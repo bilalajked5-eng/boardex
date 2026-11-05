@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-11-05T11:45:52.592Z",
-  "htmlFiles": 24,
+  "checkedAt": "2026-11-05T11:59:37.646Z",
+  "htmlFiles": 170,
   "indexable": 10,
-  "noindex": 14,
+  "noindex": 160,
   "sitemapUrls": 10,
-  "productRecords": 3,
+  "productRecords": 76,
   "approvedProducts": 0,
   "expectedProducts": 76,
-  "productPages": 6,
+  "productPages": 152,
   "failures": [],
   "warnings": [],
   "passedChecks": 16

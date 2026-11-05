@@ -1,105 +1,6524 @@
 {
-  "_note": "Structured product inventory. ONLY source-backed records. No invented ingredients, allergens, nutrition, prices, codes or shelf lives. 'status' drives indexability: only 'approved' records are indexable and enter the sitemap. Blueprint reports 76 products across 7 families on the current website; those records have not been supplied, see docs/content-gaps.md.",
+  "_note": "Imported from the client-supplied Plum B2B Catalogue 2026 PDF by src/build/import-catalogue.py. Names, weights, energy and shelf lives are exactly as printed. status=provisional until the client confirms the data (then set status=approved per record, or run with --approve). No ingredients, allergens, prices or codes were added.",
   "schemaVersion": 1,
   "categories": [
     {
       "id": "bread",
       "slug": "bread",
-      "name": { "ar": "الخبز", "en": "Bread" },
+      "name": {
+        "ar": "الخبز",
+        "en": "Bread"
+      },
       "expectedCount": 21,
       "shelfLife": {
-        "fresh": { "ar": "يومان", "en": "2 days" },
-        "bakedFrozen": { "ar": "3 أشهر", "en": "3 months" },
+        "fresh": {
+          "ar": "يومان",
+          "en": "2 days"
+        },
+        "bakedFrozen": {
+          "ar": "3 أشهر",
+          "en": "3 months"
+        },
         "status": "provisional",
-        "source": "Blueprint v1 §4.6 — as published on current B2B page; revalidate with client"
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
       }
     },
-    { "id": "croissants", "slug": "croissants", "name": { "ar": "الكرواسون", "en": "Croissants" }, "expectedCount": 6, "shelfLife": null },
-    { "id": "danish-focaccia", "slug": "danish-focaccia", "name": { "ar": "الدنش والفوكاشيا", "en": "Danish & Focaccia" }, "expectedCount": 10, "shelfLife": null },
-    { "id": "eclairs", "slug": "eclairs", "name": { "ar": "الإكلير", "en": "Éclairs" }, "expectedCount": 12, "shelfLife": null },
-    { "id": "miracle-cakes", "slug": "miracle-cakes", "name": { "ar": "كيك ميراكل", "en": "Miracle Cakes" }, "expectedCount": 5, "shelfLife": null },
-    { "id": "molded-cakes", "slug": "molded-cakes", "name": { "ar": "كيك القوالب", "en": "Molded Cakes" }, "expectedCount": 12, "shelfLife": null },
-    { "id": "whole-cakes", "slug": "whole-cakes", "name": { "ar": "الكيك الكامل", "en": "Whole Cakes" }, "expectedCount": 10, "shelfLife": null }
+    {
+      "id": "croissants",
+      "slug": "croissants",
+      "name": {
+        "ar": "الكرواسون",
+        "en": "Croissants"
+      },
+      "expectedCount": 6,
+      "shelfLife": {
+        "fresh": {
+          "ar": "يومان",
+          "en": "2 days"
+        },
+        "bakedFrozen": {
+          "ar": "3 أشهر",
+          "en": "3 months"
+        },
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    },
+    {
+      "id": "danish-focaccia",
+      "slug": "danish-focaccia",
+      "name": {
+        "ar": "الدنش والفوكاشيا",
+        "en": "Danish & Focaccia"
+      },
+      "expectedCount": 10,
+      "shelfLife": {
+        "fresh": {
+          "ar": "يومان",
+          "en": "2 days"
+        },
+        "bakedFrozen": {
+          "ar": "3 أشهر",
+          "en": "3 months"
+        },
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    },
+    {
+      "id": "eclairs",
+      "slug": "eclairs",
+      "name": {
+        "ar": "الإكلير",
+        "en": "Éclairs"
+      },
+      "expectedCount": 12,
+      "shelfLife": {
+        "fresh": {
+          "ar": "يومان",
+          "en": "2 days"
+        },
+        "bakedFrozen": {
+          "ar": "3 أشهر",
+          "en": "3 months"
+        },
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    },
+    {
+      "id": "miracle-cakes",
+      "slug": "miracle-cakes",
+      "name": {
+        "ar": "كيك ميراكل",
+        "en": "Miracle Cakes"
+      },
+      "expectedCount": 5,
+      "shelfLife": {
+        "fresh": {
+          "ar": "يومان",
+          "en": "2 days"
+        },
+        "bakedFrozen": {
+          "ar": "3 أشهر",
+          "en": "3 months"
+        },
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    },
+    {
+      "id": "molded-cakes",
+      "slug": "molded-cakes",
+      "name": {
+        "ar": "كيك القوالب",
+        "en": "Molded Cakes"
+      },
+      "expectedCount": 12,
+      "shelfLife": {
+        "fresh": {
+          "ar": "3 أيام",
+          "en": "3 days"
+        },
+        "bakedFrozen": null,
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    },
+    {
+      "id": "whole-cakes",
+      "slug": "whole-cakes",
+      "name": {
+        "ar": "الكيك الكامل",
+        "en": "Whole Cakes"
+      },
+      "expectedCount": 10,
+      "shelfLife": {
+        "fresh": {
+          "ar": "3 أيام",
+          "en": "3 days"
+        },
+        "bakedFrozen": null,
+        "status": "provisional",
+        "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)"
+      }
+    }
   ],
   "products": [
     {
-      "id": "prd-bread-brown-sourdough",
+      "id": "prd-brown-sourdough-bread",
       "category": "bread",
       "status": "provisional",
-      "source": "Blueprint v1 §4.6 'Verified example from current B2B source' — revalidate before approval",
-      "slug": { "ar": "brown-sourdough-bread", "en": "brown-sourdough-bread" },
-      "name": { "ar": "خبز ساوردو أسمر", "en": "Brown Sourdough Bread" },
-      "h1": { "ar": "خبز ساوردو أسمر للتوريد بالجملة", "en": "Brown Sourdough Bread for Wholesale Supply" },
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "brown-sourdough-bread",
+        "en": "brown-sourdough-bread"
+      },
+      "name": {
+        "ar": "خبز ساوردو أسمر",
+        "en": "Brown Sourdough Bread"
+      },
+      "h1": {
+        "ar": "خبز ساوردو أسمر للتوريد بالجملة",
+        "en": "Brown Sourdough Bread for Wholesale Supply"
+      },
       "productCode": null,
-      "heroImage": null,
+      "heroImage": "product-brown-sourdough-bread",
       "galleryImages": [],
       "variants": [
-        { "id": "v1", "weight": { "value": 750, "unit": "g" }, "energy": { "value": 1850, "unit": "kcal", "basis": null } }
+        {
+          "id": "v1",
+          "weight": {
+            "value": 750,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 1850,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
       ],
-      "shortDescription": { "ar": null, "en": null },
-      "longDescription": { "ar": null, "en": null },
-      "ingredients": { "ar": null, "en": null },
-      "allergens": { "ar": null, "en": null },
-      "packaging": { "ar": null, "en": null },
-      "storage": { "ar": null, "en": null },
-      "foodserviceUse": { "ar": null, "en": null },
+      "shortDescription": {
+        "ar": "خبز ساوردو أسمر من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 750 غ للوحدة (1,850 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Brown Sourdough Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 750 g per unit (1,850 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
       "freshOrFrozen": "inherit-category",
-      "relatedProducts": [],
+      "relatedProducts": [
+        "prd-white-sourdough-bread",
+        "prd-sourdough-mixed-with-seeds",
+        "prd-olive-sourdough-bread",
+        "prd-baguette-with-mixed-seeds"
+      ],
       "pdfAttachment": null,
       "seo": {
-        "title": { "ar": "خبز ساوردو أسمر | مخبوزات بالجملة | بلام للتموين", "en": "Brown Sourdough Bread | Wholesale Bakery | Plum Catering" },
-        "description": { "ar": null, "en": null }
+        "title": {
+          "ar": "خبز ساوردو أسمر | الخبز بالجملة | بلام للتموين",
+          "en": "Brown Sourdough Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
       },
       "indexabilityOverride": null
     },
     {
-      "id": "prd-molded-honey-cake",
-      "category": "molded-cakes",
-      "status": "draft",
-      "source": "Blueprint v1 §2 — product name only; illustrates duplicate names across categories",
-      "slug": { "ar": "honey-cake-molded-cake", "en": "honey-cake-molded-cake" },
-      "name": { "ar": "كيكة العسل", "en": "Honey Cake" },
-      "h1": { "ar": "كيكة العسل — كيك القوالب", "en": "Honey Cake — Molded Cake" },
+      "id": "prd-white-sourdough-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "white-sourdough-bread",
+        "en": "white-sourdough-bread"
+      },
+      "name": {
+        "ar": "خبز ساوردو أبيض",
+        "en": "White Sourdough Bread"
+      },
+      "h1": {
+        "ar": "خبز ساوردو أبيض للتوريد بالجملة",
+        "en": "White Sourdough Bread for Wholesale Supply"
+      },
       "productCode": null,
-      "heroImage": null,
+      "heroImage": "product-white-sourdough-bread",
       "galleryImages": [],
-      "variants": [],
-      "shortDescription": { "ar": null, "en": null },
-      "longDescription": { "ar": null, "en": null },
-      "ingredients": { "ar": null, "en": null },
-      "allergens": { "ar": null, "en": null },
-      "packaging": { "ar": null, "en": null },
-      "storage": { "ar": null, "en": null },
-      "foodserviceUse": { "ar": null, "en": null },
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 750,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 1900,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز ساوردو أبيض من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 750 غ للوحدة (1,900 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "White Sourdough Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 750 g per unit (1,900 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
       "freshOrFrozen": "inherit-category",
-      "relatedProducts": [],
+      "relatedProducts": [
+        "prd-sourdough-mixed-with-seeds",
+        "prd-olive-sourdough-bread",
+        "prd-baguette-with-mixed-seeds",
+        "prd-brown-baguette"
+      ],
       "pdfAttachment": null,
-      "seo": { "title": { "ar": null, "en": null }, "description": { "ar": null, "en": null } },
+      "seo": {
+        "title": {
+          "ar": "خبز ساوردو أبيض | الخبز بالجملة | بلام للتموين",
+          "en": "White Sourdough Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
       "indexabilityOverride": null
     },
     {
-      "id": "prd-whole-honey-cake",
-      "category": "whole-cakes",
-      "status": "draft",
-      "source": "Blueprint v1 §2 — product name only; illustrates duplicate names across categories",
-      "slug": { "ar": "honey-cake-whole-cake", "en": "honey-cake-whole-cake" },
-      "name": { "ar": "كيكة العسل", "en": "Honey Cake" },
-      "h1": { "ar": "كيكة العسل — كيك كامل", "en": "Honey Cake — Whole Cake" },
+      "id": "prd-sourdough-mixed-with-seeds",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "sourdough-mixed-with-seeds",
+        "en": "sourdough-mixed-with-seeds"
+      },
+      "name": {
+        "ar": "خبز ساوردو بالبذور المشكلة",
+        "en": "Sourdough Mixed with Seeds"
+      },
+      "h1": {
+        "ar": "خبز ساوردو بالبذور المشكلة للتوريد بالجملة",
+        "en": "Sourdough Mixed with Seeds for Wholesale Supply"
+      },
       "productCode": null,
-      "heroImage": null,
+      "heroImage": "product-sourdough-mixed-with-seeds",
       "galleryImages": [],
-      "variants": [],
-      "shortDescription": { "ar": null, "en": null },
-      "longDescription": { "ar": null, "en": null },
-      "ingredients": { "ar": null, "en": null },
-      "allergens": { "ar": null, "en": null },
-      "packaging": { "ar": null, "en": null },
-      "storage": { "ar": null, "en": null },
-      "foodserviceUse": { "ar": null, "en": null },
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 750,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 2050,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز ساوردو بالبذور المشكلة من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 750 غ للوحدة (2,050 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Sourdough Mixed with Seeds from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 750 g per unit (2,050 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
       "freshOrFrozen": "inherit-category",
-      "relatedProducts": [],
+      "relatedProducts": [
+        "prd-olive-sourdough-bread",
+        "prd-baguette-with-mixed-seeds",
+        "prd-brown-baguette",
+        "prd-white-sesame-baguette"
+      ],
       "pdfAttachment": null,
-      "seo": { "title": { "ar": null, "en": null }, "description": { "ar": null, "en": null } },
+      "seo": {
+        "title": {
+          "ar": "خبز ساوردو بالبذور المشكلة | الخبز بالجملة | بلام للتموين",
+          "en": "Sourdough Mixed with Seeds | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-olive-sourdough-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "olive-sourdough-bread",
+        "en": "olive-sourdough-bread"
+      },
+      "name": {
+        "ar": "خبز ساوردو بالزيتون",
+        "en": "Olive Sourdough Bread"
+      },
+      "h1": {
+        "ar": "خبز ساوردو بالزيتون للتوريد بالجملة",
+        "en": "Olive Sourdough Bread for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-olive-sourdough-bread",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 750,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 1950,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز ساوردو بالزيتون من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 750 غ للوحدة (1,950 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Olive Sourdough Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 750 g per unit (1,950 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-baguette-with-mixed-seeds",
+        "prd-brown-baguette",
+        "prd-white-sesame-baguette",
+        "prd-potato-bun"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز ساوردو بالزيتون | الخبز بالجملة | بلام للتموين",
+          "en": "Olive Sourdough Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-baguette-with-mixed-seeds",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "baguette-with-mixed-seeds",
+        "en": "baguette-with-mixed-seeds"
+      },
+      "name": {
+        "ar": "باغيت بالبذور المشكلة",
+        "en": "Baguette with Mixed Seeds"
+      },
+      "h1": {
+        "ar": "باغيت بالبذور المشكلة للتوريد بالجملة",
+        "en": "Baguette with Mixed Seeds for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-baguette-with-mixed-seeds",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 230,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 600,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت بالبذور المشكلة من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 230 غ للوحدة (600 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Baguette with Mixed Seeds from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 230 g per unit (600 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-brown-baguette",
+        "prd-white-sesame-baguette",
+        "prd-potato-bun",
+        "prd-burger-bun"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت بالبذور المشكلة | الخبز بالجملة | بلام للتموين",
+          "en": "Baguette with Mixed Seeds | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-brown-baguette",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "brown-baguette",
+        "en": "brown-baguette"
+      },
+      "name": {
+        "ar": "باغيت أسمر",
+        "en": "Brown Baguette"
+      },
+      "h1": {
+        "ar": "باغيت أسمر للتوريد بالجملة",
+        "en": "Brown Baguette for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-brown-baguette",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 230,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 570,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت أسمر من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 230 غ للوحدة (570 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Brown Baguette from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 230 g per unit (570 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-white-sesame-baguette",
+        "prd-potato-bun",
+        "prd-burger-bun",
+        "prd-mini-burger-bun"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت أسمر | الخبز بالجملة | بلام للتموين",
+          "en": "Brown Baguette | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-white-sesame-baguette",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "white-sesame-baguette",
+        "en": "white-sesame-baguette"
+      },
+      "name": {
+        "ar": "باغيت بالسمسم الأبيض",
+        "en": "White Sesame Baguette"
+      },
+      "h1": {
+        "ar": "باغيت بالسمسم الأبيض للتوريد بالجملة",
+        "en": "White Sesame Baguette for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-white-sesame-baguette",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 230,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 620,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت بالسمسم الأبيض من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 230 غ للوحدة (620 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "White Sesame Baguette from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 230 g per unit (620 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-potato-bun",
+        "prd-burger-bun",
+        "prd-mini-burger-bun",
+        "prd-mini-baguette"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت بالسمسم الأبيض | الخبز بالجملة | بلام للتموين",
+          "en": "White Sesame Baguette | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-potato-bun",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "potato-bun",
+        "en": "potato-bun"
+      },
+      "name": {
+        "ar": "خبز البرغر بالبطاطس",
+        "en": "Potato Bun"
+      },
+      "h1": {
+        "ar": "خبز البرغر بالبطاطس للتوريد بالجملة",
+        "en": "Potato Bun for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-potato-bun",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 90,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 250,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز البرغر بالبطاطس من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 90 غ للوحدة (250 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Potato Bun from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 90 g per unit (250 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-burger-bun",
+        "prd-mini-burger-bun",
+        "prd-mini-baguette",
+        "prd-mini-sesame-baguette"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز البرغر بالبطاطس | الخبز بالجملة | بلام للتموين",
+          "en": "Potato Bun | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-burger-bun",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "burger-bun",
+        "en": "burger-bun"
+      },
+      "name": {
+        "ar": "خبز برغر",
+        "en": "Burger Bun"
+      },
+      "h1": {
+        "ar": "خبز برغر للتوريد بالجملة",
+        "en": "Burger Bun for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-burger-bun",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 90,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 240,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز برغر من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 90 غ للوحدة (240 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Burger Bun from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 90 g per unit (240 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-burger-bun",
+        "prd-mini-baguette",
+        "prd-mini-sesame-baguette",
+        "prd-mini-baguette-mixed-sesame-seeds"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز برغر | الخبز بالجملة | بلام للتموين",
+          "en": "Burger Bun | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-burger-bun",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-burger-bun",
+        "en": "mini-burger-bun"
+      },
+      "name": {
+        "ar": "خبز برغر صغير",
+        "en": "Mini Burger Bun"
+      },
+      "h1": {
+        "ar": "خبز برغر صغير للتوريد بالجملة",
+        "en": "Mini Burger Bun for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-burger-bun",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 40,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 110,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز برغر صغير من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 40 غ للوحدة (110 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Burger Bun from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 40 g per unit (110 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-baguette",
+        "prd-mini-sesame-baguette",
+        "prd-mini-baguette-mixed-sesame-seeds",
+        "prd-mini-brown-baguette"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز برغر صغير | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Burger Bun | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-baguette",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-baguette",
+        "en": "mini-baguette"
+      },
+      "name": {
+        "ar": "باغيت صغير",
+        "en": "Mini Baguette"
+      },
+      "h1": {
+        "ar": "باغيت صغير للتوريد بالجملة",
+        "en": "Mini Baguette for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-baguette",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 210,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت صغير من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (210 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Baguette from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (210 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-sesame-baguette",
+        "prd-mini-baguette-mixed-sesame-seeds",
+        "prd-mini-brown-baguette",
+        "prd-mini-brown-baguette-mixed-seeds"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت صغير | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Baguette | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-sesame-baguette",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-sesame-baguette",
+        "en": "mini-sesame-baguette"
+      },
+      "name": {
+        "ar": "باغيت صغير بالسمسم",
+        "en": "Mini Sesame Baguette"
+      },
+      "h1": {
+        "ar": "باغيت صغير بالسمسم للتوريد بالجملة",
+        "en": "Mini Sesame Baguette for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-sesame-baguette",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 220,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت صغير بالسمسم من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (220 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Sesame Baguette from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (220 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-baguette-mixed-sesame-seeds",
+        "prd-mini-brown-baguette",
+        "prd-mini-brown-baguette-mixed-seeds",
+        "prd-mini-baguette-mixed-seeds"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت صغير بالسمسم | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Sesame Baguette | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-baguette-mixed-sesame-seeds",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-baguette-mixed-sesame-seeds",
+        "en": "mini-baguette-mixed-sesame-seeds"
+      },
+      "name": {
+        "ar": "باغيت صغير بخليط السمسم",
+        "en": "Mini Baguette Mixed Sesame Seeds"
+      },
+      "h1": {
+        "ar": "باغيت صغير بخليط السمسم للتوريد بالجملة",
+        "en": "Mini Baguette Mixed Sesame Seeds for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-baguette-mixed-sesame-seeds",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 225,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت صغير بخليط السمسم من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (225 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Baguette Mixed Sesame Seeds from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (225 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-brown-baguette",
+        "prd-mini-brown-baguette-mixed-seeds",
+        "prd-mini-baguette-mixed-seeds",
+        "prd-semolina-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت صغير بخليط السمسم | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Baguette Mixed Sesame Seeds | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-brown-baguette",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-brown-baguette",
+        "en": "mini-brown-baguette"
+      },
+      "name": {
+        "ar": "باغيت أسمر صغير",
+        "en": "Mini Brown Baguette"
+      },
+      "h1": {
+        "ar": "باغيت أسمر صغير للتوريد بالجملة",
+        "en": "Mini Brown Baguette for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-brown-baguette",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 200,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت أسمر صغير من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (200 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Brown Baguette from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (200 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-brown-baguette-mixed-seeds",
+        "prd-mini-baguette-mixed-seeds",
+        "prd-semolina-bread",
+        "prd-ciabatta-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت أسمر صغير | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Brown Baguette | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-brown-baguette-mixed-seeds",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-brown-baguette-mixed-seeds",
+        "en": "mini-brown-baguette-mixed-seeds"
+      },
+      "name": {
+        "ar": "باغيت أسمر صغير متعدد البذور",
+        "en": "Mini Brown Baguette Mixed Seeds"
+      },
+      "h1": {
+        "ar": "باغيت أسمر صغير متعدد البذور للتوريد بالجملة",
+        "en": "Mini Brown Baguette Mixed Seeds for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-brown-baguette-mixed-seeds",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 220,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت أسمر صغير متعدد البذور من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (220 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Brown Baguette Mixed Seeds from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (220 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mini-baguette-mixed-seeds",
+        "prd-semolina-bread",
+        "prd-ciabatta-bread",
+        "prd-rye-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت أسمر صغير متعدد البذور | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Brown Baguette Mixed Seeds | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mini-baguette-mixed-seeds",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mini-baguette-mixed-seeds",
+        "en": "mini-baguette-mixed-seeds"
+      },
+      "name": {
+        "ar": "باغيت صغير متعدد البذور",
+        "en": "Mini Baguette Mixed Seeds"
+      },
+      "h1": {
+        "ar": "باغيت صغير متعدد البذور للتوريد بالجملة",
+        "en": "Mini Baguette Mixed Seeds for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mini-baguette-mixed-seeds",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 215,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "باغيت صغير متعدد البذور من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (215 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Mini Baguette Mixed Seeds from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (215 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-semolina-bread",
+        "prd-ciabatta-bread",
+        "prd-rye-bread",
+        "prd-brown-bread-roll-with-pecan"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "باغيت صغير متعدد البذور | الخبز بالجملة | بلام للتموين",
+          "en": "Mini Baguette Mixed Seeds | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-semolina-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "semolina-bread",
+        "en": "semolina-bread"
+      },
+      "name": {
+        "ar": "خبز السميد",
+        "en": "Semolina Bread"
+      },
+      "h1": {
+        "ar": "خبز السميد للتوريد بالجملة",
+        "en": "Semolina Bread for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-semolina-bread",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 210,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز السميد من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (210 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Semolina Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (210 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-ciabatta-bread",
+        "prd-rye-bread",
+        "prd-brown-bread-roll-with-pecan",
+        "prd-white-toast-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز السميد | الخبز بالجملة | بلام للتموين",
+          "en": "Semolina Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-ciabatta-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "ciabatta-bread",
+        "en": "ciabatta-bread"
+      },
+      "name": {
+        "ar": "خبز تشاباتا",
+        "en": "Ciabatta Bread"
+      },
+      "h1": {
+        "ar": "خبز تشاباتا للتوريد بالجملة",
+        "en": "Ciabatta Bread for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-ciabatta-bread",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 90,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 240,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز تشاباتا من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 90 غ للوحدة (240 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Ciabatta Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 90 g per unit (240 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-rye-bread",
+        "prd-brown-bread-roll-with-pecan",
+        "prd-white-toast-bread",
+        "prd-brown-sourdough-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز تشاباتا | الخبز بالجملة | بلام للتموين",
+          "en": "Ciabatta Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-rye-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "rye-bread",
+        "en": "rye-bread"
+      },
+      "name": {
+        "ar": "خبز الجاودار",
+        "en": "Rye Bread"
+      },
+      "h1": {
+        "ar": "خبز الجاودار للتوريد بالجملة",
+        "en": "Rye Bread for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-rye-bread",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 90,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 230,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز الجاودار من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 90 غ للوحدة (230 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Rye Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 90 g per unit (230 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-brown-bread-roll-with-pecan",
+        "prd-white-toast-bread",
+        "prd-brown-sourdough-bread",
+        "prd-white-sourdough-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز الجاودار | الخبز بالجملة | بلام للتموين",
+          "en": "Rye Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-brown-bread-roll-with-pecan",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "brown-bread-roll-with-pecan",
+        "en": "brown-bread-roll-with-pecan"
+      },
+      "name": {
+        "ar": "رول خبز أسمر بالبقان",
+        "en": "Brown Bread Roll with Pecan"
+      },
+      "h1": {
+        "ar": "رول خبز أسمر بالبقان للتوريد بالجملة",
+        "en": "Brown Bread Roll with Pecan for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-brown-bread-roll-with-pecan",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 90,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "رول خبز أسمر بالبقان من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 30 غ للوحدة (90 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Brown Bread Roll with Pecan from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 30 g per unit (90 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-white-toast-bread",
+        "prd-brown-sourdough-bread",
+        "prd-white-sourdough-bread",
+        "prd-sourdough-mixed-with-seeds"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "رول خبز أسمر بالبقان | الخبز بالجملة | بلام للتموين",
+          "en": "Brown Bread Roll with Pecan | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-white-toast-bread",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "white-toast-bread",
+        "en": "white-toast-bread"
+      },
+      "name": {
+        "ar": "خبز توست أبيض",
+        "en": "White Toast Bread"
+      },
+      "h1": {
+        "ar": "خبز توست أبيض للتوريد بالجملة",
+        "en": "White Toast Bread for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-white-toast-bread",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 950,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 2450,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "خبز توست أبيض من فئة الخبز، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 950 غ للوحدة (2,450 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "White Toast Bread from the Bread range, produced in Plum Catering's central kitchen in Riyadh: 950 g per unit (2,450 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-brown-sourdough-bread",
+        "prd-white-sourdough-bread",
+        "prd-sourdough-mixed-with-seeds",
+        "prd-olive-sourdough-bread"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "خبز توست أبيض | الخبز بالجملة | بلام للتموين",
+          "en": "White Toast Bread | Wholesale Bread | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-plain-croissant",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "plain-croissant",
+        "en": "plain-croissant"
+      },
+      "name": {
+        "ar": "كرواسون سادة",
+        "en": "Plain Croissant"
+      },
+      "h1": {
+        "ar": "كرواسون سادة للتوريد بالجملة",
+        "en": "Plain Croissant for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-plain-croissant",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 420,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 315,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 160,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كرواسون سادة من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Plain Croissant from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-cheese-croissant",
+        "prd-zaatar-croissant",
+        "prd-almond-croissant",
+        "prd-pecan-croissant"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كرواسون سادة | الكرواسون بالجملة | بلام للتموين",
+          "en": "Plain Croissant | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-cheese-croissant",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "cheese-croissant",
+        "en": "cheese-croissant"
+      },
+      "name": {
+        "ar": "كرواسون بالجبنة",
+        "en": "Cheese Croissant"
+      },
+      "h1": {
+        "ar": "كرواسون بالجبنة للتوريد بالجملة",
+        "en": "Cheese Croissant for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-cheese-croissant",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 430,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 325,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 165,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كرواسون بالجبنة من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Cheese Croissant from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-zaatar-croissant",
+        "prd-almond-croissant",
+        "prd-pecan-croissant",
+        "prd-pain-au-chocolat"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كرواسون بالجبنة | الكرواسون بالجملة | بلام للتموين",
+          "en": "Cheese Croissant | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-zaatar-croissant",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "zaatar-croissant",
+        "en": "zaatar-croissant"
+      },
+      "name": {
+        "ar": "كرواسون بالزعتر",
+        "en": "Zaatar Croissant"
+      },
+      "h1": {
+        "ar": "كرواسون بالزعتر للتوريد بالجملة",
+        "en": "Zaatar Croissant for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-zaatar-croissant",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 400,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 300,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 150,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كرواسون بالزعتر من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Zaatar Croissant from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-almond-croissant",
+        "prd-pecan-croissant",
+        "prd-pain-au-chocolat",
+        "prd-plain-croissant"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كرواسون بالزعتر | الكرواسون بالجملة | بلام للتموين",
+          "en": "Zaatar Croissant | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-almond-croissant",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "almond-croissant",
+        "en": "almond-croissant"
+      },
+      "name": {
+        "ar": "كرواسون باللوز",
+        "en": "Almond Croissant"
+      },
+      "h1": {
+        "ar": "كرواسون باللوز للتوريد بالجملة",
+        "en": "Almond Croissant for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-almond-croissant",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 480,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 360,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 180,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كرواسون باللوز من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Almond Croissant from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pecan-croissant",
+        "prd-pain-au-chocolat",
+        "prd-plain-croissant",
+        "prd-cheese-croissant"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كرواسون باللوز | الكرواسون بالجملة | بلام للتموين",
+          "en": "Almond Croissant | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pecan-croissant",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pecan-croissant",
+        "en": "pecan-croissant"
+      },
+      "name": {
+        "ar": "كرواسون بالبقان",
+        "en": "Pecan Croissant"
+      },
+      "h1": {
+        "ar": "كرواسون بالبقان للتوريد بالجملة",
+        "en": "Pecan Croissant for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pecan-croissant",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 490,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 370,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 185,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كرواسون بالبقان من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Pecan Croissant from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pain-au-chocolat",
+        "prd-plain-croissant",
+        "prd-cheese-croissant",
+        "prd-zaatar-croissant"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كرواسون بالبقان | الكرواسون بالجملة | بلام للتموين",
+          "en": "Pecan Croissant | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pain-au-chocolat",
+      "category": "croissants",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pain-au-chocolat",
+        "en": "pain-au-chocolat"
+      },
+      "name": {
+        "ar": "بان أو شوكولا",
+        "en": "Pain Au Chocolat"
+      },
+      "h1": {
+        "ar": "بان أو شوكولا للتوريد بالجملة",
+        "en": "Pain Au Chocolat for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pain-au-chocolat",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 430,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v2",
+          "weight": {
+            "value": 60,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 325,
+            "unit": "kcal",
+            "basis": null
+          }
+        },
+        {
+          "id": "v3",
+          "weight": {
+            "value": 30,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 165,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بان أو شوكولا من مطبخ بلام للتموين المركزي في الرياض، يُورَّد لمنشآت خدمات الطعام بثلاثة أحجام (80 غ، 60 غ، 30 غ). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر).",
+        "en": "Pain Au Chocolat from Plum Catering's central kitchen in Riyadh, supplied to foodservice businesses in three sizes (80 g, 60 g, 30 g). Available fresh (2 days) or baked-frozen (3 months)."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-plain-croissant",
+        "prd-cheese-croissant",
+        "prd-zaatar-croissant",
+        "prd-almond-croissant"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بان أو شوكولا | الكرواسون بالجملة | بلام للتموين",
+          "en": "Pain Au Chocolat | Wholesale Croissants | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-cherry-tomato-focaccia",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "cherry-tomato-focaccia",
+        "en": "cherry-tomato-focaccia"
+      },
+      "name": {
+        "ar": "فوكاتشيا بالطماطم الكرزية",
+        "en": "Cherry Tomato Focaccia"
+      },
+      "h1": {
+        "ar": "فوكاتشيا بالطماطم الكرزية للتوريد بالجملة",
+        "en": "Cherry Tomato Focaccia for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-cherry-tomato-focaccia",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 130,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 360,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "فوكاتشيا بالطماطم الكرزية من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 130 غ للوحدة (360 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Cherry Tomato Focaccia from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 130 g per unit (360 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-fetta-cheese-focaccia",
+        "prd-sundried-tomato-focaccia",
+        "prd-fetta-cheese-danish",
+        "prd-peperoni-pizza-danish"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "فوكاتشيا بالطماطم الكرزية | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Cherry Tomato Focaccia | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-fetta-cheese-focaccia",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "fetta-cheese-focaccia",
+        "en": "fetta-cheese-focaccia"
+      },
+      "name": {
+        "ar": "فوكاتشيا بجبنة الفيتا",
+        "en": "Fetta Cheese Focaccia"
+      },
+      "h1": {
+        "ar": "فوكاتشيا بجبنة الفيتا للتوريد بالجملة",
+        "en": "Fetta Cheese Focaccia for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-fetta-cheese-focaccia",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 130,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 390,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "فوكاتشيا بجبنة الفيتا من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 130 غ للوحدة (390 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Fetta Cheese Focaccia from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 130 g per unit (390 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-sundried-tomato-focaccia",
+        "prd-fetta-cheese-danish",
+        "prd-peperoni-pizza-danish",
+        "prd-halloumi-pesto-danish"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "فوكاتشيا بجبنة الفيتا | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Fetta Cheese Focaccia | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-sundried-tomato-focaccia",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "sundried-tomato-focaccia",
+        "en": "sundried-tomato-focaccia"
+      },
+      "name": {
+        "ar": "فوكاتشيا بالطماطم المجففة",
+        "en": "Sundried Tomato Focaccia"
+      },
+      "h1": {
+        "ar": "فوكاتشيا بالطماطم المجففة للتوريد بالجملة",
+        "en": "Sundried Tomato Focaccia for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-sundried-tomato-focaccia",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 130,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 350,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "فوكاتشيا بالطماطم المجففة من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 130 غ للوحدة (350 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Sundried Tomato Focaccia from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 130 g per unit (350 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-fetta-cheese-danish",
+        "prd-peperoni-pizza-danish",
+        "prd-halloumi-pesto-danish",
+        "prd-pain-suisse-cheese"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "فوكاتشيا بالطماطم المجففة | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Sundried Tomato Focaccia | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-fetta-cheese-danish",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "fetta-cheese-danish",
+        "en": "fetta-cheese-danish"
+      },
+      "name": {
+        "ar": "دانيش بجبنة الفيتا",
+        "en": "Fetta Cheese Danish"
+      },
+      "h1": {
+        "ar": "دانيش بجبنة الفيتا للتوريد بالجملة",
+        "en": "Fetta Cheese Danish for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-fetta-cheese-danish",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 110,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 420,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "دانيش بجبنة الفيتا من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 110 غ للوحدة (420 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Fetta Cheese Danish from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 110 g per unit (420 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-peperoni-pizza-danish",
+        "prd-halloumi-pesto-danish",
+        "prd-pain-suisse-cheese",
+        "prd-pain-swisse-kunafa"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "دانيش بجبنة الفيتا | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Fetta Cheese Danish | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-peperoni-pizza-danish",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "peperoni-pizza-danish",
+        "en": "peperoni-pizza-danish"
+      },
+      "name": {
+        "ar": "دانيش بيتزا بالبيبروني",
+        "en": "Peperoni Pizza Danish"
+      },
+      "h1": {
+        "ar": "دانيش بيتزا بالبيبروني للتوريد بالجملة",
+        "en": "Peperoni Pizza Danish for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-peperoni-pizza-danish",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 110,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 430,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "دانيش بيتزا بالبيبروني من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 110 غ للوحدة (430 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Peperoni Pizza Danish from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 110 g per unit (430 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-halloumi-pesto-danish",
+        "prd-pain-suisse-cheese",
+        "prd-pain-swisse-kunafa",
+        "prd-pain-swiss-chocolate"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "دانيش بيتزا بالبيبروني | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Peperoni Pizza Danish | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-halloumi-pesto-danish",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "halloumi-pesto-danish",
+        "en": "halloumi-pesto-danish"
+      },
+      "name": {
+        "ar": "دانيش بالحلوم والبيستو",
+        "en": "Halloumi Pesto Danish"
+      },
+      "h1": {
+        "ar": "دانيش بالحلوم والبيستو للتوريد بالجملة",
+        "en": "Halloumi Pesto Danish for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-halloumi-pesto-danish",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 110,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 400,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "دانيش بالحلوم والبيستو من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 110 غ للوحدة (400 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Halloumi Pesto Danish from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 110 g per unit (400 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pain-suisse-cheese",
+        "prd-pain-swisse-kunafa",
+        "prd-pain-swiss-chocolate",
+        "prd-pain-swisse-pistachio"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "دانيش بالحلوم والبيستو | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Halloumi Pesto Danish | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pain-suisse-cheese",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pain-suisse-cheese",
+        "en": "pain-suisse-cheese"
+      },
+      "name": {
+        "ar": "بان سويس بالجبنة",
+        "en": "Pain Suisse Cheese"
+      },
+      "h1": {
+        "ar": "بان سويس بالجبنة للتوريد بالجملة",
+        "en": "Pain Suisse Cheese for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pain-suisse-cheese",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 320,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بان سويس بالجبنة من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (320 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Pain Suisse Cheese from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (320 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pain-swisse-kunafa",
+        "prd-pain-swiss-chocolate",
+        "prd-pain-swisse-pistachio",
+        "prd-cherry-tomato-focaccia"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بان سويس بالجبنة | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Pain Suisse Cheese | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pain-swisse-kunafa",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pain-swisse-kunafa",
+        "en": "pain-swisse-kunafa"
+      },
+      "name": {
+        "ar": "بان سويس بالكنافة",
+        "en": "Pain Swisse Kunafa"
+      },
+      "h1": {
+        "ar": "بان سويس بالكنافة للتوريد بالجملة",
+        "en": "Pain Swisse Kunafa for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pain-swisse-kunafa",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 360,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بان سويس بالكنافة من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (360 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Pain Swisse Kunafa from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (360 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pain-swiss-chocolate",
+        "prd-pain-swisse-pistachio",
+        "prd-cherry-tomato-focaccia",
+        "prd-fetta-cheese-focaccia"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بان سويس بالكنافة | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Pain Swisse Kunafa | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pain-swiss-chocolate",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pain-swiss-chocolate",
+        "en": "pain-swiss-chocolate"
+      },
+      "name": {
+        "ar": "بان سويس بالشوكولاتة",
+        "en": "Pain Swiss Chocolate"
+      },
+      "h1": {
+        "ar": "بان سويس بالشوكولاتة للتوريد بالجملة",
+        "en": "Pain Swiss Chocolate for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pain-swiss-chocolate",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 340,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بان سويس بالشوكولاتة من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (340 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Pain Swiss Chocolate from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (340 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pain-swisse-pistachio",
+        "prd-cherry-tomato-focaccia",
+        "prd-fetta-cheese-focaccia",
+        "prd-sundried-tomato-focaccia"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بان سويس بالشوكولاتة | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Pain Swiss Chocolate | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pain-swisse-pistachio",
+      "category": "danish-focaccia",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pain-swisse-pistachio",
+        "en": "pain-swisse-pistachio"
+      },
+      "name": {
+        "ar": "بان سويس بالفستق الحلبي",
+        "en": "Pain Swisse Pistachio"
+      },
+      "h1": {
+        "ar": "بان سويس بالفستق الحلبي للتوريد بالجملة",
+        "en": "Pain Swisse Pistachio for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pain-swisse-pistachio",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 370,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بان سويس بالفستق الحلبي من فئة الدنش والفوكاشيا، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (370 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Pain Swisse Pistachio from the Danish & Focaccia range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (370 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-cherry-tomato-focaccia",
+        "prd-fetta-cheese-focaccia",
+        "prd-sundried-tomato-focaccia",
+        "prd-fetta-cheese-danish"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بان سويس بالفستق الحلبي | الدنش والفوكاشيا بالجملة | بلام للتموين",
+          "en": "Pain Swisse Pistachio | Wholesale Danish & Focaccia | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-vanilla-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "vanilla-eclair",
+        "en": "vanilla-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالفانيليا",
+        "en": "Vanilla Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالفانيليا للتوريد بالجملة",
+        "en": "Vanilla Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-vanilla-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 280,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالفانيليا من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (280 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Vanilla Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (280 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-cheese-cake-eclair",
+        "prd-dark-chocolate-eclair",
+        "prd-coffee-eclair",
+        "prd-golden-hazelnut-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالفانيليا | الإكلير بالجملة | بلام للتموين",
+          "en": "Vanilla Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-cheese-cake-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "cheese-cake-eclair",
+        "en": "cheese-cake-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالتشيز كيك",
+        "en": "Cheese Cake Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالتشيز كيك للتوريد بالجملة",
+        "en": "Cheese Cake Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-cheese-cake-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 320,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالتشيز كيك من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (320 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Cheese Cake Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (320 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-dark-chocolate-eclair",
+        "prd-coffee-eclair",
+        "prd-golden-hazelnut-eclair",
+        "prd-lemon-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالتشيز كيك | الإكلير بالجملة | بلام للتموين",
+          "en": "Cheese Cake Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-dark-chocolate-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "dark-chocolate-eclair",
+        "en": "dark-chocolate-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالشوكولاتة الداكنة",
+        "en": "Dark Chocolate Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالشوكولاتة الداكنة للتوريد بالجملة",
+        "en": "Dark Chocolate Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-dark-chocolate-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 330,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالشوكولاتة الداكنة من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (330 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Dark Chocolate Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (330 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-coffee-eclair",
+        "prd-golden-hazelnut-eclair",
+        "prd-lemon-eclair",
+        "prd-milk-chocolate-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالشوكولاتة الداكنة | الإكلير بالجملة | بلام للتموين",
+          "en": "Dark Chocolate Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-coffee-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "coffee-eclair",
+        "en": "coffee-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالقهوة",
+        "en": "Coffee Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالقهوة للتوريد بالجملة",
+        "en": "Coffee Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-coffee-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 290,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالقهوة من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (290 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Coffee Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (290 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-golden-hazelnut-eclair",
+        "prd-lemon-eclair",
+        "prd-milk-chocolate-eclair",
+        "prd-strawberry-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالقهوة | الإكلير بالجملة | بلام للتموين",
+          "en": "Coffee Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-golden-hazelnut-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "golden-hazelnut-eclair",
+        "en": "golden-hazelnut-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالبندق الذهبي",
+        "en": "Golden Hazelnut Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالبندق الذهبي للتوريد بالجملة",
+        "en": "Golden Hazelnut Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-golden-hazelnut-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 340,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالبندق الذهبي من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (340 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Golden Hazelnut Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (340 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-lemon-eclair",
+        "prd-milk-chocolate-eclair",
+        "prd-strawberry-eclair",
+        "prd-passion-fruit-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالبندق الذهبي | الإكلير بالجملة | بلام للتموين",
+          "en": "Golden Hazelnut Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-lemon-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "lemon-eclair",
+        "en": "lemon-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالليمون",
+        "en": "Lemon Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالليمون للتوريد بالجملة",
+        "en": "Lemon Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-lemon-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 270,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالليمون من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (270 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Lemon Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (270 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-milk-chocolate-eclair",
+        "prd-strawberry-eclair",
+        "prd-passion-fruit-eclair",
+        "prd-pistachio-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالليمون | الإكلير بالجملة | بلام للتموين",
+          "en": "Lemon Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-milk-chocolate-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "milk-chocolate-eclair",
+        "en": "milk-chocolate-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالشوكولاتة بالحليب",
+        "en": "Milk Chocolate Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالشوكولاتة بالحليب للتوريد بالجملة",
+        "en": "Milk Chocolate Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-milk-chocolate-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 320,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالشوكولاتة بالحليب من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (320 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Milk Chocolate Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (320 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-strawberry-eclair",
+        "prd-passion-fruit-eclair",
+        "prd-pistachio-eclair",
+        "prd-raspberry-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالشوكولاتة بالحليب | الإكلير بالجملة | بلام للتموين",
+          "en": "Milk Chocolate Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-strawberry-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "strawberry-eclair",
+        "en": "strawberry-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالفراولة",
+        "en": "Strawberry Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالفراولة للتوريد بالجملة",
+        "en": "Strawberry Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-strawberry-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 290,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالفراولة من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (290 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Strawberry Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (290 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-passion-fruit-eclair",
+        "prd-pistachio-eclair",
+        "prd-raspberry-eclair",
+        "prd-salted-caramel-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالفراولة | الإكلير بالجملة | بلام للتموين",
+          "en": "Strawberry Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-passion-fruit-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "passion-fruit-eclair",
+        "en": "passion-fruit-eclair"
+      },
+      "name": {
+        "ar": "إكلير بفاكهة الباشن فروت",
+        "en": "Passion Fruit Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بفاكهة الباشن فروت للتوريد بالجملة",
+        "en": "Passion Fruit Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-passion-fruit-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 280,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بفاكهة الباشن فروت من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (280 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Passion Fruit Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (280 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pistachio-eclair",
+        "prd-raspberry-eclair",
+        "prd-salted-caramel-eclair",
+        "prd-vanilla-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بفاكهة الباشن فروت | الإكلير بالجملة | بلام للتموين",
+          "en": "Passion Fruit Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pistachio-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pistachio-eclair",
+        "en": "pistachio-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالفستق الحلبي",
+        "en": "Pistachio Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالفستق الحلبي للتوريد بالجملة",
+        "en": "Pistachio Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pistachio-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 350,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالفستق الحلبي من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (350 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Pistachio Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (350 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-raspberry-eclair",
+        "prd-salted-caramel-eclair",
+        "prd-vanilla-eclair",
+        "prd-cheese-cake-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالفستق الحلبي | الإكلير بالجملة | بلام للتموين",
+          "en": "Pistachio Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-raspberry-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "raspberry-eclair",
+        "en": "raspberry-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالتوت العليق",
+        "en": "Raspberry Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالتوت العليق للتوريد بالجملة",
+        "en": "Raspberry Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-raspberry-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 290,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالتوت العليق من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (290 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Raspberry Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (290 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-salted-caramel-eclair",
+        "prd-vanilla-eclair",
+        "prd-cheese-cake-eclair",
+        "prd-dark-chocolate-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالتوت العليق | الإكلير بالجملة | بلام للتموين",
+          "en": "Raspberry Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-salted-caramel-eclair",
+      "category": "eclairs",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "salted-caramel-eclair",
+        "en": "salted-caramel-eclair"
+      },
+      "name": {
+        "ar": "إكلير بالكراميل المملح",
+        "en": "Salted Caramel Éclair"
+      },
+      "h1": {
+        "ar": "إكلير بالكراميل المملح للتوريد بالجملة",
+        "en": "Salted Caramel Éclair for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-salted-caramel-eclair",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 80,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 330,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "إكلير بالكراميل المملح من فئة الإكلير، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 80 غ للوحدة (330 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Salted Caramel Éclair from the Éclairs range, produced in Plum Catering's central kitchen in Riyadh: 80 g per unit (330 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-vanilla-eclair",
+        "prd-cheese-cake-eclair",
+        "prd-dark-chocolate-eclair",
+        "prd-coffee-eclair"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "إكلير بالكراميل المملح | الإكلير بالجملة | بلام للتموين",
+          "en": "Salted Caramel Éclair | Wholesale Éclairs | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-dulcey-pecan-coffee",
+      "category": "miracle-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "dulcey-pecan-coffee",
+        "en": "dulcey-pecan-coffee"
+      },
+      "name": {
+        "ar": "دولسي بالبقان والقهوة",
+        "en": "Dulcey Pecan Coffee"
+      },
+      "h1": {
+        "ar": "دولسي بالبقان والقهوة للتوريد بالجملة",
+        "en": "Dulcey Pecan Coffee for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-dulcey-pecan-coffee",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 720,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "دولسي بالبقان والقهوة من فئة كيك ميراكل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 200 غ للوحدة (720 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Dulcey Pecan Coffee from the Miracle Cakes range, produced in Plum Catering's central kitchen in Riyadh: 200 g per unit (720 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-miracle-chocolate-hazelnut",
+        "prd-miracle-mango-passion-fruit",
+        "prd-miracle-vanilla",
+        "prd-miracle-strawberry"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "دولسي بالبقان والقهوة | كيك ميراكل بالجملة | بلام للتموين",
+          "en": "Dulcey Pecan Coffee | Wholesale Miracle Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-miracle-chocolate-hazelnut",
+      "category": "miracle-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "miracle-chocolate-hazelnut",
+        "en": "miracle-chocolate-hazelnut"
+      },
+      "name": {
+        "ar": "ميراكل بالشوكولاتة والبندق",
+        "en": "Miracle Chocolate Hazelnut"
+      },
+      "h1": {
+        "ar": "ميراكل بالشوكولاتة والبندق للتوريد بالجملة",
+        "en": "Miracle Chocolate Hazelnut for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-miracle-chocolate-hazelnut",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 760,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "ميراكل بالشوكولاتة والبندق من فئة كيك ميراكل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 200 غ للوحدة (760 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Miracle Chocolate Hazelnut from the Miracle Cakes range, produced in Plum Catering's central kitchen in Riyadh: 200 g per unit (760 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-miracle-mango-passion-fruit",
+        "prd-miracle-vanilla",
+        "prd-miracle-strawberry",
+        "prd-dulcey-pecan-coffee"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "ميراكل بالشوكولاتة والبندق | كيك ميراكل بالجملة | بلام للتموين",
+          "en": "Miracle Chocolate Hazelnut | Wholesale Miracle Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-miracle-mango-passion-fruit",
+      "category": "miracle-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "miracle-mango-passion-fruit",
+        "en": "miracle-mango-passion-fruit"
+      },
+      "name": {
+        "ar": "ميراكل بالمانجو والباشن فروت",
+        "en": "Miracle Mango Passion Fruit"
+      },
+      "h1": {
+        "ar": "ميراكل بالمانجو والباشن فروت للتوريد بالجملة",
+        "en": "Miracle Mango Passion Fruit for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-miracle-mango-passion-fruit",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 680,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "ميراكل بالمانجو والباشن فروت من فئة كيك ميراكل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 200 غ للوحدة (680 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Miracle Mango Passion Fruit from the Miracle Cakes range, produced in Plum Catering's central kitchen in Riyadh: 200 g per unit (680 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-miracle-vanilla",
+        "prd-miracle-strawberry",
+        "prd-dulcey-pecan-coffee",
+        "prd-miracle-chocolate-hazelnut"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "ميراكل بالمانجو والباشن فروت | كيك ميراكل بالجملة | بلام للتموين",
+          "en": "Miracle Mango Passion Fruit | Wholesale Miracle Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-miracle-vanilla",
+      "category": "miracle-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "miracle-vanilla",
+        "en": "miracle-vanilla"
+      },
+      "name": {
+        "ar": "ميراكل بالفانيليا",
+        "en": "Miracle Vanilla"
+      },
+      "h1": {
+        "ar": "ميراكل بالفانيليا للتوريد بالجملة",
+        "en": "Miracle Vanilla for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-miracle-vanilla",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 700,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "ميراكل بالفانيليا من فئة كيك ميراكل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 200 غ للوحدة (700 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Miracle Vanilla from the Miracle Cakes range, produced in Plum Catering's central kitchen in Riyadh: 200 g per unit (700 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-miracle-strawberry",
+        "prd-dulcey-pecan-coffee",
+        "prd-miracle-chocolate-hazelnut",
+        "prd-miracle-mango-passion-fruit"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "ميراكل بالفانيليا | كيك ميراكل بالجملة | بلام للتموين",
+          "en": "Miracle Vanilla | Wholesale Miracle Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-miracle-strawberry",
+      "category": "miracle-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "miracle-strawberry",
+        "en": "miracle-strawberry"
+      },
+      "name": {
+        "ar": "ميراكل بالفراولة",
+        "en": "Miracle Strawberry"
+      },
+      "h1": {
+        "ar": "ميراكل بالفراولة للتوريد بالجملة",
+        "en": "Miracle Strawberry for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-miracle-strawberry",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 690,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "ميراكل بالفراولة من فئة كيك ميراكل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 200 غ للوحدة (690 سعرة حرارية). متاح طازجًا (يومان) أو مخبوزًا مجمدًا (3 أشهر) للتوريد بالجملة.",
+        "en": "Miracle Strawberry from the Miracle Cakes range, produced in Plum Catering's central kitchen in Riyadh: 200 g per unit (690 kcal). Available fresh (2 days) or baked-frozen (3 months) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-dulcey-pecan-coffee",
+        "prd-miracle-chocolate-hazelnut",
+        "prd-miracle-mango-passion-fruit",
+        "prd-miracle-vanilla"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "ميراكل بالفراولة | كيك ميراكل بالجملة | بلام للتموين",
+          "en": "Miracle Strawberry | Wholesale Miracle Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-tiramisu",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "tiramisu",
+        "en": "tiramisu"
+      },
+      "name": {
+        "ar": "تيراميسو",
+        "en": "Tiramisu"
+      },
+      "h1": {
+        "ar": "تيراميسو للتوريد بالجملة",
+        "en": "Tiramisu for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-tiramisu",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 160,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 520,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "تيراميسو من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 160 غ للوحدة (520 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Tiramisu from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 160 g per unit (520 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-chocolate-mandarine-cake",
+        "prd-molded-cake-honey-cake",
+        "prd-molded-cake-chocolate-tart",
+        "prd-strawberry-lovers"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "تيراميسو | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Tiramisu | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-chocolate-mandarine-cake",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "chocolate-mandarine-cake",
+        "en": "chocolate-mandarine-cake"
+      },
+      "name": {
+        "ar": "كيك الشوكولاتة واليوسفي",
+        "en": "Chocolate Mandarine Cake"
+      },
+      "h1": {
+        "ar": "كيك الشوكولاتة واليوسفي للتوريد بالجملة",
+        "en": "Chocolate Mandarine Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-chocolate-mandarine-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 155,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 500,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك الشوكولاتة واليوسفي من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 155 غ للوحدة (500 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Chocolate Mandarine Cake from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 155 g per unit (500 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-molded-cake-honey-cake",
+        "prd-molded-cake-chocolate-tart",
+        "prd-strawberry-lovers",
+        "prd-brownies-salted-caramel"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك الشوكولاتة واليوسفي | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Chocolate Mandarine Cake | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-molded-cake-honey-cake",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "honey-cake-molded-cake",
+        "en": "honey-cake-molded-cake"
+      },
+      "name": {
+        "ar": "كيك العسل",
+        "en": "Honey Cake"
+      },
+      "h1": {
+        "ar": "كيك العسل للتوريد بالجملة",
+        "en": "Honey Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-honey-cake-molded-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 120,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 430,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك العسل من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 120 غ للوحدة (430 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Honey Cake from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 120 g per unit (430 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-molded-cake-chocolate-tart",
+        "prd-strawberry-lovers",
+        "prd-brownies-salted-caramel",
+        "prd-pistachio-lovers"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك العسل | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Honey Cake | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-molded-cake-chocolate-tart",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "chocolate-tart-molded-cake",
+        "en": "chocolate-tart-molded-cake"
+      },
+      "name": {
+        "ar": "تارت الشوكولاتة",
+        "en": "Chocolate Tart"
+      },
+      "h1": {
+        "ar": "تارت الشوكولاتة للتوريد بالجملة",
+        "en": "Chocolate Tart for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-chocolate-tart-molded-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 110,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 470,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "تارت الشوكولاتة من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 110 غ للوحدة (470 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Chocolate Tart from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 110 g per unit (470 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-strawberry-lovers",
+        "prd-brownies-salted-caramel",
+        "prd-pistachio-lovers",
+        "prd-raspberry-cheesecake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "تارت الشوكولاتة | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Chocolate Tart | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-strawberry-lovers",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "strawberry-lovers",
+        "en": "strawberry-lovers"
+      },
+      "name": {
+        "ar": "عشاق الفراولة",
+        "en": "Strawberry Lovers"
+      },
+      "h1": {
+        "ar": "عشاق الفراولة للتوريد بالجملة",
+        "en": "Strawberry Lovers for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-strawberry-lovers",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 160,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 480,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "عشاق الفراولة من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 160 غ للوحدة (480 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Strawberry Lovers from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 160 g per unit (480 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-brownies-salted-caramel",
+        "prd-pistachio-lovers",
+        "prd-raspberry-cheesecake",
+        "prd-hazelnut-lovers"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "عشاق الفراولة | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Strawberry Lovers | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-brownies-salted-caramel",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "brownies-salted-caramel",
+        "en": "brownies-salted-caramel"
+      },
+      "name": {
+        "ar": "براونيز بالكراميل المملح",
+        "en": "Brownies Salted Caramel"
+      },
+      "h1": {
+        "ar": "براونيز بالكراميل المملح للتوريد بالجملة",
+        "en": "Brownies Salted Caramel for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-brownies-salted-caramel",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 220,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 980,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "براونيز بالكراميل المملح من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 220 غ للوحدة (980 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Brownies Salted Caramel from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 220 g per unit (980 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pistachio-lovers",
+        "prd-raspberry-cheesecake",
+        "prd-hazelnut-lovers",
+        "prd-black-forest"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "براونيز بالكراميل المملح | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Brownies Salted Caramel | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pistachio-lovers",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pistachio-lovers",
+        "en": "pistachio-lovers"
+      },
+      "name": {
+        "ar": "عشاق الفستق الحلبي",
+        "en": "Pistachio Lovers"
+      },
+      "h1": {
+        "ar": "عشاق الفستق الحلبي للتوريد بالجملة",
+        "en": "Pistachio Lovers for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pistachio-lovers",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 140,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 560,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "عشاق الفستق الحلبي من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 140 غ للوحدة (560 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Pistachio Lovers from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 140 g per unit (560 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-raspberry-cheesecake",
+        "prd-hazelnut-lovers",
+        "prd-black-forest",
+        "prd-mango-lovers"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "عشاق الفستق الحلبي | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Pistachio Lovers | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-raspberry-cheesecake",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "raspberry-cheesecake",
+        "en": "raspberry-cheesecake"
+      },
+      "name": {
+        "ar": "تشيز كيك بالتوت العليق",
+        "en": "Raspberry Cheesecake"
+      },
+      "h1": {
+        "ar": "تشيز كيك بالتوت العليق للتوريد بالجملة",
+        "en": "Raspberry Cheesecake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-raspberry-cheesecake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 190,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 540,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "تشيز كيك بالتوت العليق من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 190 غ للوحدة (540 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Raspberry Cheesecake from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 190 g per unit (540 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-hazelnut-lovers",
+        "prd-black-forest",
+        "prd-mango-lovers",
+        "prd-dulcey-pecan"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "تشيز كيك بالتوت العليق | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Raspberry Cheesecake | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-hazelnut-lovers",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "hazelnut-lovers",
+        "en": "hazelnut-lovers"
+      },
+      "name": {
+        "ar": "عشاق البندق",
+        "en": "Hazelnut Lovers"
+      },
+      "h1": {
+        "ar": "عشاق البندق للتوريد بالجملة",
+        "en": "Hazelnut Lovers for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-hazelnut-lovers",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 130,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 510,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "عشاق البندق من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 130 غ للوحدة (510 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Hazelnut Lovers from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 130 g per unit (510 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-black-forest",
+        "prd-mango-lovers",
+        "prd-dulcey-pecan",
+        "prd-tiramisu"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "عشاق البندق | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Hazelnut Lovers | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-black-forest",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "black-forest",
+        "en": "black-forest"
+      },
+      "name": {
+        "ar": "بلاك فورست",
+        "en": "Black Forest"
+      },
+      "h1": {
+        "ar": "بلاك فورست للتوريد بالجملة",
+        "en": "Black Forest for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-black-forest",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 180,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 460,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "بلاك فورست من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 180 غ للوحدة (460 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Black Forest from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 180 g per unit (460 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-mango-lovers",
+        "prd-dulcey-pecan",
+        "prd-tiramisu",
+        "prd-chocolate-mandarine-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "بلاك فورست | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Black Forest | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-mango-lovers",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "mango-lovers",
+        "en": "mango-lovers"
+      },
+      "name": {
+        "ar": "عشاق المانجو",
+        "en": "Mango Lovers"
+      },
+      "h1": {
+        "ar": "عشاق المانجو للتوريد بالجملة",
+        "en": "Mango Lovers for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-mango-lovers",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 180,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 450,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "عشاق المانجو من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 180 غ للوحدة (450 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Mango Lovers from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 180 g per unit (450 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-dulcey-pecan",
+        "prd-tiramisu",
+        "prd-chocolate-mandarine-cake",
+        "prd-molded-cake-honey-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "عشاق المانجو | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Mango Lovers | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-dulcey-pecan",
+      "category": "molded-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "dulcey-pecan",
+        "en": "dulcey-pecan"
+      },
+      "name": {
+        "ar": "دولسي بالبقان",
+        "en": "Dulcey Pecan"
+      },
+      "h1": {
+        "ar": "دولسي بالبقان للتوريد بالجملة",
+        "en": "Dulcey Pecan for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-dulcey-pecan",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 250,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 950,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "دولسي بالبقان من فئة كيك القوالب، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 250 غ للوحدة (950 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Dulcey Pecan from the Molded Cakes range, produced in Plum Catering's central kitchen in Riyadh: 250 g per unit (950 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-tiramisu",
+        "prd-chocolate-mandarine-cake",
+        "prd-molded-cake-honey-cake",
+        "prd-molded-cake-chocolate-tart"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "دولسي بالبقان | كيك القوالب بالجملة | بلام للتموين",
+          "en": "Dulcey Pecan | Wholesale Molded Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-whole-cake-honey-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "honey-cake-whole-cake",
+        "en": "honey-cake-whole-cake"
+      },
+      "name": {
+        "ar": "كيك العسل",
+        "en": "Honey Cake"
+      },
+      "h1": {
+        "ar": "كيك العسل للتوريد بالجملة",
+        "en": "Honey Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-honey-cake-whole-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1700,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 5200,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك العسل من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,700 غ للوحدة (5,200 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Honey Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,700 g per unit (5,200 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-chocolate-cake",
+        "prd-dulce-vanilla-pecan-cake",
+        "prd-pistachio-raspberry",
+        "prd-millefeuille-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك العسل | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Honey Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-chocolate-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "chocolate-cake",
+        "en": "chocolate-cake"
+      },
+      "name": {
+        "ar": "كيك الشوكولاتة",
+        "en": "Chocolate Cake"
+      },
+      "h1": {
+        "ar": "كيك الشوكولاتة للتوريد بالجملة",
+        "en": "Chocolate Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-chocolate-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1800,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 7200,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك الشوكولاتة من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,800 غ للوحدة (7,200 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Chocolate Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,800 g per unit (7,200 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-dulce-vanilla-pecan-cake",
+        "prd-pistachio-raspberry",
+        "prd-millefeuille-cake",
+        "prd-tiramisu-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك الشوكولاتة | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Chocolate Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-dulce-vanilla-pecan-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "dulce-vanilla-pecan-cake",
+        "en": "dulce-vanilla-pecan-cake"
+      },
+      "name": {
+        "ar": "كيك دولسي بالفانيليا والبقان",
+        "en": "Dulce Vanilla Pecan Cake"
+      },
+      "h1": {
+        "ar": "كيك دولسي بالفانيليا والبقان للتوريد بالجملة",
+        "en": "Dulce Vanilla Pecan Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-dulce-vanilla-pecan-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 2170,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 8600,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك دولسي بالفانيليا والبقان من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 2,170 غ للوحدة (8,600 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Dulce Vanilla Pecan Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 2,170 g per unit (8,600 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-pistachio-raspberry",
+        "prd-millefeuille-cake",
+        "prd-tiramisu-cake",
+        "prd-black-forest-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك دولسي بالفانيليا والبقان | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Dulce Vanilla Pecan Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-pistachio-raspberry",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "pistachio-raspberry",
+        "en": "pistachio-raspberry"
+      },
+      "name": {
+        "ar": "كيك الفستق الحلبي والتوت العليق",
+        "en": "Pistachio Raspberry"
+      },
+      "h1": {
+        "ar": "كيك الفستق الحلبي والتوت العليق للتوريد بالجملة",
+        "en": "Pistachio Raspberry for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-pistachio-raspberry",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1990,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 7900,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك الفستق الحلبي والتوت العليق من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,990 غ للوحدة (7,900 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Pistachio Raspberry from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,990 g per unit (7,900 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-millefeuille-cake",
+        "prd-tiramisu-cake",
+        "prd-black-forest-cake",
+        "prd-red-fruits-cheesecake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك الفستق الحلبي والتوت العليق | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Pistachio Raspberry | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-millefeuille-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "millefeuille-cake",
+        "en": "millefeuille-cake"
+      },
+      "name": {
+        "ar": "كيك الميل فوي",
+        "en": "Millefeuille Cake"
+      },
+      "h1": {
+        "ar": "كيك الميل فوي للتوريد بالجملة",
+        "en": "Millefeuille Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-millefeuille-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1200,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 4800,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك الميل فوي من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,200 غ للوحدة (4,800 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Millefeuille Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,200 g per unit (4,800 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-tiramisu-cake",
+        "prd-black-forest-cake",
+        "prd-red-fruits-cheesecake",
+        "prd-chocolate-hazelnut"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك الميل فوي | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Millefeuille Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-tiramisu-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "tiramisu-cake",
+        "en": "tiramisu-cake"
+      },
+      "name": {
+        "ar": "كيك التيراميسو",
+        "en": "Tiramisu Cake"
+      },
+      "h1": {
+        "ar": "كيك التيراميسو للتوريد بالجملة",
+        "en": "Tiramisu Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-tiramisu-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1770,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 5600,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك التيراميسو من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,770 غ للوحدة (5,600 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Tiramisu Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,770 g per unit (5,600 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-black-forest-cake",
+        "prd-red-fruits-cheesecake",
+        "prd-chocolate-hazelnut",
+        "prd-whole-cake-chocolate-tart"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك التيراميسو | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Tiramisu Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-black-forest-cake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "black-forest-cake",
+        "en": "black-forest-cake"
+      },
+      "name": {
+        "ar": "كيك البلاك فورست",
+        "en": "Black Forest Cake"
+      },
+      "h1": {
+        "ar": "كيك البلاك فورست للتوريد بالجملة",
+        "en": "Black Forest Cake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-black-forest-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1450,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 4200,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك البلاك فورست من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,450 غ للوحدة (4,200 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Black Forest Cake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,450 g per unit (4,200 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-red-fruits-cheesecake",
+        "prd-chocolate-hazelnut",
+        "prd-whole-cake-chocolate-tart",
+        "prd-whole-cake-honey-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك البلاك فورست | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Black Forest Cake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-red-fruits-cheesecake",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "red-fruits-cheesecake",
+        "en": "red-fruits-cheesecake"
+      },
+      "name": {
+        "ar": "تشيز كيك بالفواكه الحمراء",
+        "en": "Red Fruits Cheesecake"
+      },
+      "h1": {
+        "ar": "تشيز كيك بالفواكه الحمراء للتوريد بالجملة",
+        "en": "Red Fruits Cheesecake for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-red-fruits-cheesecake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1850,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 6100,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "تشيز كيك بالفواكه الحمراء من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,850 غ للوحدة (6,100 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Red Fruits Cheesecake from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,850 g per unit (6,100 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-chocolate-hazelnut",
+        "prd-whole-cake-chocolate-tart",
+        "prd-whole-cake-honey-cake",
+        "prd-chocolate-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "تشيز كيك بالفواكه الحمراء | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Red Fruits Cheesecake | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-chocolate-hazelnut",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "chocolate-hazelnut",
+        "en": "chocolate-hazelnut"
+      },
+      "name": {
+        "ar": "كيك الشوكولاتة والبندق",
+        "en": "Chocolate Hazelnut"
+      },
+      "h1": {
+        "ar": "كيك الشوكولاتة والبندق للتوريد بالجملة",
+        "en": "Chocolate Hazelnut for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-chocolate-hazelnut",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1500,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 6900,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "كيك الشوكولاتة والبندق من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,500 غ للوحدة (6,900 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Chocolate Hazelnut from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,500 g per unit (6,900 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-whole-cake-chocolate-tart",
+        "prd-whole-cake-honey-cake",
+        "prd-chocolate-cake",
+        "prd-dulce-vanilla-pecan-cake"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "كيك الشوكولاتة والبندق | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Chocolate Hazelnut | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-whole-cake-chocolate-tart",
+      "category": "whole-cakes",
+      "status": "provisional",
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "slug": {
+        "ar": "chocolate-tart-whole-cake",
+        "en": "chocolate-tart-whole-cake"
+      },
+      "name": {
+        "ar": "تارت الشوكولاتة",
+        "en": "Chocolate Tart"
+      },
+      "h1": {
+        "ar": "تارت الشوكولاتة للتوريد بالجملة",
+        "en": "Chocolate Tart for Wholesale Supply"
+      },
+      "productCode": null,
+      "heroImage": "product-chocolate-tart-whole-cake",
+      "galleryImages": [],
+      "variants": [
+        {
+          "id": "v1",
+          "weight": {
+            "value": 1300,
+            "unit": "g"
+          },
+          "energy": {
+            "value": 5800,
+            "unit": "kcal",
+            "basis": null
+          }
+        }
+      ],
+      "shortDescription": {
+        "ar": "تارت الشوكولاتة من فئة الكيك الكامل، يُنتج في مطبخ بلام للتموين المركزي بالرياض: 1,300 غ للوحدة (5,800 سعرة حرارية). متاح طازجًا (3 أيام) للتوريد بالجملة.",
+        "en": "Chocolate Tart from the Whole Cakes range, produced in Plum Catering's central kitchen in Riyadh: 1,300 g per unit (5,800 kcal). Available fresh (3 days) for wholesale supply."
+      },
+      "longDescription": {
+        "ar": null,
+        "en": null
+      },
+      "ingredients": {
+        "ar": null,
+        "en": null
+      },
+      "allergens": {
+        "ar": null,
+        "en": null
+      },
+      "packaging": {
+        "ar": null,
+        "en": null
+      },
+      "storage": {
+        "ar": null,
+        "en": null
+      },
+      "foodserviceUse": {
+        "ar": null,
+        "en": null
+      },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [
+        "prd-whole-cake-honey-cake",
+        "prd-chocolate-cake",
+        "prd-dulce-vanilla-pecan-cake",
+        "prd-pistachio-raspberry"
+      ],
+      "pdfAttachment": null,
+      "seo": {
+        "title": {
+          "ar": "تارت الشوكولاتة | الكيك الكامل بالجملة | بلام للتموين",
+          "en": "Chocolate Tart | Wholesale Whole Cakes | Plum Catering"
+        },
+        "description": {
+          "ar": null,
+          "en": null
+        }
+      },
       "indexabilityOverride": null
     }
   ]

@@ -61,7 +61,8 @@
     },
     "productCount": {
       "value": 76,
-      "status": "provisional"
+      "status": "verified",
+      "source": "Plum B2B Catalogue 2026"
     },
     "city": {
       "value": {
@@ -72,15 +73,16 @@
     }
   },
   "contact": {
-    "phone": null,
-    "email": null,
+    "phone": "+966 53 532 4747",
+    "email": "info@plumcatering.com.sa",
     "whatsappNumber": null,
     "address": {
       "ar": null,
       "en": null
     },
     "openingHours": null,
-    "social": []
+    "social": [],
+    "_source": "Plum B2B Catalogue 2026 (client PDF) — contact page. WhatsApp enablement of this number NOT confirmed; whatsappNumber stays null until the client confirms."
   },
   "integrations": {
     "quoteEndpoint": null,
@@ -102,10 +104,11 @@
   },
   "catalogue": {
     "pdf": {
-      "ar": null,
-      "en": null,
-      "version": null,
-      "date": null
+      "ar": "/assets/pdf/Plum_B2B-Catalogue-2026.pdf",
+      "en": "/assets/pdf/Plum_B2B-Catalogue-2026.pdf",
+      "version": "2026",
+      "date": "2026",
+      "_comment": "Single bilingual file supplied by the client; same PDF served for both languages."
     }
   },
   "facilityManagement": {

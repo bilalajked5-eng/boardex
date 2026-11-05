@@ -14,7 +14,7 @@ npm run qa:browser    # Playwright QA — run with `npm run preview` active; add
 ```
 No npm dependencies. Node ≥ 18. The browser QA uses an installed Playwright/Chromium (`NODE_PATH=$(npm root -g)` if it is global).
 
-Entry points to inspect: `dist/ar/index.html`, `dist/en/index.html`, `dist/en/services/b2b/index.html`, `dist/ar/products/brown-sourdough-bread/index.html`. `dist/index.html` is a tiny Arabic-first language gateway (noindex); in production `/` must 301 to `/ar/` at the server (see `docs/deployment-and-redirects.md`).
+Entry points to inspect: `dist/ar/index.html`, `dist/en/index.html`, `dist/en/services/b2b/index.html`, `dist/ar/products/brown-sourdough-bread/index.html`, `dist/en/products/plain-croissant/index.html`. `dist/index.html` is a tiny Arabic-first language gateway (noindex); in production `/` must 301 to `/ar/` at the server (see `docs/deployment-and-redirects.md`).
 
 ## What is where
 ```
@@ -34,7 +34,7 @@ docs/              inventory, gaps, SEO matrix, redirects, API contract, trackin
 |---|---|
 | Route plan, headings, page structure, Arabic & English UI/marketing copy written for this site | All photography and video (SVG placeholders) |
 | Brand tokens from the guidelines | Client logo slots |
-| Provisional facts quoted by the Blueprint (flagged "To confirm") | 3 product records (1 provisional, 2 draft) standing in for 76 |
+| Provisional facts quoted by the Blueprint (flagged "To confirm") | — |
 | Interim logo from the brand board | Privacy policy bracketed placeholders |
 
 Every field that is still `null` in `src/data/site-config.json` is a pending client input; see `docs/content-gaps.md`.
@@ -42,5 +42,5 @@ Every field that is still `null` in `src/data/site-config.json` is a pending cli
 ## Switching Facility Management live (prototype)
 Set `facilityManagement.launchMode` to `"live"` in `site-config.json` and rebuild: the page becomes indexable, enters the sitemap, renders the phase-2 template and adds "Facility management" to the quote form. Keep it `coming_soon` until approved content exists. Preview the live template today at `/__preview/facility-live/ar/`.
 
-## Adding products
-Append records to `src/data/products.json` following the existing shape (same `id` for both languages, unique slugs per language, `status: approved` only with verified data). The build validates ids, slug collisions, categories and related links, and refuses approved products without descriptions.
+## Adding / approving products
+All 76 catalogue products are in `src/data/products.json` (imported by `src/build/import-catalogue.py`). To publish one, set its `status` to `"approved"` and supply both `longDescription` texts; the build then indexes it and adds it to `sitemap-products.xml`. Append new records following the existing shape (same `id` for both languages, unique slugs per language, `status: approved` only with verified data). The build validates ids, slug collisions, categories and related links, and refuses approved products without descriptions.

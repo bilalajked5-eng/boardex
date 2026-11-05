@@ -12,14 +12,14 @@ Inspected on 5 November 2026 before any code was written.
 | `Plum_Catering_Brand_Guidelines_Claude_Ready.docx` | ❌ not supplied | The .md version was used |
 | `Plum_Catering_Brand_Tokens.css` | ❌ not supplied | Tokens transcribed exactly from the Brand Guidelines tables into `src/styles/tokens.css` |
 | `Plum_Catering_Logo.png` / SVG | ❌ not supplied | **Interim** logo cropped from the brand board, background removed, no redrawing (`src/assets/logo/plum-logo-interim-from-brandboard.png`, 281×145) |
-| Product catalogue PDF / spreadsheet | ❌ | — |
+| `Plum_B2B-Catalogue-2026.pdf` (26 pp, bilingual) | ✅ supplied later the same day | All 76 products (names, weights, kcal, variants, shelf lives), 76 product photos, contact phone/email; served as the real catalogue download |
 | Photos (target 117), hero video, kitchen film | ❌ | Labelled SVG placeholders generated at build time |
 | Client logos, testimonials | ❌ | Labelled pending state |
 | Copy, legal text, redirects list, contact details, IDs | ❌ | Placeholders + `docs/content-gaps.md` |
 
 ## Live website
 
-`https://plumcatering.com.sa` could not be reached: this session's network policy blocks the host. No product names, counts or copy were taken from the live site. Every "current website" fact comes only from what the Blueprint quotes. To import the real catalogue, allow the host in the environment's network settings or supply an export.
+`https://plumcatering.com.sa` could not be reached: this session's network policy blocks the host. No copy was taken from the live site. Product data was imported from the client's catalogue PDF instead (see above); it matches the Blueprint's 76-product / 7-family counts exactly.
 
 ## Requirements extracted (summary)
 

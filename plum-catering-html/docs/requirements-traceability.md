@@ -13,24 +13,24 @@ Status legend: **implemented** · **prototype-only** (works in HTML, must be re-
 | 7 | robots.txt with staging guidance | `dist/robots.txt` | implemented |
 | 8 | JSON-LD: Organization, WebSite, WebPage/AboutPage/CollectionPage, Service, BreadcrumbList, Product, ItemList | `schema.mjs` | implemented (LocalBusiness and VideoObject wait for verified address/video) |
 | 9 | No fabricated offers/price/reviews/ratings | `schema.mjs`, enforced by `qa.mjs` | implemented |
-| 10 | 76 products × 2 languages, individual crawlable pages | `products.json`, `pages.mjs → product`, `build.mjs` | generator implemented; **pending real assets** (3/76 records loaded, 0 approved) |
+| 10 | 76 products × 2 languages, individual crawlable pages | `products.json`, `pages.mjs → product`, `build.mjs` | implemented — **76/76 records, 152 pages generated**, all provisional/noindex until client approves catalogue data |
 | 11 | Stable product IDs, collision-safe slugs, structured variants, bilingual pairs | `products.json` schema + build validation | implemented |
 | 12 | Thin/draft products noindex and out of sitemap | `isIndexableProduct` | implemented |
 | 13 | B2B grid with 7 families, native links, search + filter as enhancement | `pages.mjs → b2b`, `product-filters.js` | implemented |
-| 14 | Family counts (21/6/10/12/5/12/10) | `products.json → categories.expectedCount` | provisional, **requires client approval** |
-| 15 | Category-specific shelf life (fresh/frozen) | `categories[].shelfLife` → B2B table + product specs | Bread provisional; other 6 **pending real assets** |
-| 16 | Catalogue PDF download (real file only) | `site-config → catalogue.pdf` | **pending real assets** (disabled state shown) |
+| 14 | Family counts (21/6/10/12/5/12/10) | `products.json → categories` | implemented — verified against the catalogue PDF |
+| 15 | Category-specific shelf life (fresh/frozen) | `categories[].shelfLife` → B2B table + product specs | implemented from catalogue (provisional until confirmed) |
+| 16 | Catalogue PDF download (real file only) | `site-config → catalogue.pdf` | implemented — real bilingual PDF served |
 | 17 | Product page: breadcrumb, gallery, overview, specs, ingredients/allergens, storage, applications, related, questions, pricing CTA | `pages.mjs → product` | implemented; sections hide/flag when data missing |
 | 18 | Facility Management Coming Soon: public, noindex, no false claim, links to live services | `pages.mjs → facility` | implemented |
 | 19 | FM phase-2 full template behind `launch_mode` flag | `site-config → facilityManagement.launchMode`, `preview/facility-live/*` | implemented (**requires client approval** to switch) |
 | 20 | Privacy policy structure (11 H2s), TOC, cookie settings link | `pages.mjs → privacy` | implemented as review draft; **requires client approval** (noindex until `legal.privacyApproved`) |
 | 21 | Sticky responsive header, drawer, language switcher preserving page/product | `layout.mjs`, `navigation.js` | implemented |
-| 22 | Footer with services, company, contact, legal, cookie prefs | `layout.mjs → footer()` | implemented (contact **pending real assets**) |
+| 22 | Footer with services, company, contact, legal, cookie prefs | `layout.mjs → footer()` | implemented (phone + email from catalogue; address pending) |
 | 23 | Accessible quote modal: focus trap, Esc, restore, validation, conditional fields, privacy + marketing consent | `layout.mjs → quoteModal()`, `quote-modal.js` | implemented |
 | 24 | Quote prefill by service / product | `data-quote-open` attributes | implemented |
 | 25 | Quote → Microsoft 365 email | `docs/quote-api-contract.md` | **requires backend** |
 | 26 | Honest success: only on server confirmation; lead event only then | `quote-modal.js`, `tracking-adapter.js`; tested in `browser-qa.mjs` | implemented |
-| 27 | WhatsApp click-to-chat with approved number, contextual prefill, click tracking | `layout.mjs → whatsappControl()` | implemented; **pending real assets** (number) |
+| 27 | WhatsApp click-to-chat with approved number, contextual prefill, click tracking | `layout.mjs → whatsappControl()` | implemented; number **requires client approval** (catalogue phone not confirmed as WhatsApp) |
 | 28 | Bilingual cookie consent (Accept/Reject/Customise/Change) | `cookie-consent.js`, `layout.mjs → cookieUI()` | implemented (**requires client approval** of legal wording) |
 | 29 | GTM Consent Mode v2 (4 signals, default denied) | inline head script, `cookie-consent.js` | implemented |
 | 30 | GTM + Google Ads conversion on confirmed lead | `tracking-adapter.js`, `docs/tracking-consent-setup.md` | implemented adapter; **pending real assets** (IDs) |

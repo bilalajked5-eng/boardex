@@ -1,13 +1,13 @@
 {
-  "builtAt": "2026-11-05T11:45:52.518Z",
+  "builtAt": "2026-11-05T11:59:37.393Z",
   "mode": "review",
   "corePages": 14,
-  "productRecords": 3,
+  "productRecords": 76,
   "productRecordsApproved": 0,
   "expectedProducts": 76,
-  "productPages": 6,
+  "productPages": 152,
   "indexableUrls": 10,
-  "noindexUrls": 10,
+  "noindexUrls": 156,
   "sitemapUrls": 10,
   "galleryPhotosSupplied": 0,
   "galleryTarget": 117

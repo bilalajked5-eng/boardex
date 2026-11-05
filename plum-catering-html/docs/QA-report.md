@@ -4,12 +4,12 @@
 | Metric | Value |
 |---|---|
 | Core pages | **14** (7 × AR/EN), all distinct content and metadata |
-| Product records / expected | **3 / 76** (0 approved, 1 provisional, 2 draft) |
-| Product pages generated | **6** (3 × AR/EN), all **noindex** because no record is approved |
-| HTML files | 24 (14 core + 6 products + 3 × 404 + root gateway) |
+| Product records / expected | **76 / 76** imported from the client catalogue PDF (all provisional, 0 approved) |
+| Product pages generated | **152** (76 × AR/EN), all **noindex** until the client approves catalogue data |
+| HTML files | 170 (14 core + 152 products + 3 × 404 + root gateway) |
 | Indexable URLs / in sitemap | **10** (Home, About, Corporates, Celebrations, B2B × 2) |
-| Noindex | 14 (FM Coming Soon ×2, Privacy draft ×2, products ×6, 404 ×3, root gateway) |
-| Gallery photos supplied / target | **0 / 117** |
+| Noindex | 160 (FM Coming Soon ×2, Privacy draft ×2, products ×152, 404 ×3, root gateway) |
+| Gallery photos supplied / target | **0 / 117** (76 product photos supplied separately via the catalogue) |
 
 ## Static checks — `npm run qa` (pass, 0 failures)
 Per page: correct `lang`/`dir`, exactly one `<h1>`, title + description present and unique, self-canonical only when indexable, reciprocal `ar-SA`/`en-SA` hreflang to an indexable partner, noindex pages excluded from the sitemap, no `#`/empty/`javascript:` links, every internal link and anchor resolves, every `<img>` has `alt`, JSON-LD parses and contains no `offers`/`price`/`review`/`aggregateRating`/`availability`, no lorem ipsum, no phone/WhatsApp links without an approved number. Site-wide: all 14 core URLs exist, catalogue links every product in the same language, draft products are noindex, FM is noindex while Coming Soon, sitemap URLs exist. Also run against the `--clean` build (0 failures). Results: `docs/qa-static-results.json`.
@@ -26,6 +26,9 @@ Reviewed full-page screenshots of EN/AR Home, B2B, product, Corporates, FM Comin
 - Screen-reader walkthrough (NVDA/VoiceOver) not performed; ARIA patterns follow APG (dialog, accordion, switch) and were verified structurally.
 - Firefox/Safari not tested; native `<dialog>` is used (supported in all evergreen browsers).
 - Live website unreachable from this session, so content parity with the current site is unverified.
+
+## Catalogue import (second pass)
+All 76 products were imported from `Plum_B2B-Catalogue-2026.pdf` with their photos (soft-masked, padded to 800×800 WebP, 2 MB total); mapping of the 76 photos to product names was verified visually against the PDF pages. Static and browser QA re-run after the import: 0 failures / 95 of 95.
 
 ## Open defects
 None known. Everything outstanding is a content/asset/integration gap, listed in `content-gaps.md`.

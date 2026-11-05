@@ -18,7 +18,7 @@ Everything below is either missing or provisional. In a **review build** (`npm r
 | Hero video (MP4/WebM, muted, about 10–20 s) + poster | 1 | 0. Placeholder poster is shown and no video is loaded |
 | Kitchen film + captions (AR/EN `.vtt`) + poster | 1 | 0 |
 | Service section photography (Corporates ×7, Celebrations ×6, service cards ×4, About, Team, Kitchen) | about 25 | 0 |
-| Product photography (one original per product, plus optional extra images) | **76+** | 0 |
+| Product photography | 76 | **76 supplied** via the catalogue PDF (≈570 px extracted, soft-masked). Higher-resolution originals are recommended for the product hero |
 | Client logos with written approval for each | ? | 0 |
 
 ## 3. Company facts (all provisional, from Blueprint §1)
@@ -36,25 +36,24 @@ Everything below is either missing or provisional. In a **review build** (`npm r
 ## 4. Contact & integrations
 | Item | Config key | Status |
 |---|---|---|
-| Phone | `contact.phone` | null |
-| Email | `contact.email` | null |
-| WhatsApp number (official) | `contact.whatsappNumber` | null. WhatsApp controls show a non-clickable "pending" marker |
+| Phone | `contact.phone` | **+966 53 532 4747** (from the catalogue's contact page) |
+| Email | `contact.email` | **info@plumcatering.com.sa** (from the catalogue) |
+| WhatsApp number (official) | `contact.whatsappNumber` | null. The catalogue phone is the obvious candidate, but WhatsApp enablement is not confirmed, so controls show a "pending" marker |
 | Address (AR/EN) and opening hours | `contact.address`, `contact.openingHours` | null. LocalBusiness schema is omitted until supplied |
 | Social profiles | `contact.social` | [] |
 | Quote endpoint | `integrations.quoteEndpoint` | null. The form shows "integration pending" and sends nothing |
 | GTM container ID | `integrations.gtmContainerId` | null. GTM is never loaded |
 | Google Ads conversion ID/label | `integrations.googleAdsConversion` | null |
 | Search Console verification token | `integrations.searchConsoleVerification` | null (DNS verification is preferred) |
-| Catalogue PDF (AR/EN), version and date | `catalogue.pdf` | null. The download button is shown disabled with an explanation |
+| Catalogue PDF (AR/EN), version and date | `catalogue.pdf` | **Supplied**: one bilingual file, `Plum_B2B-Catalogue-2026.pdf` (3.7 MB), served for both languages |
 
 ## 5. Products
-- **Expected:** 76 products in 7 families (Bread 21, Croissants 6, Danish & Focaccia 10, Éclairs 12, Miracle Cakes 5, Molded Cakes 12, Whole Cakes 10). These counts are provisional and taken from the Blueprint.
-- **Loaded:** 3 records, 0 approved:
-  - `prd-bread-brown-sourdough`: *provisional*. Weight 750 g and 1,850 kcal come from the Blueprint, and the kcal basis (per loaf?) is unknown. Bread shelf life is fresh 2 days / baked-frozen 3 months.
-  - `prd-molded-honey-cake` and `prd-whole-honey-cake`: *draft*, names only. They show how two products with the same name in different families get separate slugs.
-- **Needed per product (AR + EN):** name, family, product code, photos, 60–120-word intro, 100–180-word distinct overview, variants (weight / energy **with basis**), packaging, storage/thawing, fresh vs frozen shelf life, foodservice uses, related products, and any verified ingredients and allergens (**never estimated**).
-- Shelf life for the six families other than Bread.
-- Approval of the Arabic family names (الكرواسون، الدنش والفوكاشيا، الإكلير، كيك ميراكل، كيك القوالب، الكيك الكامل), which are our translations.
+- **Imported: 76 / 76** from the client's *Plum B2B Catalogue 2026* PDF — Bread 21, Croissants 6, Danish & Focaccia 10, Éclairs 12, Miracle Cakes 5, Molded Cakes 12, Whole Cakes 10. Names (AR/EN), weights, energy, size variants and family shelf lives are exactly as printed. Importer: `src/build/import-catalogue.py`.
+- **Status: all 76 are `provisional` → noindex** until the client confirms the catalogue data is current. Approval is a one-field change per record (`status: "approved"`) and needs the bilingual overview text below.
+- **Still needed per product (AR + EN):** 100–180-word distinct overview (`longDescription`), energy **basis** (per unit? per 100 g?) — catalogue prints kcal next to the unit weight, packaging, storage/thawing guidance, foodservice uses, product codes, and any verified ingredients and allergens (**never estimated**).
+- **Spelling check:** the catalogue prints "Fetta", "Peperoni", "Pain Suisse / Swisse / Swiss", "Mandarine". These were kept verbatim; confirm whether to standardise.
+- Arabic family names (الكرواسون، الدنش والفوكاشيا، الإكلير، كيك ميراكل، كيك القوالب، الكيك الكامل) are our translations — the catalogue uses selection headings (e.g. "تشكيلة الكيك") rather than family names.
+- Molded and Whole Cakes are listed **fresh only (3 days)**; Bread, Croissants, Danish, Éclairs and Miracle Cakes are fresh 2 days / baked-frozen 3 months.
 
 ## 6. Legal
 - The Privacy Policy is a **review draft** with bracketed placeholders (entity, address, legal bases under PDPL, cookie inventory, retention periods, transfers, rights, privacy contact). The page stays **noindex** until `legal.privacyApproved = true`.

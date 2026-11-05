@@ -128,7 +128,7 @@ async function mockedProductPage(response) {
   return p;
 }
 page = await mockedProductPage({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: true, reference: 'PLM-TEST-0001' }) });
-check('product quote attaches product', (await page.isVisible('[data-attached]')) && (await page.inputValue('input[name="product_id"]')) === 'prd-bread-brown-sourdough');
+check('product quote attaches product', (await page.isVisible('[data-attached]')) && (await page.inputValue('input[name="product_id"]')) === 'prd-brown-sourdough-bread');
 check('product quote preselects B2B and shows volume field', (await page.inputValue('#q-service')) === 'b2b' && (await page.isVisible('#q-volume')));
 await page.fill('#q-name', 'QA Tester'); await page.fill('#q-email', 'qa@example.com'); await page.fill('#q-phone', '+966500000000'); await page.check('#q-privacy');
 await page.click('#quote-form [data-submit]');

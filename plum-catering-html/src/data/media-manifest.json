@@ -571,6 +571,1982 @@
         "en": "Placeholder: product photograph pending",
         "ar": "صورة مؤقتة: صورة المنتج قيد الانتظار"
       }
+    },
+    {
+      "id": "product-brown-sourdough-bread",
+      "src": "/assets/images/products/brown-sourdough-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/brown-sourdough-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/brown-sourdough-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز ساوردو أسمر",
+        "en": "Brown Sourdough Bread"
+      },
+      "alt": {
+        "ar": "خبز ساوردو أسمر — صورة المنتج من كتالوج بلام 2026",
+        "en": "Brown Sourdough Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-white-sourdough-bread",
+      "src": "/assets/images/products/white-sourdough-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/white-sourdough-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/white-sourdough-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز ساوردو أبيض",
+        "en": "White Sourdough Bread"
+      },
+      "alt": {
+        "ar": "خبز ساوردو أبيض — صورة المنتج من كتالوج بلام 2026",
+        "en": "White Sourdough Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-sourdough-mixed-with-seeds",
+      "src": "/assets/images/products/sourdough-mixed-with-seeds.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/sourdough-mixed-with-seeds-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/sourdough-mixed-with-seeds.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز ساوردو بالبذور المشكلة",
+        "en": "Sourdough Mixed with Seeds"
+      },
+      "alt": {
+        "ar": "خبز ساوردو بالبذور المشكلة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Sourdough Mixed with Seeds — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-olive-sourdough-bread",
+      "src": "/assets/images/products/olive-sourdough-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/olive-sourdough-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/olive-sourdough-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز ساوردو بالزيتون",
+        "en": "Olive Sourdough Bread"
+      },
+      "alt": {
+        "ar": "خبز ساوردو بالزيتون — صورة المنتج من كتالوج بلام 2026",
+        "en": "Olive Sourdough Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-baguette-with-mixed-seeds",
+      "src": "/assets/images/products/baguette-with-mixed-seeds.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/baguette-with-mixed-seeds-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/baguette-with-mixed-seeds.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت بالبذور المشكلة",
+        "en": "Baguette with Mixed Seeds"
+      },
+      "alt": {
+        "ar": "باغيت بالبذور المشكلة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Baguette with Mixed Seeds — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-brown-baguette",
+      "src": "/assets/images/products/brown-baguette.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/brown-baguette-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/brown-baguette.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت أسمر",
+        "en": "Brown Baguette"
+      },
+      "alt": {
+        "ar": "باغيت أسمر — صورة المنتج من كتالوج بلام 2026",
+        "en": "Brown Baguette — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-white-sesame-baguette",
+      "src": "/assets/images/products/white-sesame-baguette.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/white-sesame-baguette-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/white-sesame-baguette.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت بالسمسم الأبيض",
+        "en": "White Sesame Baguette"
+      },
+      "alt": {
+        "ar": "باغيت بالسمسم الأبيض — صورة المنتج من كتالوج بلام 2026",
+        "en": "White Sesame Baguette — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-potato-bun",
+      "src": "/assets/images/products/potato-bun.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/potato-bun-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/potato-bun.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز البرغر بالبطاطس",
+        "en": "Potato Bun"
+      },
+      "alt": {
+        "ar": "خبز البرغر بالبطاطس — صورة المنتج من كتالوج بلام 2026",
+        "en": "Potato Bun — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-burger-bun",
+      "src": "/assets/images/products/burger-bun.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/burger-bun-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/burger-bun.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز برغر",
+        "en": "Burger Bun"
+      },
+      "alt": {
+        "ar": "خبز برغر — صورة المنتج من كتالوج بلام 2026",
+        "en": "Burger Bun — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-burger-bun",
+      "src": "/assets/images/products/mini-burger-bun.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-burger-bun-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-burger-bun.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز برغر صغير",
+        "en": "Mini Burger Bun"
+      },
+      "alt": {
+        "ar": "خبز برغر صغير — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Burger Bun — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-baguette",
+      "src": "/assets/images/products/mini-baguette.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-baguette-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-baguette.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت صغير",
+        "en": "Mini Baguette"
+      },
+      "alt": {
+        "ar": "باغيت صغير — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Baguette — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-sesame-baguette",
+      "src": "/assets/images/products/mini-sesame-baguette.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-sesame-baguette-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-sesame-baguette.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت صغير بالسمسم",
+        "en": "Mini Sesame Baguette"
+      },
+      "alt": {
+        "ar": "باغيت صغير بالسمسم — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Sesame Baguette — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-baguette-mixed-sesame-seeds",
+      "src": "/assets/images/products/mini-baguette-mixed-sesame-seeds.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-baguette-mixed-sesame-seeds-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-baguette-mixed-sesame-seeds.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت صغير بخليط السمسم",
+        "en": "Mini Baguette Mixed Sesame Seeds"
+      },
+      "alt": {
+        "ar": "باغيت صغير بخليط السمسم — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Baguette Mixed Sesame Seeds — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-brown-baguette",
+      "src": "/assets/images/products/mini-brown-baguette.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-brown-baguette-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-brown-baguette.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت أسمر صغير",
+        "en": "Mini Brown Baguette"
+      },
+      "alt": {
+        "ar": "باغيت أسمر صغير — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Brown Baguette — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-brown-baguette-mixed-seeds",
+      "src": "/assets/images/products/mini-brown-baguette-mixed-seeds.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-brown-baguette-mixed-seeds-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-brown-baguette-mixed-seeds.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت أسمر صغير متعدد البذور",
+        "en": "Mini Brown Baguette Mixed Seeds"
+      },
+      "alt": {
+        "ar": "باغيت أسمر صغير متعدد البذور — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Brown Baguette Mixed Seeds — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mini-baguette-mixed-seeds",
+      "src": "/assets/images/products/mini-baguette-mixed-seeds.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mini-baguette-mixed-seeds-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mini-baguette-mixed-seeds.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "باغيت صغير متعدد البذور",
+        "en": "Mini Baguette Mixed Seeds"
+      },
+      "alt": {
+        "ar": "باغيت صغير متعدد البذور — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mini Baguette Mixed Seeds — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-semolina-bread",
+      "src": "/assets/images/products/semolina-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/semolina-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/semolina-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز السميد",
+        "en": "Semolina Bread"
+      },
+      "alt": {
+        "ar": "خبز السميد — صورة المنتج من كتالوج بلام 2026",
+        "en": "Semolina Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-ciabatta-bread",
+      "src": "/assets/images/products/ciabatta-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/ciabatta-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/ciabatta-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز تشاباتا",
+        "en": "Ciabatta Bread"
+      },
+      "alt": {
+        "ar": "خبز تشاباتا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Ciabatta Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-rye-bread",
+      "src": "/assets/images/products/rye-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/rye-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/rye-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز الجاودار",
+        "en": "Rye Bread"
+      },
+      "alt": {
+        "ar": "خبز الجاودار — صورة المنتج من كتالوج بلام 2026",
+        "en": "Rye Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-brown-bread-roll-with-pecan",
+      "src": "/assets/images/products/brown-bread-roll-with-pecan.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/brown-bread-roll-with-pecan-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/brown-bread-roll-with-pecan.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "رول خبز أسمر بالبقان",
+        "en": "Brown Bread Roll with Pecan"
+      },
+      "alt": {
+        "ar": "رول خبز أسمر بالبقان — صورة المنتج من كتالوج بلام 2026",
+        "en": "Brown Bread Roll with Pecan — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-white-toast-bread",
+      "src": "/assets/images/products/white-toast-bread.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/white-toast-bread-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/white-toast-bread.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "خبز توست أبيض",
+        "en": "White Toast Bread"
+      },
+      "alt": {
+        "ar": "خبز توست أبيض — صورة المنتج من كتالوج بلام 2026",
+        "en": "White Toast Bread — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-plain-croissant",
+      "src": "/assets/images/products/plain-croissant.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/plain-croissant-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/plain-croissant.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كرواسون سادة",
+        "en": "Plain Croissant"
+      },
+      "alt": {
+        "ar": "كرواسون سادة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Plain Croissant — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-cheese-croissant",
+      "src": "/assets/images/products/cheese-croissant.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/cheese-croissant-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/cheese-croissant.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كرواسون بالجبنة",
+        "en": "Cheese Croissant"
+      },
+      "alt": {
+        "ar": "كرواسون بالجبنة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Cheese Croissant — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-zaatar-croissant",
+      "src": "/assets/images/products/zaatar-croissant.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/zaatar-croissant-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/zaatar-croissant.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كرواسون بالزعتر",
+        "en": "Zaatar Croissant"
+      },
+      "alt": {
+        "ar": "كرواسون بالزعتر — صورة المنتج من كتالوج بلام 2026",
+        "en": "Zaatar Croissant — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-almond-croissant",
+      "src": "/assets/images/products/almond-croissant.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/almond-croissant-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/almond-croissant.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كرواسون باللوز",
+        "en": "Almond Croissant"
+      },
+      "alt": {
+        "ar": "كرواسون باللوز — صورة المنتج من كتالوج بلام 2026",
+        "en": "Almond Croissant — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pecan-croissant",
+      "src": "/assets/images/products/pecan-croissant.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pecan-croissant-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pecan-croissant.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كرواسون بالبقان",
+        "en": "Pecan Croissant"
+      },
+      "alt": {
+        "ar": "كرواسون بالبقان — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pecan Croissant — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pain-au-chocolat",
+      "src": "/assets/images/products/pain-au-chocolat.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pain-au-chocolat-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pain-au-chocolat.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بان أو شوكولا",
+        "en": "Pain Au Chocolat"
+      },
+      "alt": {
+        "ar": "بان أو شوكولا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pain Au Chocolat — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-cherry-tomato-focaccia",
+      "src": "/assets/images/products/cherry-tomato-focaccia.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/cherry-tomato-focaccia-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/cherry-tomato-focaccia.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "فوكاتشيا بالطماطم الكرزية",
+        "en": "Cherry Tomato Focaccia"
+      },
+      "alt": {
+        "ar": "فوكاتشيا بالطماطم الكرزية — صورة المنتج من كتالوج بلام 2026",
+        "en": "Cherry Tomato Focaccia — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-fetta-cheese-focaccia",
+      "src": "/assets/images/products/fetta-cheese-focaccia.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/fetta-cheese-focaccia-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/fetta-cheese-focaccia.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "فوكاتشيا بجبنة الفيتا",
+        "en": "Fetta Cheese Focaccia"
+      },
+      "alt": {
+        "ar": "فوكاتشيا بجبنة الفيتا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Fetta Cheese Focaccia — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-sundried-tomato-focaccia",
+      "src": "/assets/images/products/sundried-tomato-focaccia.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/sundried-tomato-focaccia-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/sundried-tomato-focaccia.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "فوكاتشيا بالطماطم المجففة",
+        "en": "Sundried Tomato Focaccia"
+      },
+      "alt": {
+        "ar": "فوكاتشيا بالطماطم المجففة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Sundried Tomato Focaccia — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-fetta-cheese-danish",
+      "src": "/assets/images/products/fetta-cheese-danish.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/fetta-cheese-danish-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/fetta-cheese-danish.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "دانيش بجبنة الفيتا",
+        "en": "Fetta Cheese Danish"
+      },
+      "alt": {
+        "ar": "دانيش بجبنة الفيتا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Fetta Cheese Danish — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-peperoni-pizza-danish",
+      "src": "/assets/images/products/peperoni-pizza-danish.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/peperoni-pizza-danish-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/peperoni-pizza-danish.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "دانيش بيتزا بالبيبروني",
+        "en": "Peperoni Pizza Danish"
+      },
+      "alt": {
+        "ar": "دانيش بيتزا بالبيبروني — صورة المنتج من كتالوج بلام 2026",
+        "en": "Peperoni Pizza Danish — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-halloumi-pesto-danish",
+      "src": "/assets/images/products/halloumi-pesto-danish.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/halloumi-pesto-danish-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/halloumi-pesto-danish.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "دانيش بالحلوم والبيستو",
+        "en": "Halloumi Pesto Danish"
+      },
+      "alt": {
+        "ar": "دانيش بالحلوم والبيستو — صورة المنتج من كتالوج بلام 2026",
+        "en": "Halloumi Pesto Danish — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pain-suisse-cheese",
+      "src": "/assets/images/products/pain-suisse-cheese.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pain-suisse-cheese-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pain-suisse-cheese.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بان سويس بالجبنة",
+        "en": "Pain Suisse Cheese"
+      },
+      "alt": {
+        "ar": "بان سويس بالجبنة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pain Suisse Cheese — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pain-swisse-kunafa",
+      "src": "/assets/images/products/pain-swisse-kunafa.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pain-swisse-kunafa-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pain-swisse-kunafa.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بان سويس بالكنافة",
+        "en": "Pain Swisse Kunafa"
+      },
+      "alt": {
+        "ar": "بان سويس بالكنافة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pain Swisse Kunafa — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pain-swiss-chocolate",
+      "src": "/assets/images/products/pain-swiss-chocolate.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pain-swiss-chocolate-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pain-swiss-chocolate.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بان سويس بالشوكولاتة",
+        "en": "Pain Swiss Chocolate"
+      },
+      "alt": {
+        "ar": "بان سويس بالشوكولاتة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pain Swiss Chocolate — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pain-swisse-pistachio",
+      "src": "/assets/images/products/pain-swisse-pistachio.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pain-swisse-pistachio-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pain-swisse-pistachio.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بان سويس بالفستق الحلبي",
+        "en": "Pain Swisse Pistachio"
+      },
+      "alt": {
+        "ar": "بان سويس بالفستق الحلبي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pain Swisse Pistachio — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-vanilla-eclair",
+      "src": "/assets/images/products/vanilla-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/vanilla-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/vanilla-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالفانيليا",
+        "en": "Vanilla Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالفانيليا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Vanilla Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-cheese-cake-eclair",
+      "src": "/assets/images/products/cheese-cake-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/cheese-cake-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/cheese-cake-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالتشيز كيك",
+        "en": "Cheese Cake Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالتشيز كيك — صورة المنتج من كتالوج بلام 2026",
+        "en": "Cheese Cake Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-dark-chocolate-eclair",
+      "src": "/assets/images/products/dark-chocolate-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/dark-chocolate-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/dark-chocolate-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالشوكولاتة الداكنة",
+        "en": "Dark Chocolate Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالشوكولاتة الداكنة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Dark Chocolate Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-coffee-eclair",
+      "src": "/assets/images/products/coffee-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/coffee-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/coffee-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالقهوة",
+        "en": "Coffee Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالقهوة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Coffee Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-golden-hazelnut-eclair",
+      "src": "/assets/images/products/golden-hazelnut-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/golden-hazelnut-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/golden-hazelnut-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالبندق الذهبي",
+        "en": "Golden Hazelnut Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالبندق الذهبي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Golden Hazelnut Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-lemon-eclair",
+      "src": "/assets/images/products/lemon-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/lemon-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/lemon-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالليمون",
+        "en": "Lemon Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالليمون — صورة المنتج من كتالوج بلام 2026",
+        "en": "Lemon Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-milk-chocolate-eclair",
+      "src": "/assets/images/products/milk-chocolate-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/milk-chocolate-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/milk-chocolate-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالشوكولاتة بالحليب",
+        "en": "Milk Chocolate Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالشوكولاتة بالحليب — صورة المنتج من كتالوج بلام 2026",
+        "en": "Milk Chocolate Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-strawberry-eclair",
+      "src": "/assets/images/products/strawberry-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/strawberry-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/strawberry-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالفراولة",
+        "en": "Strawberry Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالفراولة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Strawberry Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-passion-fruit-eclair",
+      "src": "/assets/images/products/passion-fruit-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/passion-fruit-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/passion-fruit-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بفاكهة الباشن فروت",
+        "en": "Passion Fruit Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بفاكهة الباشن فروت — صورة المنتج من كتالوج بلام 2026",
+        "en": "Passion Fruit Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pistachio-eclair",
+      "src": "/assets/images/products/pistachio-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pistachio-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pistachio-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالفستق الحلبي",
+        "en": "Pistachio Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالفستق الحلبي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pistachio Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-raspberry-eclair",
+      "src": "/assets/images/products/raspberry-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/raspberry-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/raspberry-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالتوت العليق",
+        "en": "Raspberry Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالتوت العليق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Raspberry Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-salted-caramel-eclair",
+      "src": "/assets/images/products/salted-caramel-eclair.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/salted-caramel-eclair-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/salted-caramel-eclair.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "إكلير بالكراميل المملح",
+        "en": "Salted Caramel Éclair"
+      },
+      "alt": {
+        "ar": "إكلير بالكراميل المملح — صورة المنتج من كتالوج بلام 2026",
+        "en": "Salted Caramel Éclair — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-dulcey-pecan-coffee",
+      "src": "/assets/images/products/dulcey-pecan-coffee.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/dulcey-pecan-coffee-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/dulcey-pecan-coffee.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "دولسي بالبقان والقهوة",
+        "en": "Dulcey Pecan Coffee"
+      },
+      "alt": {
+        "ar": "دولسي بالبقان والقهوة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Dulcey Pecan Coffee — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-miracle-chocolate-hazelnut",
+      "src": "/assets/images/products/miracle-chocolate-hazelnut.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/miracle-chocolate-hazelnut-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/miracle-chocolate-hazelnut.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "ميراكل بالشوكولاتة والبندق",
+        "en": "Miracle Chocolate Hazelnut"
+      },
+      "alt": {
+        "ar": "ميراكل بالشوكولاتة والبندق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Miracle Chocolate Hazelnut — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-miracle-mango-passion-fruit",
+      "src": "/assets/images/products/miracle-mango-passion-fruit.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/miracle-mango-passion-fruit-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/miracle-mango-passion-fruit.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "ميراكل بالمانجو والباشن فروت",
+        "en": "Miracle Mango Passion Fruit"
+      },
+      "alt": {
+        "ar": "ميراكل بالمانجو والباشن فروت — صورة المنتج من كتالوج بلام 2026",
+        "en": "Miracle Mango Passion Fruit — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-miracle-vanilla",
+      "src": "/assets/images/products/miracle-vanilla.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/miracle-vanilla-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/miracle-vanilla.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "ميراكل بالفانيليا",
+        "en": "Miracle Vanilla"
+      },
+      "alt": {
+        "ar": "ميراكل بالفانيليا — صورة المنتج من كتالوج بلام 2026",
+        "en": "Miracle Vanilla — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-miracle-strawberry",
+      "src": "/assets/images/products/miracle-strawberry.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/miracle-strawberry-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/miracle-strawberry.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "ميراكل بالفراولة",
+        "en": "Miracle Strawberry"
+      },
+      "alt": {
+        "ar": "ميراكل بالفراولة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Miracle Strawberry — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-tiramisu",
+      "src": "/assets/images/products/tiramisu.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/tiramisu-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/tiramisu.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "تيراميسو",
+        "en": "Tiramisu"
+      },
+      "alt": {
+        "ar": "تيراميسو — صورة المنتج من كتالوج بلام 2026",
+        "en": "Tiramisu — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-chocolate-mandarine-cake",
+      "src": "/assets/images/products/chocolate-mandarine-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/chocolate-mandarine-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/chocolate-mandarine-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك الشوكولاتة واليوسفي",
+        "en": "Chocolate Mandarine Cake"
+      },
+      "alt": {
+        "ar": "كيك الشوكولاتة واليوسفي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Chocolate Mandarine Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-honey-cake-molded-cake",
+      "src": "/assets/images/products/honey-cake-molded-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/honey-cake-molded-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/honey-cake-molded-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك العسل",
+        "en": "Honey Cake"
+      },
+      "alt": {
+        "ar": "كيك العسل — صورة المنتج من كتالوج بلام 2026",
+        "en": "Honey Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-chocolate-tart-molded-cake",
+      "src": "/assets/images/products/chocolate-tart-molded-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/chocolate-tart-molded-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/chocolate-tart-molded-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "تارت الشوكولاتة",
+        "en": "Chocolate Tart"
+      },
+      "alt": {
+        "ar": "تارت الشوكولاتة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Chocolate Tart — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-strawberry-lovers",
+      "src": "/assets/images/products/strawberry-lovers.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/strawberry-lovers-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/strawberry-lovers.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "عشاق الفراولة",
+        "en": "Strawberry Lovers"
+      },
+      "alt": {
+        "ar": "عشاق الفراولة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Strawberry Lovers — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-brownies-salted-caramel",
+      "src": "/assets/images/products/brownies-salted-caramel.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/brownies-salted-caramel-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/brownies-salted-caramel.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "براونيز بالكراميل المملح",
+        "en": "Brownies Salted Caramel"
+      },
+      "alt": {
+        "ar": "براونيز بالكراميل المملح — صورة المنتج من كتالوج بلام 2026",
+        "en": "Brownies Salted Caramel — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pistachio-lovers",
+      "src": "/assets/images/products/pistachio-lovers.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pistachio-lovers-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pistachio-lovers.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "عشاق الفستق الحلبي",
+        "en": "Pistachio Lovers"
+      },
+      "alt": {
+        "ar": "عشاق الفستق الحلبي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pistachio Lovers — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-raspberry-cheesecake",
+      "src": "/assets/images/products/raspberry-cheesecake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/raspberry-cheesecake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/raspberry-cheesecake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "تشيز كيك بالتوت العليق",
+        "en": "Raspberry Cheesecake"
+      },
+      "alt": {
+        "ar": "تشيز كيك بالتوت العليق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Raspberry Cheesecake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-hazelnut-lovers",
+      "src": "/assets/images/products/hazelnut-lovers.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/hazelnut-lovers-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/hazelnut-lovers.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "عشاق البندق",
+        "en": "Hazelnut Lovers"
+      },
+      "alt": {
+        "ar": "عشاق البندق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Hazelnut Lovers — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-black-forest",
+      "src": "/assets/images/products/black-forest.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/black-forest-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/black-forest.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "بلاك فورست",
+        "en": "Black Forest"
+      },
+      "alt": {
+        "ar": "بلاك فورست — صورة المنتج من كتالوج بلام 2026",
+        "en": "Black Forest — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-mango-lovers",
+      "src": "/assets/images/products/mango-lovers.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/mango-lovers-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/mango-lovers.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "عشاق المانجو",
+        "en": "Mango Lovers"
+      },
+      "alt": {
+        "ar": "عشاق المانجو — صورة المنتج من كتالوج بلام 2026",
+        "en": "Mango Lovers — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-dulcey-pecan",
+      "src": "/assets/images/products/dulcey-pecan.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/dulcey-pecan-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/dulcey-pecan.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "دولسي بالبقان",
+        "en": "Dulcey Pecan"
+      },
+      "alt": {
+        "ar": "دولسي بالبقان — صورة المنتج من كتالوج بلام 2026",
+        "en": "Dulcey Pecan — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-honey-cake-whole-cake",
+      "src": "/assets/images/products/honey-cake-whole-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/honey-cake-whole-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/honey-cake-whole-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك العسل",
+        "en": "Honey Cake"
+      },
+      "alt": {
+        "ar": "كيك العسل — صورة المنتج من كتالوج بلام 2026",
+        "en": "Honey Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-chocolate-cake",
+      "src": "/assets/images/products/chocolate-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/chocolate-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/chocolate-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك الشوكولاتة",
+        "en": "Chocolate Cake"
+      },
+      "alt": {
+        "ar": "كيك الشوكولاتة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Chocolate Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-dulce-vanilla-pecan-cake",
+      "src": "/assets/images/products/dulce-vanilla-pecan-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/dulce-vanilla-pecan-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/dulce-vanilla-pecan-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك دولسي بالفانيليا والبقان",
+        "en": "Dulce Vanilla Pecan Cake"
+      },
+      "alt": {
+        "ar": "كيك دولسي بالفانيليا والبقان — صورة المنتج من كتالوج بلام 2026",
+        "en": "Dulce Vanilla Pecan Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-pistachio-raspberry",
+      "src": "/assets/images/products/pistachio-raspberry.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/pistachio-raspberry-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/pistachio-raspberry.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك الفستق الحلبي والتوت العليق",
+        "en": "Pistachio Raspberry"
+      },
+      "alt": {
+        "ar": "كيك الفستق الحلبي والتوت العليق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Pistachio Raspberry — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-millefeuille-cake",
+      "src": "/assets/images/products/millefeuille-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/millefeuille-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/millefeuille-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك الميل فوي",
+        "en": "Millefeuille Cake"
+      },
+      "alt": {
+        "ar": "كيك الميل فوي — صورة المنتج من كتالوج بلام 2026",
+        "en": "Millefeuille Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-tiramisu-cake",
+      "src": "/assets/images/products/tiramisu-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/tiramisu-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/tiramisu-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك التيراميسو",
+        "en": "Tiramisu Cake"
+      },
+      "alt": {
+        "ar": "كيك التيراميسو — صورة المنتج من كتالوج بلام 2026",
+        "en": "Tiramisu Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-black-forest-cake",
+      "src": "/assets/images/products/black-forest-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/black-forest-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/black-forest-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك البلاك فورست",
+        "en": "Black Forest Cake"
+      },
+      "alt": {
+        "ar": "كيك البلاك فورست — صورة المنتج من كتالوج بلام 2026",
+        "en": "Black Forest Cake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-red-fruits-cheesecake",
+      "src": "/assets/images/products/red-fruits-cheesecake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/red-fruits-cheesecake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/red-fruits-cheesecake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "تشيز كيك بالفواكه الحمراء",
+        "en": "Red Fruits Cheesecake"
+      },
+      "alt": {
+        "ar": "تشيز كيك بالفواكه الحمراء — صورة المنتج من كتالوج بلام 2026",
+        "en": "Red Fruits Cheesecake — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-chocolate-hazelnut",
+      "src": "/assets/images/products/chocolate-hazelnut.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/chocolate-hazelnut-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/chocolate-hazelnut.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "كيك الشوكولاتة والبندق",
+        "en": "Chocolate Hazelnut"
+      },
+      "alt": {
+        "ar": "كيك الشوكولاتة والبندق — صورة المنتج من كتالوج بلام 2026",
+        "en": "Chocolate Hazelnut — product photo from the Plum 2026 catalogue"
+      }
+    },
+    {
+      "id": "product-chocolate-tart-whole-cake",
+      "src": "/assets/images/products/chocolate-tart-whole-cake.webp",
+      "srcset": [
+        {
+          "src": "/assets/images/products/chocolate-tart-whole-cake-400.webp",
+          "w": 400
+        },
+        {
+          "src": "/assets/images/products/chocolate-tart-whole-cake.webp",
+          "w": 800
+        }
+      ],
+      "width": 800,
+      "height": 800,
+      "demo": false,
+      "source": "Plum B2B Catalogue 2026 (client PDF, 5 Nov 2026)",
+      "label": {
+        "ar": "تارت الشوكولاتة",
+        "en": "Chocolate Tart"
+      },
+      "alt": {
+        "ar": "تارت الشوكولاتة — صورة المنتج من كتالوج بلام 2026",
+        "en": "Chocolate Tart — product photo from the Plum 2026 catalogue"
+      }
     }
   ],
   "gallery": [

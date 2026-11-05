@@ -1,7 +1,7 @@
 {
-  "ranAt": "2026-11-05T11:43:37.600Z",
+  "ranAt": "2026-11-05T12:01:56.233Z",
   "total": 95,
-  "failed": 0,
+  "failed": 2,
   "results": [
     {
       "name": "[desktop] /ar/ no errors & no horizontal overflow",
@@ -415,7 +415,7 @@
     },
     {
       "name": "catalogue search filters products",
-      "ok": true,
+      "ok": false,
       "detail": ""
     },
     {
@@ -425,7 +425,7 @@
     },
     {
       "name": "Arabic catalogue search works",
-      "ok": true,
+      "ok": false,
       "detail": ""
     },
     {
@@ -446,7 +446,7 @@
     {
       "name": "RTL drawer slides from the left edge",
       "ok": true,
-      "detail": "x=-0.845458984375"
+      "detail": "x=-0.892120361328125"
     },
     {
       "name": "drawer closes with Escape",
