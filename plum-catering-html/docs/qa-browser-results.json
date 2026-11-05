@@ -1,7 +1,7 @@
 {
-  "ranAt": "2026-11-05T12:01:56.233Z",
+  "ranAt": "2026-11-05T12:04:04.972Z",
   "total": 95,
-  "failed": 2,
+  "failed": 0,
   "results": [
     {
       "name": "[desktop] /ar/ no errors & no horizontal overflow",
@@ -414,8 +414,8 @@
       "detail": ""
     },
     {
-      "name": "catalogue search filters products",
-      "ok": false,
+      "name": "catalogue search filters products (4 sourdough breads)",
+      "ok": true,
       "detail": ""
     },
     {
@@ -424,8 +424,8 @@
       "detail": ""
     },
     {
-      "name": "Arabic catalogue search works",
-      "ok": false,
+      "name": "Arabic catalogue search works (4 ساوردو)",
+      "ok": true,
       "detail": ""
     },
     {
@@ -446,7 +446,7 @@
     {
       "name": "RTL drawer slides from the left edge",
       "ok": true,
-      "detail": "x=-0.892120361328125"
+      "detail": "x=-0.73175048828125"
     },
     {
       "name": "drawer closes with Escape",

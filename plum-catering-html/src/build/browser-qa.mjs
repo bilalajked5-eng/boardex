@@ -154,7 +154,7 @@ check('language switch → corresponding service page', (await page.getAttribute
 await page.goto(`${BASE}/en/services/b2b/`, { waitUntil: 'networkidle' });
 await page.fill('[data-product-search]', 'sourdough');
 await page.waitForTimeout(300);
-check('catalogue search filters products', (await page.locator('[data-product]:visible').count()) === 1 && (await page.textContent('[data-catalogue-status]')).includes('1'));
+check('catalogue search filters products (4 sourdough breads)', (await page.locator('[data-product]:visible').count()) === 4 && (await page.textContent('[data-catalogue-status]')).includes('4'));
 await page.fill('[data-product-search]', '');
 await page.click('[data-family-filter="molded-cakes"]');
 await page.waitForTimeout(100);
@@ -162,7 +162,7 @@ check('family chip filter hides other families', !(await page.isVisible('#family
 await page.goto(`${BASE}/ar/services/qitaa-al-aamal/`, { waitUntil: 'networkidle' });
 await page.fill('[data-product-search]', 'ساوردو');
 await page.waitForTimeout(300);
-check('Arabic catalogue search works', (await page.locator('[data-product]:visible').count()) === 1);
+check('Arabic catalogue search works (4 ساوردو)', (await page.locator('[data-product]:visible').count()) === 4);
 await page.close();
 await ctx.close();
 
