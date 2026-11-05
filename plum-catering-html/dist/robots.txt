@@ -1,0 +1,9 @@
+# Production robots.txt for https://plumcatering.com.sa
+# STAGING: replace this file with "User-agent: *\nDisallow: /" AND protect staging with HTTP auth.
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
+Disallow: /*?s=
+
+Sitemap: https://plumcatering.com.sa/sitemap.xml

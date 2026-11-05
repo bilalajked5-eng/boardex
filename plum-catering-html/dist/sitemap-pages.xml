@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://plumcatering.com.sa/ar/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/en/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/ar/about-us/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/about-us/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/en/about-us/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/about-us/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/ar/services/sharikat/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/sharikat/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/corporates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/sharikat/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/en/services/corporates/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/sharikat/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/corporates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/sharikat/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/ar/services/munasabat/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/munasabat/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/celebrations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/munasabat/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/en/services/celebrations/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/munasabat/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/celebrations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/munasabat/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/ar/services/qitaa-al-aamal/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/qitaa-al-aamal/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/b2b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/qitaa-al-aamal/"/>
+  </url>
+  <url>
+    <loc>https://plumcatering.com.sa/en/services/b2b/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://plumcatering.com.sa/ar/services/qitaa-al-aamal/"/>
+    <xhtml:link rel="alternate" hreflang="en-SA" href="https://plumcatering.com.sa/en/services/b2b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumcatering.com.sa/ar/services/qitaa-al-aamal/"/>
+  </url>
+</urlset>

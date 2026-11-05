@@ -1,0 +1,120 @@
+{
+  "_note": "Safe, non-secret configuration. Every null value is PENDING client confirmation — see docs/content-gaps.md. Never put API keys or secrets in this file.",
+  "siteName": {
+    "ar": "بلام للتموين",
+    "en": "Plum Catering"
+  },
+  "productionBaseUrl": "https://plumcatering.com.sa",
+  "defaultLanguage": "ar",
+  "languages": {
+    "ar": {
+      "locale": "ar_SA",
+      "hreflang": "ar-SA",
+      "dir": "rtl",
+      "label": "العربية",
+      "short": "ع"
+    },
+    "en": {
+      "locale": "en_SA",
+      "hreflang": "en-SA",
+      "dir": "ltr",
+      "label": "English",
+      "short": "EN"
+    }
+  },
+  "xDefaultLanguage": "ar",
+  "prototype": {
+    "showReviewFlags": true,
+    "_comment": "true = client-review build (flags + pending-content blocks visible). Run `npm run build:clean` for a review build with flags hidden and pending blocks omitted."
+  },
+  "brand": {
+    "logo": {
+      "src": "/assets/logo/plum-logo-interim-from-brandboard.png",
+      "width": 281,
+      "height": 145,
+      "status": "interim",
+      "_comment": "Interim raster cropped from the supplied brand board. Replace with the original SVG / high-res transparent logo before production."
+    },
+    "parentCompany": {
+      "value": {
+        "ar": "شركة الأغذية المتقدمة",
+        "en": "Advanced Food Co."
+      },
+      "status": "provisional"
+    }
+  },
+  "facts": {
+    "kitchenArea": {
+      "value": {
+        "ar": "نحو 1,200 م²",
+        "en": "approx. 1,200 m²"
+      },
+      "status": "provisional"
+    },
+    "certifications": {
+      "value": [
+        "ISO 22000:2018",
+        "HACCP"
+      ],
+      "status": "provisional",
+      "_comment": "Issuer, scope and certificate dates not supplied."
+    },
+    "productCount": {
+      "value": 76,
+      "status": "provisional"
+    },
+    "city": {
+      "value": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "status": "provisional"
+    }
+  },
+  "contact": {
+    "phone": null,
+    "email": null,
+    "whatsappNumber": null,
+    "address": {
+      "ar": null,
+      "en": null
+    },
+    "openingHours": null,
+    "social": []
+  },
+  "integrations": {
+    "quoteEndpoint": null,
+    "_quoteEndpointExample": "/api/quote",
+    "gtmContainerId": null,
+    "googleAdsConversion": {
+      "id": null,
+      "label": null
+    },
+    "searchConsoleVerification": null,
+    "consentModeType": "basic",
+    "_consentModeTypeNote": "basic = GTM loads only after the visitor grants analytics or advertising consent (recommended default pending legal review). advanced = GTM loads immediately with all consent denied by default."
+  },
+  "media": {
+    "heroVideo": null,
+    "heroPoster": "hero-poster",
+    "kitchenFilm": null,
+    "kitchenPoster": "kitchen-poster"
+  },
+  "catalogue": {
+    "pdf": {
+      "ar": null,
+      "en": null,
+      "version": null,
+      "date": null
+    }
+  },
+  "facilityManagement": {
+    "launchMode": "coming_soon",
+    "_comment": "coming_soon | live. 'live' renders the full template, makes the page indexable, adds it to the sitemap and enables the proposal CTA. Only switch after content approval."
+  },
+  "copyrightYear": 2026,
+  "legal": {
+    "privacyApproved": false,
+    "_comment": "Set true only after client/legal counsel approve the final policy text. Controls Privacy page indexability and the draft notice."
+  }
+}

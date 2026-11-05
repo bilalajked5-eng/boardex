@@ -1,0 +1,4 @@
+{
+  "_note": "Approved client logos only. None supplied yet — the LogoWall renders a clearly labelled pending state. Entry shape: {id, name:{ar,en}, src, width, height, approved:true, approvalRef}",
+  "logos": []
+}

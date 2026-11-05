@@ -1,0 +1,482 @@
+{
+  "ranAt": "2026-11-05T11:43:37.600Z",
+  "total": 95,
+  "failed": 0,
+  "results": [
+    {
+      "name": "[desktop] /ar/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/services/sharikat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/services/corporates/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/services/munasabat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/services/celebrations/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/services/qitaa-al-aamal/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/services/b2b/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/services/idarat-al-marafiq/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/services/facility-management/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/products/honey-cake-whole-cake/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/does-not-exist/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/services/sharikat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/services/corporates/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/services/munasabat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/services/celebrations/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/services/qitaa-al-aamal/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/services/b2b/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/services/idarat-al-marafiq/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/services/facility-management/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/products/honey-cake-whole-cake/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/does-not-exist/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/about-us/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/services/sharikat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/services/corporates/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/services/munasabat/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/services/celebrations/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/services/qitaa-al-aamal/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/services/b2b/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/services/idarat-al-marafiq/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/services/facility-management/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/privacy/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/products/brown-sourdough-bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/products/honey-cake-whole-cake/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/does-not-exist/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "skip link is first tab stop",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cookie banner shown on first visit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Consent Mode v2 defaults denied",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reject hides banner and stores choice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no GTM loaded without container ID",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cookie preferences dialog reopens from footer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "customised consent updates analytics_storage=granted, ads denied",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quote modal opens from header CTA",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "focus moves into modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Escape closes modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "focus restored to trigger",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "empty submit shows validation errors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional fields: event date shown for celebration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional fields: B2B volume hidden for celebration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no endpoint → \"integration pending\" message, no success claimed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no generate_lead event without server success",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FAQ starts collapsed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FAQ expands with aria-expanded=true",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery lightbox opens",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "lightbox arrow-key navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "lightbox closes with Escape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "product quote attaches product",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "product quote preselects B2B and shows volume field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "server-confirmed success shows reference",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "generate_lead fired only after server success",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "server error → error message, no lead event",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "language switch → same product in Arabic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "language switch → corresponding service page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "catalogue search filters products",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "family chip filter hides other families",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Arabic catalogue search works",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile bar stays off-screen while consent banner is open",
+      "ok": true,
+      "detail": "bar y=851"
+    },
+    {
+      "name": "mobile bar appears after consent choice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile drawer opens",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "RTL drawer slides from the left edge",
+      "ok": true,
+      "detail": "x=-0.845458984375"
+    },
+    {
+      "name": "drawer closes with Escape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion: all reveal content visible immediately",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-JS: H1 visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-JS: product links crawlable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-JS: FAQ answers visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-JS: reveal content visible",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

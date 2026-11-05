@@ -1,0 +1,814 @@
+{
+  "_note": "Asset manifest. src=null means the real asset is not yet supplied and a labelled SVG placeholder is generated at build time. Target: 117 real gallery photos (0 supplied). Do not duplicate photos to reach the target.",
+  "galleryTarget": 117,
+  "galleryCategories": [
+    {
+      "id": "corporates",
+      "label": {
+        "en": "Corporates",
+        "ar": "الشركات"
+      }
+    },
+    {
+      "id": "celebrations",
+      "label": {
+        "en": "Celebrations",
+        "ar": "المناسبات"
+      }
+    },
+    {
+      "id": "kitchen",
+      "label": {
+        "en": "Kitchen",
+        "ar": "المطبخ"
+      }
+    },
+    {
+      "id": "b2b",
+      "label": {
+        "en": "B2B Bakery",
+        "ar": "مخبوزات الأعمال"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "hero-poster",
+      "src": null,
+      "srcset": [],
+      "width": 1920,
+      "height": 1080,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "cloche"
+      },
+      "label": {
+        "en": "Hero video poster — cinematic Plum service footage",
+        "ar": "ملصق فيديو الواجهة — لقطات سينمائية من خدمات بلام"
+      },
+      "alt": {
+        "en": "Placeholder: hero video poster — cinematic Plum service footage",
+        "ar": "صورة مؤقتة: ملصق فيديو الواجهة — لقطات سينمائية من خدمات بلام"
+      }
+    },
+    {
+      "id": "kitchen-poster",
+      "src": null,
+      "srcset": [],
+      "width": 1600,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "chef"
+      },
+      "label": {
+        "en": "Kitchen film poster — central kitchen footage",
+        "ar": "ملصق فيلم المطبخ — لقطات من المطبخ المركزي"
+      },
+      "alt": {
+        "en": "Placeholder: kitchen film poster — central kitchen footage",
+        "ar": "صورة مؤقتة: ملصق فيلم المطبخ — لقطات من المطبخ المركزي"
+      }
+    },
+    {
+      "id": "about-hero",
+      "src": null,
+      "srcset": [],
+      "width": 1600,
+      "height": 1000,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "chef"
+      },
+      "label": {
+        "en": "Plum team and kitchen photograph",
+        "ar": "صورة فريق بلام والمطبخ"
+      },
+      "alt": {
+        "en": "Placeholder: plum team and kitchen photograph",
+        "ar": "صورة مؤقتة: صورة فريق بلام والمطبخ"
+      }
+    },
+    {
+      "id": "kitchen-facility",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "shield"
+      },
+      "label": {
+        "en": "Central kitchen facility photograph",
+        "ar": "صورة منشأة المطبخ المركزي"
+      },
+      "alt": {
+        "en": "Placeholder: central kitchen facility photograph",
+        "ar": "صورة مؤقتة: صورة منشأة المطبخ المركزي"
+      }
+    },
+    {
+      "id": "team",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "chef"
+      },
+      "label": {
+        "en": "Chef and operations team photograph",
+        "ar": "صورة فريق الطهاة والتشغيل"
+      },
+      "alt": {
+        "en": "Placeholder: chef and operations team photograph",
+        "ar": "صورة مؤقتة: صورة فريق الطهاة والتشغيل"
+      }
+    },
+    {
+      "id": "svc-corporates",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "tray"
+      },
+      "label": {
+        "en": "Corporate dining service photograph",
+        "ar": "صورة خدمة تموين الشركات"
+      },
+      "alt": {
+        "en": "Placeholder: corporate dining service photograph",
+        "ar": "صورة مؤقتة: صورة خدمة تموين الشركات"
+      }
+    },
+    {
+      "id": "svc-celebrations",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "glass"
+      },
+      "label": {
+        "en": "Celebration table setting photograph",
+        "ar": "صورة طاولة مناسبة"
+      },
+      "alt": {
+        "en": "Placeholder: celebration table setting photograph",
+        "ar": "صورة مؤقتة: صورة طاولة مناسبة"
+      }
+    },
+    {
+      "id": "svc-b2b",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "bread"
+      },
+      "label": {
+        "en": "B2B bakery product photograph",
+        "ar": "صورة منتجات المخبوزات لقطاع الأعمال"
+      },
+      "alt": {
+        "en": "Placeholder: b2B bakery product photograph",
+        "ar": "صورة مؤقتة: صورة منتجات المخبوزات لقطاع الأعمال"
+      }
+    },
+    {
+      "id": "svc-facility",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "building"
+      },
+      "label": {
+        "en": "Facility management — future service",
+        "ar": "إدارة المرافق — خدمة مستقبلية"
+      },
+      "alt": {
+        "en": "Placeholder: facility management — future service",
+        "ar": "صورة مؤقتة: إدارة المرافق — خدمة مستقبلية"
+      }
+    },
+    {
+      "id": "corp-hero",
+      "src": null,
+      "srcset": [],
+      "width": 1920,
+      "height": 1080,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "tray"
+      },
+      "label": {
+        "en": "Corporate catering hero photograph",
+        "ar": "صورة واجهة تموين الشركات"
+      },
+      "alt": {
+        "en": "Placeholder: corporate catering hero photograph",
+        "ar": "صورة مؤقتة: صورة واجهة تموين الشركات"
+      }
+    },
+    {
+      "id": "corp-business",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "tray"
+      },
+      "label": {
+        "en": "Corporate & business event catering",
+        "ar": "تموين فعاليات الشركات والأعمال"
+      },
+      "alt": {
+        "en": "Placeholder: corporate & business event catering",
+        "ar": "صورة مؤقتة: تموين فعاليات الشركات والأعمال"
+      }
+    },
+    {
+      "id": "corp-royal",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "crown"
+      },
+      "label": {
+        "en": "Royal & government event service",
+        "ar": "خدمة المناسبات الملكية والحكومية"
+      },
+      "alt": {
+        "en": "Placeholder: royal & government event service",
+        "ar": "صورة مؤقتة: خدمة المناسبات الملكية والحكومية"
+      }
+    },
+    {
+      "id": "corp-hospitals",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "shield"
+      },
+      "label": {
+        "en": "Hospital & clinic meal service",
+        "ar": "خدمة وجبات المستشفيات والعيادات"
+      },
+      "alt": {
+        "en": "Placeholder: hospital & clinic meal service",
+        "ar": "صورة مؤقتة: خدمة وجبات المستشفيات والعيادات"
+      }
+    },
+    {
+      "id": "corp-industrial",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "building"
+      },
+      "label": {
+        "en": "Industrial & remote site catering",
+        "ar": "تموين المواقع الصناعية والنائية"
+      },
+      "alt": {
+        "en": "Placeholder: industrial & remote site catering",
+        "ar": "صورة مؤقتة: تموين المواقع الصناعية والنائية"
+      }
+    },
+    {
+      "id": "corp-schools",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "book"
+      },
+      "label": {
+        "en": "School & university dining",
+        "ar": "تموين المدارس والجامعات"
+      },
+      "alt": {
+        "en": "Placeholder: school & university dining",
+        "ar": "صورة مؤقتة: تموين المدارس والجامعات"
+      }
+    },
+    {
+      "id": "corp-mealboxes",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "box"
+      },
+      "label": {
+        "en": "Meal box presentation",
+        "ar": "تقديم علب الوجبات"
+      },
+      "alt": {
+        "en": "Placeholder: meal box presentation",
+        "ar": "صورة مؤقتة: تقديم علب الوجبات"
+      }
+    },
+    {
+      "id": "corp-ramadan",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "crescent"
+      },
+      "label": {
+        "en": "Ramadan catering setup",
+        "ar": "تجهيزات تموين رمضان"
+      },
+      "alt": {
+        "en": "Placeholder: ramadan catering setup",
+        "ar": "صورة مؤقتة: تجهيزات تموين رمضان"
+      }
+    },
+    {
+      "id": "cel-hero",
+      "src": null,
+      "srcset": [],
+      "width": 1920,
+      "height": 1080,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "glass"
+      },
+      "label": {
+        "en": "Elegant celebration tablescape",
+        "ar": "طاولة احتفال أنيقة"
+      },
+      "alt": {
+        "en": "Placeholder: elegant celebration tablescape",
+        "ar": "صورة مؤقتة: طاولة احتفال أنيقة"
+      }
+    },
+    {
+      "id": "cel-weddings",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "glass"
+      },
+      "label": {
+        "en": "Wedding & engagement catering",
+        "ar": "تموين حفلات الزفاف والخطوبة"
+      },
+      "alt": {
+        "en": "Placeholder: wedding & engagement catering",
+        "ar": "صورة مؤقتة: تموين حفلات الزفاف والخطوبة"
+      }
+    },
+    {
+      "id": "cel-private",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "cloche"
+      },
+      "label": {
+        "en": "Private occasion hospitality",
+        "ar": "ضيافة المناسبات الخاصة"
+      },
+      "alt": {
+        "en": "Placeholder: private occasion hospitality",
+        "ar": "صورة مؤقتة: ضيافة المناسبات الخاصة"
+      }
+    },
+    {
+      "id": "cel-ramadan",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "crescent"
+      },
+      "label": {
+        "en": "Ramadan gathering hospitality",
+        "ar": "ضيافة مناسبات رمضان"
+      },
+      "alt": {
+        "en": "Placeholder: ramadan gathering hospitality",
+        "ar": "صورة مؤقتة: ضيافة مناسبات رمضان"
+      }
+    },
+    {
+      "id": "cel-vip",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "crown"
+      },
+      "label": {
+        "en": "Luxury VIP hospitality",
+        "ar": "الضيافة الفاخرة لكبار الضيوف"
+      },
+      "alt": {
+        "en": "Placeholder: luxury VIP hospitality",
+        "ar": "صورة مؤقتة: الضيافة الفاخرة لكبار الضيوف"
+      }
+    },
+    {
+      "id": "cel-live",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "chef"
+      },
+      "label": {
+        "en": "Live cooking station",
+        "ar": "محطة طهي مباشر"
+      },
+      "alt": {
+        "en": "Placeholder: live cooking station",
+        "ar": "صورة مؤقتة: محطة طهي مباشر"
+      }
+    },
+    {
+      "id": "cel-canapes",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "tray"
+      },
+      "label": {
+        "en": "Canapés & reception service",
+        "ar": "خدمة الكانابيه والاستقبالات"
+      },
+      "alt": {
+        "en": "Placeholder: canapés & reception service",
+        "ar": "صورة مؤقتة: خدمة الكانابيه والاستقبالات"
+      }
+    },
+    {
+      "id": "b2b-hero",
+      "src": null,
+      "srcset": [],
+      "width": 1920,
+      "height": 1080,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "bread"
+      },
+      "label": {
+        "en": "Wholesale bakery product photography",
+        "ar": "تصوير منتجات المخبوزات بالجملة"
+      },
+      "alt": {
+        "en": "Placeholder: wholesale bakery product photography",
+        "ar": "صورة مؤقتة: تصوير منتجات المخبوزات بالجملة"
+      }
+    },
+    {
+      "id": "fm-hero",
+      "src": null,
+      "srcset": [],
+      "width": 1920,
+      "height": 1080,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "building"
+      },
+      "label": {
+        "en": "Facility management — coming soon",
+        "ar": "إدارة المرافق — قريبًا"
+      },
+      "alt": {
+        "en": "Placeholder: facility management — coming soon",
+        "ar": "صورة مؤقتة: إدارة المرافق — قريبًا"
+      }
+    },
+    {
+      "id": "product-placeholder",
+      "src": null,
+      "srcset": [],
+      "width": 1200,
+      "height": 1200,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "bread"
+      },
+      "label": {
+        "en": "Product photograph pending",
+        "ar": "صورة المنتج قيد الانتظار"
+      },
+      "alt": {
+        "en": "Placeholder: product photograph pending",
+        "ar": "صورة مؤقتة: صورة المنتج قيد الانتظار"
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-demo-01",
+      "category": "corporates",
+      "src": null,
+      "width": 1200,
+      "height": 1500,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "tray"
+      },
+      "label": {
+        "en": "Corporate lunch service",
+        "ar": "خدمة غداء للشركات"
+      },
+      "alt": {
+        "en": "Demo placeholder: corporate lunch service",
+        "ar": "صورة تجريبية مؤقتة: خدمة غداء للشركات"
+      },
+      "pages": [
+        "home",
+        "corporates"
+      ]
+    },
+    {
+      "id": "gallery-demo-02",
+      "category": "celebrations",
+      "src": null,
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "glass"
+      },
+      "label": {
+        "en": "Wedding table setting",
+        "ar": "تنسيق طاولة زفاف"
+      },
+      "alt": {
+        "en": "Demo placeholder: wedding table setting",
+        "ar": "صورة تجريبية مؤقتة: تنسيق طاولة زفاف"
+      },
+      "pages": [
+        "home",
+        "celebrations"
+      ]
+    },
+    {
+      "id": "gallery-demo-03",
+      "category": "kitchen",
+      "src": null,
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "chef"
+      },
+      "label": {
+        "en": "Kitchen preparation",
+        "ar": "التحضير في المطبخ"
+      },
+      "alt": {
+        "en": "Demo placeholder: kitchen preparation",
+        "ar": "صورة تجريبية مؤقتة: التحضير في المطبخ"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-04",
+      "category": "b2b",
+      "src": null,
+      "width": 1200,
+      "height": 1500,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "bread"
+      },
+      "label": {
+        "en": "Bakery selection",
+        "ar": "تشكيلة مخبوزات"
+      },
+      "alt": {
+        "en": "Demo placeholder: bakery selection",
+        "ar": "صورة تجريبية مؤقتة: تشكيلة مخبوزات"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-05",
+      "category": "celebrations",
+      "src": null,
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "cloche"
+      },
+      "label": {
+        "en": "Reception service",
+        "ar": "خدمة استقبال"
+      },
+      "alt": {
+        "en": "Demo placeholder: reception service",
+        "ar": "صورة تجريبية مؤقتة: خدمة استقبال"
+      },
+      "pages": [
+        "home",
+        "celebrations"
+      ]
+    },
+    {
+      "id": "gallery-demo-06",
+      "category": "corporates",
+      "src": null,
+      "width": 1200,
+      "height": 1200,
+      "demo": true,
+      "placeholder": {
+        "tone": "plum",
+        "icon": "box"
+      },
+      "label": {
+        "en": "Meal boxes",
+        "ar": "علب وجبات"
+      },
+      "alt": {
+        "en": "Demo placeholder: meal boxes",
+        "ar": "صورة تجريبية مؤقتة: علب وجبات"
+      },
+      "pages": [
+        "home",
+        "corporates"
+      ]
+    },
+    {
+      "id": "gallery-demo-07",
+      "category": "kitchen",
+      "src": null,
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "shield"
+      },
+      "label": {
+        "en": "Food safety checks",
+        "ar": "فحوصات سلامة الغذاء"
+      },
+      "alt": {
+        "en": "Demo placeholder: food safety checks",
+        "ar": "صورة تجريبية مؤقتة: فحوصات سلامة الغذاء"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-08",
+      "category": "b2b",
+      "src": null,
+      "width": 1200,
+      "height": 1200,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "bread"
+      },
+      "label": {
+        "en": "Pastry display",
+        "ar": "عرض المعجنات"
+      },
+      "alt": {
+        "en": "Demo placeholder: pastry display",
+        "ar": "صورة تجريبية مؤقتة: عرض المعجنات"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-09",
+      "category": "celebrations",
+      "src": null,
+      "width": 1200,
+      "height": 1500,
+      "demo": true,
+      "placeholder": {
+        "tone": "sand",
+        "icon": "crown"
+      },
+      "label": {
+        "en": "VIP hospitality",
+        "ar": "ضيافة كبار الضيوف"
+      },
+      "alt": {
+        "en": "Demo placeholder: vip hospitality",
+        "ar": "صورة تجريبية مؤقتة: ضيافة كبار الضيوف"
+      },
+      "pages": [
+        "home",
+        "celebrations"
+      ]
+    },
+    {
+      "id": "gallery-demo-10",
+      "category": "corporates",
+      "src": null,
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "placeholder": {
+        "tone": "ivory",
+        "icon": "crescent"
+      },
+      "label": {
+        "en": "Ramadan buffet",
+        "ar": "بوفيه رمضان"
+      },
+      "alt": {
+        "en": "Demo placeholder: ramadan buffet",
+        "ar": "صورة تجريبية مؤقتة: بوفيه رمضان"
+      },
+      "pages": [
+        "home",
+        "corporates"
+      ]
+    }
+  ]
+}

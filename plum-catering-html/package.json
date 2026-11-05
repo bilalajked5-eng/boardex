@@ -1,0 +1,16 @@
+{
+  "name": "plum-catering-html",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plum Catering — premium bilingual (AR/EN) static HTML prototype, ready for review and custom-WordPress conversion.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node src/build/build.mjs",
+    "build:clean": "node src/build/build.mjs --clean",
+    "preview": "node src/build/serve.mjs",
+    "qa": "node src/build/qa.mjs",
+    "qa:browser": "node src/build/browser-qa.mjs",
+    "test": "npm run build && npm run qa"
+  }
+}

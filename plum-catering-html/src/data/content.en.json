@@ -1,0 +1,922 @@
+{
+  "ui": {
+    "skip": "Skip to main content",
+    "nav": {
+      "label": "Main navigation",
+      "home": "Home",
+      "about": "About",
+      "corporates": "Corporates",
+      "celebrations": "Celebrations",
+      "b2b": "B2B Catalogue",
+      "facility": "Facility Management",
+      "comingSoon": "Coming Soon",
+      "privacy": "Privacy Policy",
+      "menu": "Menu",
+      "close": "Close menu"
+    },
+    "cta": {
+      "quote": "Request a Quote",
+      "explore": "Explore Our Services",
+      "whatsapp": "Chat on WhatsApp",
+      "learnMore": "Learn more",
+      "viewProduct": "View product",
+      "browseProducts": "Browse Products",
+      "downloadCatalogue": "Download Catalogue",
+      "backToCatalogue": "Back to B2B catalogue",
+      "productQuote": "Request a Quote for This Product",
+      "b2bQuote": "Request B2B Quote",
+      "viewGallery": "View the full gallery",
+      "aboutLink": "More about Plum Catering"
+    },
+    "lang": {
+      "switchTo": "العربية",
+      "switchLabel": "Switch to Arabic — عرض الصفحة بالعربية"
+    },
+    "breadcrumb": {
+      "label": "Breadcrumb",
+      "home": "Home"
+    },
+    "review": {
+      "flag": "To confirm",
+      "flagTitle": "Provisional fact from the current website — client to confirm before publication",
+      "pendingTitle": "Content pending client approval",
+      "placeholder": "Placeholder",
+      "demo": "Demo placeholder"
+    },
+    "whatsappPending": "WhatsApp number pending confirmation",
+    "video": {
+      "pause": "Pause background video",
+      "play": "Play background video",
+      "filmPending": "Kitchen film pending — poster placeholder shown"
+    },
+    "gallery": {
+      "all": "All",
+      "filterLabel": "Filter gallery",
+      "open": "Open image",
+      "close": "Close",
+      "prev": "Previous image",
+      "next": "Next image",
+      "of": "of",
+      "status": "{n} of {target} approved gallery photos supplied. Labelled placeholders are shown for layout review only."
+    },
+    "logos": {
+      "pending": "Client logos will appear here once each brand has approved their use. No logos have been supplied yet.",
+      "slot": "Approved client logo"
+    },
+    "filters": {
+      "label": "Filter products by family",
+      "all": "All families",
+      "search": "Search products",
+      "searchPlaceholder": "Search by product name",
+      "results": "{n} products shown",
+      "noResults": "No products match your search. Try another name or family.",
+      "clear": "Clear filters"
+    },
+    "catalogue": {
+      "loaded": "{n} of {expected} products loaded",
+      "pendingCard": "{n} more {family} products from the current catalogue are awaiting data import and approval.",
+      "familyEmpty": "Product records for this family are awaiting data import and approval.",
+      "pdfPending": "The catalogue PDF has not been supplied yet. It will be downloadable here once the approved file is provided.",
+      "draft": "Draft"
+    },
+    "footer": {
+      "summary": "Plum Catering is a Riyadh catering and food-industry brand serving organisations, celebrations and foodservice businesses.",
+      "services": "Services",
+      "company": "Company",
+      "contact": "Contact",
+      "legal": "Legal",
+      "cookieSettings": "Cookie preferences",
+      "rights": "All rights reserved.",
+      "contactPending": "Phone, email and address will be published here once confirmed by the client.",
+      "quotePrompt": "The fastest way to reach us is the quote request form."
+    },
+    "quote": {
+      "title": "Request a Quote",
+      "intro": "Tell us about your requirements and our team will be in touch. Fields marked * are required.",
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Mobile number",
+      "phoneHint": "Include the country code, e.g. +966",
+      "company": "Company or organisation",
+      "optional": "optional",
+      "service": "Service",
+      "servicePlaceholder": "Select a service",
+      "services": {
+        "corporate": "Corporate catering",
+        "celebration": "Celebrations & events",
+        "b2b": "B2B wholesale supply",
+        "facility": "Facility management"
+      },
+      "eventDate": "Event date",
+      "guests": "Expected number of guests",
+      "product": "Product of interest",
+      "volume": "Estimated supply volume",
+      "volumeHint": "For example, weekly quantities per product",
+      "message": "Your message",
+      "messageHint": "Share any details that will help us prepare an accurate proposal.",
+      "privacy": "I have read the {link} and agree to Plum Catering processing my details to respond to this request.",
+      "privacyLink": "Privacy Policy",
+      "marketing": "I would also like to receive occasional news and offers from Plum Catering.",
+      "submit": "Send request",
+      "sending": "Sending…",
+      "close": "Close",
+      "required": "required",
+      "errors": {
+        "summary": "Please correct the highlighted fields.",
+        "required": "This field is required.",
+        "email": "Enter a valid email address.",
+        "phone": "Enter a valid phone number.",
+        "privacy": "Please confirm you have read the Privacy Policy.",
+        "network": "We could not send your request. Please check your connection and try again.",
+        "server": "Your request could not be processed. Please try again shortly."
+      },
+      "pendingIntegration": "Online form delivery is not connected yet in this prototype, so your request has not been sent. Once the secure server integration is live, requests will be delivered to the Plum team by email.",
+      "successTitle": "Thank you — your request has been received",
+      "success": "Our team will review your request and contact you. A reference number: {ref}",
+      "attached": "Attached product"
+    },
+    "cookie": {
+      "title": "Your cookie choices",
+      "body": "We use strictly necessary cookies to run this website. With your permission we would also like to use analytics and advertising cookies to understand site usage and measure our campaigns.",
+      "acceptAll": "Accept all",
+      "reject": "Reject non-essential",
+      "customize": "Customise",
+      "save": "Save preferences",
+      "prefsTitle": "Cookie preferences",
+      "alwaysOn": "Always on",
+      "necessary": {
+        "title": "Strictly necessary",
+        "desc": "Required for core features such as remembering your cookie choice. Cannot be switched off."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Helps us understand how visitors use the site so we can improve it."
+      },
+      "marketing": {
+        "title": "Advertising",
+        "desc": "Used to measure and personalise our advertising, including Google Ads conversion measurement."
+      },
+      "policyLink": "Read our Privacy Policy",
+      "saved": "Your cookie preferences have been saved."
+    },
+    "mobileBar": {
+      "label": "Quick contact"
+    }
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Catering Company in Riyadh | Plum Catering",
+        "description": "Plum Catering provides corporate catering, celebration and event catering, and wholesale bakery supply from its central kitchen in Riyadh. Request a quote."
+      },
+      "hero": {
+        "eyebrow": "Plum Catering · Riyadh",
+        "h1": "Catering Services in Riyadh for Businesses and Celebrations",
+        "lead": "From daily corporate dining to weddings and private occasions, Plum prepares every menu in its own central kitchen and delivers it with care, consistency and attention to detail.",
+        "links": "Discover {corporates} and {celebrations}"
+      },
+      "about": {
+        "h2": "About Plum Catering",
+        "body": "Plum Catering is a Riyadh-based catering and food-industry brand serving organisations, families and foodservice businesses. Our work brings together carefully planned menus, a professional central kitchen and dependable service teams, so that every client receives food prepared to the same standard whether it is a meeting lunch, a large celebration or a recurring bakery order. We take time to understand each brief, recommend what will work for your guests and setting, and stay in contact from first enquiry to final service.",
+        "approach": {
+          "h3": "Our Approach",
+          "body": "Listen first, plan carefully, prepare with discipline and serve with warmth — the same principles applied to every order."
+        }
+      },
+      "services": {
+        "h2": "Our Catering Services",
+        "intro": "Three established service lines, each with its own specialist team and planning process.",
+        "cards": {
+          "corporates": {
+            "h3": "Corporates",
+            "body": "Catering for offices, government entities, healthcare, education and industrial sites — from meeting lunches to recurring meal programmes."
+          },
+          "celebrations": {
+            "h3": "Celebrations",
+            "body": "Weddings, engagements, private occasions and Ramadan gatherings, with menus and service styles tailored to your event."
+          },
+          "b2b": {
+            "h3": "B2B Supply",
+            "body": "Breads, croissants, pastries and cakes supplied to hotels, restaurants, cafés and foodservice operators."
+          },
+          "facility": {
+            "h3": "Facility Management — Coming Soon",
+            "body": "A future service line. It is not yet available; details will be announced when it launches."
+          }
+        }
+      },
+      "kitchen": {
+        "h2": "Our Central Kitchen",
+        "intro": "Every Plum menu is prepared in our central kitchen in Riyadh, where planning, preparation and quality checks happen under one roof.",
+        "items": [
+          {
+            "h3": "Food Safety",
+            "body": "Documented food-safety procedures guide how ingredients are received, stored, prepared and dispatched."
+          },
+          {
+            "h3": "Professional Preparation",
+            "body": "Dedicated preparation areas and experienced kitchen teams help us deliver consistent results at every scale."
+          }
+        ],
+        "factsLabel": "Kitchen at a glance",
+        "areaLabel": "Central kitchen",
+        "certLabel": "Food-safety certifications",
+        "link": "Learn more about our kitchen"
+      },
+      "why": {
+        "h2": "Why Choose Plum",
+        "cards": [
+          {
+            "icon": "chef",
+            "h3": "Quality you can taste",
+            "body": "Menus prepared from scratch in our own kitchen, with presentation that reflects the occasion."
+          },
+          {
+            "icon": "clock",
+            "h3": "Reliable delivery",
+            "body": "Clear planning and agreed timelines, so your guests are served when and where you expect."
+          },
+          {
+            "icon": "truck",
+            "h3": "Organised logistics",
+            "body": "Preparation, transport and on-site setup coordinated by one team from start to finish."
+          },
+          {
+            "icon": "sliders",
+            "h3": "Tailored service",
+            "body": "Menus, service styles and quantities shaped around your brief rather than a fixed package."
+          }
+        ]
+      },
+      "cuisine": {
+        "h2": "Food & Cuisine Expertise",
+        "body": "Our menus are planned around each client's occasion, guests and preferences. Explore how this works for {corporates} and for {celebrations}.",
+        "pendingNote": "List the cuisines and menu styles Plum actually serves (e.g. Saudi, Levantine, International). Only confirmed cuisines will be published."
+      },
+      "work": {
+        "h2": "Our Work",
+        "intro": "A selection from recent corporate services, celebrations and our kitchen."
+      },
+      "clients": {
+        "h2": "Trusted by Our Clients",
+        "intro": "Organisations and families across Riyadh rely on Plum for their catering."
+      },
+      "faq": {
+        "h2": "Frequently Asked Questions",
+        "items": [
+          {
+            "q": "How do I request a catering quote?",
+            "a": "Select \"Request a Quote\" on any page and tell us about your event or requirement, including the date, number of guests and location. Our team will review the details and contact you to discuss a proposal."
+          },
+          {
+            "q": "Which areas do you serve?",
+            "a": "Plum Catering operates from its central kitchen in Riyadh. Please include your location in your request and we will confirm whether we can serve it.",
+            "review": true
+          },
+          {
+            "q": "How far in advance should I book?",
+            "a": "Lead times depend on the size of the event, the menu and the season. We recommend contacting us as early as possible, especially for weddings, large corporate events and Ramadan.",
+            "review": true
+          },
+          {
+            "q": "Can you cater for both small and large events?",
+            "a": "Our service teams plan each event according to its guest count and format. Share your expected numbers in the quote form and we will advise on the best service style.",
+            "review": true
+          }
+        ]
+      },
+      "finalCta": {
+        "h2": "Plan Your Next Event",
+        "body": "Share your date, guest count and the kind of experience you have in mind. We will prepare a proposal tailored to you."
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "About Plum Catering | Our Kitchen & Expertise",
+        "description": "Learn about Plum Catering, a Riyadh catering and food-industry brand: who we are, our central kitchen, how we work and the services we provide."
+      },
+      "hero": {
+        "eyebrow": "About us",
+        "h1": "About Plum Catering",
+        "lead": "Plum Catering prepares and serves food for organisations, celebrations and foodservice businesses in Riyadh. Everything we do starts in our own central kitchen and is delivered by teams who care about the details."
+      },
+      "who": {
+        "h2": "Who We Are",
+        "body": "Plum Catering is a catering and food-industry brand of {parent}, based in Riyadh, Saudi Arabia. We combine corporate catering, celebration catering and wholesale bakery supply under one brand and one quality standard.",
+        "pendingNote": "Legal entity name, commercial registration and company history to be supplied and approved by the client.",
+        "bodyNoParent": "Plum Catering is a catering and food-industry brand based in Riyadh, Saudi Arabia. We combine corporate catering, celebration catering and wholesale bakery supply under one brand and one quality standard."
+      },
+      "story": {
+        "h2": "Our Story",
+        "pendingNote": "Brand story and milestones (founding year, key moments) are required from the client. No dates or milestones are published until approved.",
+        "milestonesH3": "Our Milestones"
+      },
+      "mvv": {
+        "h2": "Mission, Vision & Values",
+        "mission": {
+          "h3": "Mission"
+        },
+        "vision": {
+          "h3": "Vision"
+        },
+        "values": {
+          "h3": "Core Values"
+        },
+        "pendingNote": "Approved mission, vision and values wording is required from the client."
+      },
+      "whatWeDo": {
+        "h2": "What We Do",
+        "intro": "Three live service lines, with a fourth in preparation."
+      },
+      "kitchen": {
+        "h2": "Our Central Kitchen",
+        "body": "Our central kitchen in Riyadh is where menus are planned, prepared and checked before they leave for delivery. Keeping preparation in one facility helps us manage quality, timing and consistency across corporate, celebration and bakery orders.",
+        "filmCaption": "Kitchen film — to be supplied by the client",
+        "logisticsH3": "Quality & Logistics",
+        "logisticsBody": "Orders are scheduled, prepared and dispatched to an agreed plan, with service teams coordinating delivery and on-site setup."
+      },
+      "quality": {
+        "h2": "Quality and Food Safety",
+        "certH3": "Food Safety Certifications",
+        "certBody": "Plum's current website lists the following food-safety certifications. Certificate issuer, scope and validity dates will be added once verified.",
+        "pendingNote": "Provide certificate copies (issuer, scope, issue and expiry dates) for verification before publication."
+      },
+      "team": {
+        "h2": "Our Team",
+        "body": "Our chefs, kitchen staff and service teams bring the experience behind every Plum menu.",
+        "pendingNote": "Team photographs and approved, factual descriptions of team expertise are required. No headcounts or credentials are published until supplied."
+      },
+      "clients": {
+        "h2": "Our Clients",
+        "intro": "Client logos and testimonials are shown only with each client's approval."
+      },
+      "process": {
+        "h2": "How We Deliver",
+        "steps": [
+          {
+            "h3": "Plan",
+            "body": "We understand your brief, guests and setting, then agree menu, quantities and timings."
+          },
+          {
+            "h3": "Prepare",
+            "body": "Our kitchen prepares your order to the agreed plan."
+          },
+          {
+            "h3": "Quality check",
+            "body": "Food is checked for presentation, temperature and completeness before dispatch."
+          },
+          {
+            "h3": "Delivery & setup",
+            "body": "Our team delivers, sets up and — where agreed — serves your guests."
+          }
+        ]
+      },
+      "finalCta": {
+        "h2": "Work With Plum",
+        "body": "Whether you are planning a corporate programme, a celebration or a supply partnership, we would be glad to hear from you."
+      }
+    },
+    "corporates": {
+      "meta": {
+        "title": "Corporate Catering in Riyadh | Plum Catering",
+        "description": "Corporate catering in Riyadh for businesses, government, healthcare, education and industrial sites — events, meal boxes and Ramadan catering. Request a proposal."
+      },
+      "hero": {
+        "eyebrow": "Corporates",
+        "h1": "Corporate Catering Services in Riyadh",
+        "lead": "Dependable catering for organisations — from boardroom lunches and conferences to recurring meal programmes for hospitals, schools and remote sites.",
+        "cta": "Request a Corporate Catering Quote"
+      },
+      "overview": {
+        "h2": "Catering Solutions for Organizations",
+        "body": "Organisations need catering that runs to schedule, scales with attendance and represents them well in front of guests and staff. Plum plans each corporate service around your audience, location and timing, prepares it in our central kitchen and coordinates delivery and service with your team. Whether you need a one-off event or a recurring programme, you work with one point of contact throughout."
+      },
+      "services": {
+        "h2": "Our Corporate Catering Services",
+        "jumpLabel": "Jump to a service",
+        "items": [
+          {
+            "id": "corporate-business",
+            "img": "corp-business",
+            "h3": "Corporate & Business",
+            "body": "Meeting lunches, conferences, product launches and staff events, planned around your agenda. We help you choose menus and service styles — from boxed meals to buffets and served dining — that suit the occasion and the number of attendees."
+          },
+          {
+            "id": "royal-government",
+            "img": "corp-royal",
+            "h3": "Royal & Government Events",
+            "body": "Formal occasions call for careful protocol, presentation and timing. We coordinate closely with your organisers on menu, service sequence and setup so that hospitality runs discreetly and to plan."
+          },
+          {
+            "id": "hospitals-clinics",
+            "img": "corp-hospitals",
+            "h3": "Hospitals & Clinics",
+            "body": "Meal services for healthcare settings, planned with your facility team around schedules, service points and any menu requirements you define. Dietary and clinical menu specifications are agreed with your team before service begins."
+          },
+          {
+            "id": "industrial-remote",
+            "img": "corp-industrial",
+            "h3": "Industrial & Remote Sites",
+            "body": "Catering for industrial and project sites where reliable, consistent meals matter to the workforce. Coverage, delivery schedules and service models are confirmed per site during planning."
+          },
+          {
+            "id": "schools-universities",
+            "img": "corp-schools",
+            "h3": "Schools & Universities",
+            "body": "Catering for educational institutions, from daily dining to campus events and graduations, planned with your administration around timetables and student numbers."
+          },
+          {
+            "id": "meal-boxes",
+            "img": "corp-mealboxes",
+            "h3": "Meal Boxes",
+            "body": "Individually packed meal boxes for meetings, training days, site visits and events — convenient to distribute, easy to plan and presented with care."
+          },
+          {
+            "id": "ramadan-catering",
+            "img": "corp-ramadan",
+            "h3": "Ramadan Catering",
+            "body": "Iftar and Suhoor catering for organisations during the holy month, including staff gatherings and hosted iftars. Because Ramadan is a busy season, we recommend planning early."
+          }
+        ]
+      },
+      "kitchen": {
+        "h2": "Our Kitchen & Food Safety",
+        "body": "Corporate orders are prepared in our central kitchen in Riyadh under documented food-safety procedures, then dispatched to an agreed schedule."
+      },
+      "process": {
+        "h2": "How Corporate Catering Works",
+        "steps": [
+          {
+            "h3": "Consultation",
+            "body": "We learn about your organisation, audience, location and schedule."
+          },
+          {
+            "h3": "Menu & Scope Planning",
+            "body": "We propose menus, quantities and service format for your approval."
+          },
+          {
+            "h3": "Preparation & Logistics",
+            "body": "Your order is prepared in our kitchen and delivery is coordinated with your team."
+          },
+          {
+            "h3": "Service & Follow-Up",
+            "body": "We serve to plan and follow up to refine recurring services."
+          }
+        ]
+      },
+      "gallery": {
+        "h2": "Catering Gallery"
+      },
+      "faq": {
+        "h2": "Common Questions",
+        "items": [
+          {
+            "q": "How far in advance should we book corporate catering?",
+            "a": "It depends on the size and format of the service. Contact us as early as possible with your date and expected attendance, and we will confirm what is achievable.",
+            "review": true
+          },
+          {
+            "q": "Can you support recurring daily or weekly catering?",
+            "a": "Yes, we discuss recurring programmes during consultation, including menus, quantities and delivery schedules, and agree them with your team.",
+            "review": true
+          },
+          {
+            "q": "Do you deliver outside Riyadh?",
+            "a": "Please include your location in your request. Coverage outside Riyadh is confirmed case by case.",
+            "review": true
+          },
+          {
+            "q": "Can we coordinate the menu with our team?",
+            "a": "Yes. Menus are proposed for your approval and can be adjusted to your audience and requirements before confirmation."
+          }
+        ]
+      },
+      "finalCta": {
+        "h2": "Request a Corporate Proposal",
+        "body": "Tell us about your organisation and the service you need. We will prepare a tailored proposal."
+      },
+      "related": {
+        "b2b": "Looking for bakery supply for your own outlets? See our {link}."
+      }
+    },
+    "celebrations": {
+      "meta": {
+        "title": "Event & Wedding Catering in Riyadh | Plum",
+        "description": "Celebration and event catering in Riyadh: weddings, engagements, private occasions, Ramadan gatherings, VIP hospitality, live stations and canapés."
+      },
+      "hero": {
+        "eyebrow": "Celebrations",
+        "h1": "Celebration & Event Catering in Riyadh",
+        "lead": "Thoughtful menus and graceful service for the moments that matter — planned with you, prepared in our kitchen and presented beautifully on the day.",
+        "cta": "Plan Your Event"
+      },
+      "overview": {
+        "h2": "Catering Made for Your Occasion",
+        "body": "Every celebration has its own character. We take time to understand your guests, traditions and the atmosphere you want to create, then shape the menu, presentation and service around it — so you can be present with your guests while we take care of the hospitality."
+      },
+      "services": {
+        "h2": "Our Celebration Services",
+        "jumpLabel": "Jump to a service",
+        "items": [
+          {
+            "id": "weddings-engagements",
+            "img": "cel-weddings",
+            "h3": "Weddings & Engagements",
+            "body": "Catering for weddings and engagement celebrations, with menus, presentation and service planned around your programme and guest list."
+          },
+          {
+            "id": "private-occasions",
+            "img": "cel-private",
+            "h3": "Private Occasions",
+            "body": "Family gatherings, milestone birthdays, graduations and home receptions, served with the warmth and attention a private occasion deserves."
+          },
+          {
+            "id": "ramadan-gatherings",
+            "img": "cel-ramadan",
+            "h3": "Ramadan Gatherings",
+            "body": "Iftar and Suhoor gatherings for family and friends, from intimate tables to larger hosted evenings."
+          },
+          {
+            "id": "vip-hospitality",
+            "img": "cel-vip",
+            "h3": "Luxury VIP Catering",
+            "body": "Elevated hospitality for distinguished guests, with refined presentation and discreet, attentive service."
+          },
+          {
+            "id": "live-cooking",
+            "img": "cel-live",
+            "h3": "Live Cooking Stations",
+            "body": "Chef-attended stations that bring theatre and freshness to your event, prepared in front of your guests."
+          },
+          {
+            "id": "canapes-receptions",
+            "img": "cel-canapes",
+            "h3": "Canapés & Receptions",
+            "body": "Elegant bite-sized selections for receptions and standing events, served by our team or presented on styled displays."
+          }
+        ]
+      },
+      "menus": {
+        "h2": "Menus & Cuisine Options",
+        "body": "Menus are designed with you for each event. Tell us about your guests and preferences and we will propose options to suit.",
+        "pendingNote": "Confirmed cuisine types, customisation conditions and any dietary options offered are required before publication."
+      },
+      "gallery": {
+        "h2": "Our Event Gallery"
+      },
+      "process": {
+        "h2": "Our Event Planning Process",
+        "steps": [
+          {
+            "h3": "Discovery",
+            "body": "We learn about your occasion, guests, venue and vision."
+          },
+          {
+            "h3": "Planning",
+            "body": "We propose a menu, service style and timeline for your approval."
+          },
+          {
+            "h3": "Preparation",
+            "body": "Our kitchen prepares your menu and our team readies the setup."
+          },
+          {
+            "h3": "Event Day",
+            "body": "We deliver, set up and serve so you can enjoy your guests."
+          }
+        ]
+      },
+      "why": {
+        "h2": "Why Celebrate with Plum?",
+        "points": [
+          {
+            "h3": "One team, start to finish",
+            "body": "The same team plans, prepares and serves your event."
+          },
+          {
+            "h3": "Menus shaped around you",
+            "body": "Proposals tailored to your guests, traditions and setting."
+          },
+          {
+            "h3": "Presentation with care",
+            "body": "Thoughtful styling that suits the mood of your occasion."
+          }
+        ]
+      },
+      "faq": {
+        "h2": "Celebration FAQs",
+        "items": [
+          {
+            "q": "How early should we book for a wedding?",
+            "a": "Weddings and peak-season events benefit from early planning. Share your date as soon as you can and we will confirm availability.",
+            "review": true
+          },
+          {
+            "q": "Do you provide setup and service staff?",
+            "a": "Setup and service options are agreed during planning according to your event format.",
+            "review": true
+          },
+          {
+            "q": "Can we customise the menu?",
+            "a": "Yes. Menus are proposed for your approval and can be adjusted before confirmation."
+          },
+          {
+            "q": "Is there a minimum number of guests?",
+            "a": "Please share your expected guest count in the quote form and we will advise on suitable options.",
+            "review": true
+          }
+        ]
+      },
+      "finalCta": {
+        "h2": "Let's Plan Your Celebration",
+        "body": "Share your date, guest count and vision — we will prepare a proposal for your occasion."
+      }
+    },
+    "b2b": {
+      "meta": {
+        "title": "Wholesale Bakery Supplier Riyadh | Plum B2B",
+        "description": "Wholesale breads, croissants, Danish, focaccia, éclairs and cakes for hotels, restaurants and cafés in Riyadh. Browse the Plum B2B catalogue and request a quote."
+      },
+      "hero": {
+        "eyebrow": "B2B Catalogue",
+        "h1": "Wholesale Bakery & Pastry Supply in Riyadh",
+        "lead": "Breads, viennoiserie, pastries and cakes from the Plum central kitchen, supplied to hotels, restaurants, cafés and foodservice operators."
+      },
+      "overview": {
+        "h2": "B2B Supply for Foodservice Businesses",
+        "body": "Foodservice businesses need bakery products they can rely on — consistent in quality, size and presentation, order after order. Plum's B2B range covers seven product families, with fresh and baked-frozen options in selected families. Browse the catalogue below, open any product for its specifications, and request a quote for the items and quantities you need."
+      },
+      "range": {
+        "h2": "Explore Our Product Range"
+      },
+      "options": {
+        "h2": "Fresh & Baked-Frozen Options",
+        "body": "Shelf life is specific to each product family. Where a family is offered both fresh and baked-frozen, the approved shelf life is shown below.",
+        "fresh": "Fresh",
+        "frozen": "Baked-frozen",
+        "familyPending": "Shelf-life data pending for this family."
+      },
+      "quality": {
+        "h2": "Quality & Production Standards",
+        "body": "All B2B products are produced in Plum's central kitchen in Riyadh under documented food-safety procedures."
+      },
+      "download": {
+        "h2": "Product Catalogue Download",
+        "body": "Prefer a document to share with your purchasing team? Download the catalogue. Product details also remain available on each product page."
+      },
+      "who": {
+        "h2": "Who We Supply",
+        "items": [
+          "Hotels",
+          "Restaurants",
+          "Cafés",
+          "Foodservice operators"
+        ],
+        "pendingNote": "Confirm any additional industries served (e.g. corporate canteens, airlines, retailers)."
+      },
+      "finalCta": {
+        "h2": "Start a Supply Partnership",
+        "body": "Tell us about your business, the products you are interested in and your expected quantities."
+      },
+      "faq": {
+        "h2": "B2B Frequently Asked Questions",
+        "items": [
+          {
+            "q": "How do I request wholesale pricing?",
+            "a": "Open any product and select \"Request a Quote for This Product\", or use the B2B quote form to list several products and your expected quantities."
+          },
+          {
+            "q": "What is the lead time for orders?",
+            "a": "Lead times vary by product and quantity and are confirmed when your supply arrangement is agreed.",
+            "review": true
+          },
+          {
+            "q": "Which delivery areas do you cover?",
+            "a": "Please include your delivery location in your request. Delivery coverage is confirmed during onboarding.",
+            "review": true
+          },
+          {
+            "q": "How should products be stored?",
+            "a": "Storage guidance is specific to each product and will be shown on each product page once approved product documentation is supplied.",
+            "review": true
+          }
+        ]
+      }
+    },
+    "facility": {
+      "comingSoon": {
+        "meta": {
+          "title": "Facility Management — Coming Soon | Plum Catering",
+          "description": "Plum Catering's facility management services are coming soon. In the meantime, explore our corporate catering, celebrations and B2B supply services."
+        },
+        "eyebrow": "Future service",
+        "h1": "Facility Management — Coming Soon",
+        "lead": "We are preparing a facility management service line. It is not currently operational and we are not accepting facility management enquiries yet.",
+        "plannedH2": "Planned service areas",
+        "plannedNote": "The scope below is indicative and subject to change before launch.",
+        "planned": [
+          "Pest control & cleaning",
+          "Linen & laundry",
+          "Housekeeping",
+          "Site maintenance",
+          "Landscaping"
+        ],
+        "liveH2": "Explore Our Current Services",
+        "liveBody": "Our catering services are available today."
+      },
+      "live": {
+        "meta": {
+          "title": "Facility Management Services in Riyadh | Plum",
+          "description": "PENDING — approved meta description required before launch."
+        },
+        "eyebrow": "Facility Management",
+        "h1": "Facility Management Services in Riyadh",
+        "lead": "PENDING — approved positioning statement required before launch.",
+        "sections": {
+          "overview": {
+            "h2": "Integrated Facility Services"
+          },
+          "solutions": {
+            "h2": "Our Facility Management Solutions",
+            "items": [
+              "Pest Control & Cleaning",
+              "Linen & Laundry",
+              "Housekeeping",
+              "Site Maintenance",
+              "Landscaping"
+            ]
+          },
+          "industries": {
+            "h2": "Facilities We Serve"
+          },
+          "model": {
+            "h2": "Service Delivery Model",
+            "steps": [
+              "Site assessment",
+              "Scope of work",
+              "Mobilisation",
+              "Routine delivery & reporting"
+            ]
+          },
+          "quality": {
+            "h2": "Quality, Safety & Compliance"
+          },
+          "team": {
+            "h2": "Our Operational Team"
+          },
+          "projects": {
+            "h2": "Projects & Case Studies"
+          },
+          "faq": {
+            "h2": "FAQs"
+          },
+          "cta": {
+            "h2": "Request a Facility Management Proposal",
+            "body": "Tell us about your facility and requirements."
+          }
+        },
+        "pendingNote": "Content for this section is required and must be approved before Facility Management is switched live."
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy | Plum Catering",
+        "description": "How Plum Catering collects, uses and protects personal data submitted through this website, including enquiry forms and cookies."
+      },
+      "h1": "Privacy Policy",
+      "draftNotice": "Review draft — this policy must be completed and approved by Plum Catering and its legal counsel before publication. Bracketed items are placeholders, not commitments.",
+      "updated": "Last updated: [date to be set on approval]",
+      "tocLabel": "On this page",
+      "sections": [
+        {
+          "id": "who-we-are",
+          "h2": "Who We Are",
+          "body": [
+            "This website is operated by Plum Catering, a brand of [legal entity name — to be confirmed], [registered address — to be confirmed]. For the purposes of this policy, that entity is the controller of your personal data."
+          ]
+        },
+        {
+          "id": "data-we-collect",
+          "h2": "Data We Collect",
+          "body": [
+            "When you submit an enquiry we collect the details you provide, such as your name, email address, phone number, company, service of interest, event details and message.",
+            "When you browse the website, technical information such as device and browser data may be processed to deliver and secure the site. Optional analytics and advertising data are collected only with your consent."
+          ]
+        },
+        {
+          "id": "why-we-process",
+          "h2": "Why We Process Data",
+          "body": [
+            "We use your information to respond to your enquiry, prepare proposals, provide our services, keep the website secure and, where you have agreed, to measure and improve our website and advertising.",
+            "[Legal bases for each purpose under the Saudi Personal Data Protection Law (PDPL) — to be confirmed by legal counsel.]"
+          ]
+        },
+        {
+          "id": "inquiry-forms",
+          "h2": "Inquiry Form Processing",
+          "body": [
+            "Enquiries submitted through the quote form are transmitted securely to our server and delivered to the Plum team by email through [Microsoft 365 — configuration to be confirmed].",
+            "Marketing communications are sent only if you separately opt in, and you can withdraw that consent at any time."
+          ]
+        },
+        {
+          "id": "cookies",
+          "h2": "Cookies & Tracking",
+          "body": [
+            "We use strictly necessary cookies to operate the site and remember your cookie choices. With your consent we may use Google Tag Manager, analytics and Google Ads conversion measurement. Non-essential tags do not run until you allow them.",
+            "[Full cookie list with names, providers, purposes and durations — to be completed once tags are configured.]"
+          ]
+        },
+        {
+          "id": "consent",
+          "h2": "Consent Choices",
+          "body": [
+            "You can accept, reject or customise non-essential cookies when you first visit, and change your choice at any time using \"Cookie preferences\" in the footer or the button below."
+          ],
+          "cookieButton": true
+        },
+        {
+          "id": "providers",
+          "h2": "Service Providers & Transfers",
+          "body": [
+            "We use service providers to host and protect the website and to deliver email, which may include [hosting provider], Cloudflare, Microsoft and Google. [Details of any processing or transfers outside the Kingdom of Saudi Arabia and the safeguards applied — to be confirmed by legal counsel.]"
+          ]
+        },
+        {
+          "id": "retention",
+          "h2": "Data Retention",
+          "body": [
+            "We keep personal data only for as long as necessary for the purposes described above. [Specific retention periods — to be defined and approved.]"
+          ]
+        },
+        {
+          "id": "your-rights",
+          "h2": "Your Rights",
+          "body": [
+            "Subject to applicable law, you may have the right to be informed, to access, correct or request destruction of your personal data, and to withdraw consent. [Exact rights and how to exercise them — to be confirmed under PDPL.]"
+          ]
+        },
+        {
+          "id": "security",
+          "h2": "Security",
+          "body": [
+            "We apply technical and organisational measures intended to protect personal data, including encrypted connections. [Description of measures — to be confirmed.]"
+          ]
+        },
+        {
+          "id": "contact-updates",
+          "h2": "Contact & Updates",
+          "body": [
+            "For privacy questions, contact [privacy contact email — to be confirmed]. We may update this policy from time to time; the date at the top of this page shows the latest version."
+          ]
+        }
+      ]
+    },
+    "product": {
+      "eyebrow": "B2B product",
+      "b2b": "B2B Catalogue",
+      "overviewH2": "Product Overview",
+      "specsH2": "Product Specifications",
+      "sizesH3": "Available Sizes",
+      "ingredientsH2": "Ingredients & Allergens",
+      "storageH2": "Storage & Handling",
+      "applicationsH2": "Foodservice Applications",
+      "relatedH2": "Related Products",
+      "questionsH2": "Product Questions",
+      "pricingH2": "Request Wholesale Pricing",
+      "pricingBody": "Tell us the quantities and delivery frequency you need. This product will be attached to your request automatically.",
+      "spec": {
+        "category": "Product family",
+        "code": "Product code",
+        "weight": "Weight",
+        "energy": "Energy",
+        "fresh": "Fresh shelf life",
+        "frozen": "Baked-frozen shelf life",
+        "packaging": "Packaging",
+        "variant": "Variant"
+      },
+      "highlights": "Key facts",
+      "pending": {
+        "overview": "A distinct, fact-based product overview (100–180 words) is required for this product.",
+        "intro": "Short product introduction (60–120 words) pending.",
+        "specs": "Verified specifications have not been supplied for this product.",
+        "ingredients": "Ingredients and allergen information must come from approved product documentation. This section is hidden on the live site until supplied — allergens are never estimated.",
+        "storage": "Storage, thawing and temperature guidance must come from approved product documentation.",
+        "applications": "Approved foodservice use cases pending.",
+        "related": "Related products will appear once more products in this family are approved.",
+        "image": "Original product photography pending"
+      },
+      "draftBanner": "Draft product page — not indexed. Awaiting verified product data and client approval.",
+      "energyBasisPending": "basis to be confirmed",
+      "inquiry": "Ask about this product on WhatsApp"
+    },
+    "notFound": {
+      "meta": {
+        "title": "Page Not Found | Plum Catering",
+        "description": "The page you are looking for could not be found. Explore Plum Catering's corporate, celebration and B2B catering services."
+      },
+      "h1": "We couldn't find that page",
+      "body": "The page may have moved or the address may be incorrect. These links will help you find your way.",
+      "home": "Go to the home page"
+    }
+  }
+}

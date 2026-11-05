@@ -1,0 +1,106 @@
+{
+  "_note": "Structured product inventory. ONLY source-backed records. No invented ingredients, allergens, nutrition, prices, codes or shelf lives. 'status' drives indexability: only 'approved' records are indexable and enter the sitemap. Blueprint reports 76 products across 7 families on the current website; those records have not been supplied, see docs/content-gaps.md.",
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "bread",
+      "slug": "bread",
+      "name": { "ar": "الخبز", "en": "Bread" },
+      "expectedCount": 21,
+      "shelfLife": {
+        "fresh": { "ar": "يومان", "en": "2 days" },
+        "bakedFrozen": { "ar": "3 أشهر", "en": "3 months" },
+        "status": "provisional",
+        "source": "Blueprint v1 §4.6 — as published on current B2B page; revalidate with client"
+      }
+    },
+    { "id": "croissants", "slug": "croissants", "name": { "ar": "الكرواسون", "en": "Croissants" }, "expectedCount": 6, "shelfLife": null },
+    { "id": "danish-focaccia", "slug": "danish-focaccia", "name": { "ar": "الدنش والفوكاشيا", "en": "Danish & Focaccia" }, "expectedCount": 10, "shelfLife": null },
+    { "id": "eclairs", "slug": "eclairs", "name": { "ar": "الإكلير", "en": "Éclairs" }, "expectedCount": 12, "shelfLife": null },
+    { "id": "miracle-cakes", "slug": "miracle-cakes", "name": { "ar": "كيك ميراكل", "en": "Miracle Cakes" }, "expectedCount": 5, "shelfLife": null },
+    { "id": "molded-cakes", "slug": "molded-cakes", "name": { "ar": "كيك القوالب", "en": "Molded Cakes" }, "expectedCount": 12, "shelfLife": null },
+    { "id": "whole-cakes", "slug": "whole-cakes", "name": { "ar": "الكيك الكامل", "en": "Whole Cakes" }, "expectedCount": 10, "shelfLife": null }
+  ],
+  "products": [
+    {
+      "id": "prd-bread-brown-sourdough",
+      "category": "bread",
+      "status": "provisional",
+      "source": "Blueprint v1 §4.6 'Verified example from current B2B source' — revalidate before approval",
+      "slug": { "ar": "brown-sourdough-bread", "en": "brown-sourdough-bread" },
+      "name": { "ar": "خبز ساوردو أسمر", "en": "Brown Sourdough Bread" },
+      "h1": { "ar": "خبز ساوردو أسمر للتوريد بالجملة", "en": "Brown Sourdough Bread for Wholesale Supply" },
+      "productCode": null,
+      "heroImage": null,
+      "galleryImages": [],
+      "variants": [
+        { "id": "v1", "weight": { "value": 750, "unit": "g" }, "energy": { "value": 1850, "unit": "kcal", "basis": null } }
+      ],
+      "shortDescription": { "ar": null, "en": null },
+      "longDescription": { "ar": null, "en": null },
+      "ingredients": { "ar": null, "en": null },
+      "allergens": { "ar": null, "en": null },
+      "packaging": { "ar": null, "en": null },
+      "storage": { "ar": null, "en": null },
+      "foodserviceUse": { "ar": null, "en": null },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [],
+      "pdfAttachment": null,
+      "seo": {
+        "title": { "ar": "خبز ساوردو أسمر | مخبوزات بالجملة | بلام للتموين", "en": "Brown Sourdough Bread | Wholesale Bakery | Plum Catering" },
+        "description": { "ar": null, "en": null }
+      },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-molded-honey-cake",
+      "category": "molded-cakes",
+      "status": "draft",
+      "source": "Blueprint v1 §2 — product name only; illustrates duplicate names across categories",
+      "slug": { "ar": "honey-cake-molded-cake", "en": "honey-cake-molded-cake" },
+      "name": { "ar": "كيكة العسل", "en": "Honey Cake" },
+      "h1": { "ar": "كيكة العسل — كيك القوالب", "en": "Honey Cake — Molded Cake" },
+      "productCode": null,
+      "heroImage": null,
+      "galleryImages": [],
+      "variants": [],
+      "shortDescription": { "ar": null, "en": null },
+      "longDescription": { "ar": null, "en": null },
+      "ingredients": { "ar": null, "en": null },
+      "allergens": { "ar": null, "en": null },
+      "packaging": { "ar": null, "en": null },
+      "storage": { "ar": null, "en": null },
+      "foodserviceUse": { "ar": null, "en": null },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [],
+      "pdfAttachment": null,
+      "seo": { "title": { "ar": null, "en": null }, "description": { "ar": null, "en": null } },
+      "indexabilityOverride": null
+    },
+    {
+      "id": "prd-whole-honey-cake",
+      "category": "whole-cakes",
+      "status": "draft",
+      "source": "Blueprint v1 §2 — product name only; illustrates duplicate names across categories",
+      "slug": { "ar": "honey-cake-whole-cake", "en": "honey-cake-whole-cake" },
+      "name": { "ar": "كيكة العسل", "en": "Honey Cake" },
+      "h1": { "ar": "كيكة العسل — كيك كامل", "en": "Honey Cake — Whole Cake" },
+      "productCode": null,
+      "heroImage": null,
+      "galleryImages": [],
+      "variants": [],
+      "shortDescription": { "ar": null, "en": null },
+      "longDescription": { "ar": null, "en": null },
+      "ingredients": { "ar": null, "en": null },
+      "allergens": { "ar": null, "en": null },
+      "packaging": { "ar": null, "en": null },
+      "storage": { "ar": null, "en": null },
+      "foodserviceUse": { "ar": null, "en": null },
+      "freshOrFrozen": "inherit-category",
+      "relatedProducts": [],
+      "pdfAttachment": null,
+      "seo": { "title": { "ar": null, "en": null }, "description": { "ar": null, "en": null } },
+      "indexabilityOverride": null
+    }
+  ]
+}
