@@ -42,6 +42,7 @@ export function navModel(ctx) {
     { key: 'b2b', label: ctx.ui.nav.b2b, head: ctx.ui.nav.groups.b2b, href: route('b2b', L), items: ctx.categories.map((c) => ({ label: c.name[L], href: familyRoute(c.slug, L) })) },
     { key: 'about', label: ctx.ui.nav.about, href: route('about', L) },
     { key: 'gallery', label: ctx.ui.nav.gallery, href: route('gallery', L) },
+    { key: 'facility', label: ctx.ui.nav.facility, href: route('facility', L), badge: ctx.config.facilityManagement.launchMode !== 'live' ? ctx.ui.nav.comingSoon : null },
     { key: 'contact', label: ctx.ui.nav.contact, href: route('contact', L) },
   ];
 }
@@ -57,10 +58,9 @@ export function header(ctx) {
   const logo = ctx.config.brand.logo;
   const c = ctx.config.contact;
   const nav = navModel(ctx);
-  const utility = `<div class="utility-bar"><div class="container utility-bar__inner"><span>${esc(ctx.ui.nav.utility.location)}</span>${c.phone ? `<span>${esc(ctx.ui.nav.utility.phone)}: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" dir="ltr">${esc(c.phone)}</a></span>` : ''}</div></div>`;
   const items = join(nav, (n, i) => {
     const current = ctx.pageKey === n.key || ctx.navParent === n.key;
-    if (!n.items) return `<li><a class="nav-link" href="${n.href}"${isCurrent(ctx, n.href) ? ' aria-current="page"' : ''}>${esc(n.label)}</a></li>`;
+    if (!n.items) return `<li><a class="nav-link" href="${n.href}"${isCurrent(ctx, n.href) ? ' aria-current="page"' : ''}>${esc(n.label)}${n.badge ? ` <span class="nav-badge">${esc(n.badge)}</span>` : ''}</a></li>`;
     const id = `mega-${n.key}`;
     return `<li class="nav-item" data-nav-item data-current="${current}">
       <button class="nav-item__btn" type="button" aria-expanded="false" aria-controls="${id}" data-nav-toggle>${esc(n.label)}${icon('chevron', { cls: 'nav-chevron' })}</button>
@@ -71,7 +71,7 @@ export function header(ctx) {
       </div>
     </li>`;
   });
-  return `${utility}<header class="site-header" data-header>
+  return `<header class="site-header" data-header>
   <div class="container site-header__inner">
     <a class="site-logo" href="${route('home', ctx.lang)}" aria-label="${esc(ctx.config.siteName[ctx.lang])} — ${esc(ctx.ui.nav.home)}"><img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[ctx.lang])}" fetchpriority="high"></a>
     <nav class="primary-nav" aria-label="${esc(ctx.ui.nav.label)}"><ul class="nav-list">${items}</ul></nav>

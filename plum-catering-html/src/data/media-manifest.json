@@ -1,5 +1,5 @@
 {
-  "_note": "Asset manifest. src=null means the real asset is not yet supplied and a labelled SVG placeholder is generated at build time. Target: 117 real gallery photos (0 supplied). Do not duplicate photos to reach the target.",
+  "_note": "Asset manifest. Photo entries are DERIVED from client-supplied catalogue assets (demo:true) until final photography is supplied; placeholders are generated for any entry without src. Target: 117 real gallery photos (0 final photos supplied).",
   "galleryTarget": 117,
   "galleryCategories": [
     {
@@ -34,7 +34,7 @@
   "images": [
     {
       "id": "hero-poster",
-      "src": null,
+      "src": "/assets/images/photos/hero-poster.jpg",
       "srcset": [],
       "width": 1920,
       "height": 1080,
@@ -48,13 +48,14 @@
         "ar": "ملصق فيديو الواجهة — لقطات سينمائية من خدمات بلام"
       },
       "alt": {
-        "en": "Placeholder: hero video poster — cinematic Plum service footage",
-        "ar": "صورة مؤقتة: ملصق فيديو الواجهة — لقطات سينمائية من خدمات بلام"
-      }
+        "en": "Hero video poster — cinematic Plum service footage",
+        "ar": "ملصق فيديو الواجهة — لقطات سينمائية من خدمات بلام"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "kitchen-poster",
-      "src": null,
+      "src": "/assets/images/photos/kitchen-poster.jpg",
       "srcset": [],
       "width": 1600,
       "height": 900,
@@ -68,16 +69,17 @@
         "ar": "ملصق فيلم المطبخ — لقطات من المطبخ المركزي"
       },
       "alt": {
-        "en": "Placeholder: kitchen film poster — central kitchen footage",
-        "ar": "صورة مؤقتة: ملصق فيلم المطبخ — لقطات من المطبخ المركزي"
-      }
+        "en": "Kitchen film poster — central kitchen footage",
+        "ar": "ملصق فيلم المطبخ — لقطات من المطبخ المركزي"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "about-hero",
-      "src": null,
+      "src": "/assets/images/photos/about-hero.jpg",
       "srcset": [],
       "width": 1600,
-      "height": 1000,
+      "height": 1100,
       "demo": true,
       "placeholder": {
         "tone": "sand",
@@ -88,13 +90,14 @@
         "ar": "صورة فريق بلام والمطبخ"
       },
       "alt": {
-        "en": "Placeholder: plum team and kitchen photograph",
-        "ar": "صورة مؤقتة: صورة فريق بلام والمطبخ"
-      }
+        "en": "Plum team and kitchen photograph",
+        "ar": "صورة فريق بلام والمطبخ"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "kitchen-facility",
-      "src": null,
+      "src": "/assets/images/photos/kitchen-facility.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -108,13 +111,14 @@
         "ar": "صورة منشأة المطبخ المركزي"
       },
       "alt": {
-        "en": "Placeholder: central kitchen facility photograph",
-        "ar": "صورة مؤقتة: صورة منشأة المطبخ المركزي"
-      }
+        "en": "Central kitchen facility photograph",
+        "ar": "صورة منشأة المطبخ المركزي"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "team",
-      "src": null,
+      "src": "/assets/images/photos/team.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -128,13 +132,14 @@
         "ar": "صورة فريق الطهاة والتشغيل"
       },
       "alt": {
-        "en": "Placeholder: chef and operations team photograph",
-        "ar": "صورة مؤقتة: صورة فريق الطهاة والتشغيل"
-      }
+        "en": "Chef and operations team photograph",
+        "ar": "صورة فريق الطهاة والتشغيل"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "svc-corporates",
-      "src": null,
+      "src": "/assets/images/photos/svc-corporates.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -148,13 +153,14 @@
         "ar": "صورة خدمة تموين الشركات"
       },
       "alt": {
-        "en": "Placeholder: corporate dining service photograph",
-        "ar": "صورة مؤقتة: صورة خدمة تموين الشركات"
-      }
+        "en": "Corporate dining service photograph",
+        "ar": "صورة خدمة تموين الشركات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "svc-celebrations",
-      "src": null,
+      "src": "/assets/images/photos/svc-celebrations.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -168,13 +174,14 @@
         "ar": "صورة طاولة مناسبة"
       },
       "alt": {
-        "en": "Placeholder: celebration table setting photograph",
-        "ar": "صورة مؤقتة: صورة طاولة مناسبة"
-      }
+        "en": "Celebration table setting photograph",
+        "ar": "صورة طاولة مناسبة"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "svc-b2b",
-      "src": null,
+      "src": "/assets/images/photos/svc-b2b.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -188,13 +195,14 @@
         "ar": "صورة منتجات المخبوزات لقطاع الأعمال"
       },
       "alt": {
-        "en": "Placeholder: b2B bakery product photograph",
-        "ar": "صورة مؤقتة: صورة منتجات المخبوزات لقطاع الأعمال"
-      }
+        "en": "B2B bakery product photograph",
+        "ar": "صورة منتجات المخبوزات لقطاع الأعمال"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "svc-facility",
-      "src": null,
+      "src": "/assets/images/photos/svc-facility.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -208,16 +216,17 @@
         "ar": "إدارة المرافق — خدمة مستقبلية"
       },
       "alt": {
-        "en": "Placeholder: facility management — future service",
-        "ar": "صورة مؤقتة: إدارة المرافق — خدمة مستقبلية"
-      }
+        "en": "Facility management — future service",
+        "ar": "إدارة المرافق — خدمة مستقبلية"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-hero",
-      "src": null,
+      "src": "/assets/images/photos/corp-hero.jpg",
       "srcset": [],
-      "width": 1920,
-      "height": 1080,
+      "width": 1600,
+      "height": 1100,
       "demo": true,
       "placeholder": {
         "tone": "plum",
@@ -228,13 +237,14 @@
         "ar": "صورة واجهة تموين الشركات"
       },
       "alt": {
-        "en": "Placeholder: corporate catering hero photograph",
-        "ar": "صورة مؤقتة: صورة واجهة تموين الشركات"
-      }
+        "en": "Corporate catering hero photograph",
+        "ar": "صورة واجهة تموين الشركات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-business",
-      "src": null,
+      "src": "/assets/images/photos/corp-business.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -248,13 +258,14 @@
         "ar": "تموين فعاليات الشركات والأعمال"
       },
       "alt": {
-        "en": "Placeholder: corporate & business event catering",
-        "ar": "صورة مؤقتة: تموين فعاليات الشركات والأعمال"
-      }
+        "en": "Corporate & business event catering",
+        "ar": "تموين فعاليات الشركات والأعمال"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-royal",
-      "src": null,
+      "src": "/assets/images/photos/corp-royal.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -268,13 +279,14 @@
         "ar": "خدمة المناسبات الملكية والحكومية"
       },
       "alt": {
-        "en": "Placeholder: royal & government event service",
-        "ar": "صورة مؤقتة: خدمة المناسبات الملكية والحكومية"
-      }
+        "en": "Royal & government event service",
+        "ar": "خدمة المناسبات الملكية والحكومية"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-hospitals",
-      "src": null,
+      "src": "/assets/images/photos/corp-hospitals.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -288,13 +300,14 @@
         "ar": "خدمة وجبات المستشفيات والعيادات"
       },
       "alt": {
-        "en": "Placeholder: hospital & clinic meal service",
-        "ar": "صورة مؤقتة: خدمة وجبات المستشفيات والعيادات"
-      }
+        "en": "Hospital & clinic meal service",
+        "ar": "خدمة وجبات المستشفيات والعيادات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-industrial",
-      "src": null,
+      "src": "/assets/images/photos/corp-industrial.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -308,13 +321,14 @@
         "ar": "تموين المواقع الصناعية والنائية"
       },
       "alt": {
-        "en": "Placeholder: industrial & remote site catering",
-        "ar": "صورة مؤقتة: تموين المواقع الصناعية والنائية"
-      }
+        "en": "Industrial & remote site catering",
+        "ar": "تموين المواقع الصناعية والنائية"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-schools",
-      "src": null,
+      "src": "/assets/images/photos/corp-schools.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -328,13 +342,14 @@
         "ar": "تموين المدارس والجامعات"
       },
       "alt": {
-        "en": "Placeholder: school & university dining",
-        "ar": "صورة مؤقتة: تموين المدارس والجامعات"
-      }
+        "en": "School & university dining",
+        "ar": "تموين المدارس والجامعات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-mealboxes",
-      "src": null,
+      "src": "/assets/images/photos/corp-mealboxes.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -348,13 +363,14 @@
         "ar": "تقديم علب الوجبات"
       },
       "alt": {
-        "en": "Placeholder: meal box presentation",
-        "ar": "صورة مؤقتة: تقديم علب الوجبات"
-      }
+        "en": "Meal box presentation",
+        "ar": "تقديم علب الوجبات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "corp-ramadan",
-      "src": null,
+      "src": "/assets/images/photos/corp-ramadan.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -368,16 +384,17 @@
         "ar": "تجهيزات تموين رمضان"
       },
       "alt": {
-        "en": "Placeholder: ramadan catering setup",
-        "ar": "صورة مؤقتة: تجهيزات تموين رمضان"
-      }
+        "en": "Ramadan catering setup",
+        "ar": "تجهيزات تموين رمضان"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-hero",
-      "src": null,
+      "src": "/assets/images/photos/cel-hero.jpg",
       "srcset": [],
-      "width": 1920,
-      "height": 1080,
+      "width": 1600,
+      "height": 1100,
       "demo": true,
       "placeholder": {
         "tone": "plum",
@@ -388,13 +405,14 @@
         "ar": "طاولة احتفال أنيقة"
       },
       "alt": {
-        "en": "Placeholder: elegant celebration tablescape",
-        "ar": "صورة مؤقتة: طاولة احتفال أنيقة"
-      }
+        "en": "Elegant celebration tablescape",
+        "ar": "طاولة احتفال أنيقة"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-weddings",
-      "src": null,
+      "src": "/assets/images/photos/cel-weddings.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -408,13 +426,14 @@
         "ar": "تموين حفلات الزفاف والخطوبة"
       },
       "alt": {
-        "en": "Placeholder: wedding & engagement catering",
-        "ar": "صورة مؤقتة: تموين حفلات الزفاف والخطوبة"
-      }
+        "en": "Wedding & engagement catering",
+        "ar": "تموين حفلات الزفاف والخطوبة"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-private",
-      "src": null,
+      "src": "/assets/images/photos/cel-private.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -428,13 +447,14 @@
         "ar": "ضيافة المناسبات الخاصة"
       },
       "alt": {
-        "en": "Placeholder: private occasion hospitality",
-        "ar": "صورة مؤقتة: ضيافة المناسبات الخاصة"
-      }
+        "en": "Private occasion hospitality",
+        "ar": "ضيافة المناسبات الخاصة"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-ramadan",
-      "src": null,
+      "src": "/assets/images/photos/cel-ramadan.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -448,13 +468,14 @@
         "ar": "ضيافة مناسبات رمضان"
       },
       "alt": {
-        "en": "Placeholder: ramadan gathering hospitality",
-        "ar": "صورة مؤقتة: ضيافة مناسبات رمضان"
-      }
+        "en": "Ramadan gathering hospitality",
+        "ar": "ضيافة مناسبات رمضان"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-vip",
-      "src": null,
+      "src": "/assets/images/photos/cel-vip.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -468,13 +489,14 @@
         "ar": "الضيافة الفاخرة لكبار الضيوف"
       },
       "alt": {
-        "en": "Placeholder: luxury VIP hospitality",
-        "ar": "صورة مؤقتة: الضيافة الفاخرة لكبار الضيوف"
-      }
+        "en": "Luxury VIP hospitality",
+        "ar": "الضيافة الفاخرة لكبار الضيوف"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-live",
-      "src": null,
+      "src": "/assets/images/photos/cel-live.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -488,13 +510,14 @@
         "ar": "محطة طهي مباشر"
       },
       "alt": {
-        "en": "Placeholder: live cooking station",
-        "ar": "صورة مؤقتة: محطة طهي مباشر"
-      }
+        "en": "Live cooking station",
+        "ar": "محطة طهي مباشر"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "cel-canapes",
-      "src": null,
+      "src": "/assets/images/photos/cel-canapes.jpg",
       "srcset": [],
       "width": 1200,
       "height": 900,
@@ -508,16 +531,17 @@
         "ar": "خدمة الكانابيه والاستقبالات"
       },
       "alt": {
-        "en": "Placeholder: canapés & reception service",
-        "ar": "صورة مؤقتة: خدمة الكانابيه والاستقبالات"
-      }
+        "en": "Canapés & reception service",
+        "ar": "خدمة الكانابيه والاستقبالات"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "b2b-hero",
-      "src": null,
+      "src": "/assets/images/photos/b2b-hero.jpg",
       "srcset": [],
-      "width": 1920,
-      "height": 1080,
+      "width": 1600,
+      "height": 1100,
       "demo": true,
       "placeholder": {
         "tone": "plum",
@@ -528,16 +552,17 @@
         "ar": "تصوير منتجات المخبوزات بالجملة"
       },
       "alt": {
-        "en": "Placeholder: wholesale bakery product photography",
-        "ar": "صورة مؤقتة: تصوير منتجات المخبوزات بالجملة"
-      }
+        "en": "Wholesale bakery product photography",
+        "ar": "تصوير منتجات المخبوزات بالجملة"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "fm-hero",
-      "src": null,
+      "src": "/assets/images/photos/fm-hero.jpg",
       "srcset": [],
-      "width": 1920,
-      "height": 1080,
+      "width": 1600,
+      "height": 1100,
       "demo": true,
       "placeholder": {
         "tone": "plum",
@@ -548,9 +573,10 @@
         "ar": "إدارة المرافق — قريبًا"
       },
       "alt": {
-        "en": "Placeholder: facility management — coming soon",
-        "ar": "صورة مؤقتة: إدارة المرافق — قريبًا"
-      }
+        "en": "Facility management — coming soon",
+        "ar": "إدارة المرافق — قريبًا"
+      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography."
     },
     {
       "id": "product-placeholder",
@@ -2552,46 +2578,19 @@
   "gallery": [
     {
       "id": "gallery-demo-01",
-      "category": "corporates",
-      "src": null,
+      "category": "celebrations",
+      "src": "/assets/images/photos/gallery-demo-01.jpg",
       "width": 1200,
       "height": 1500,
       "demo": true,
-      "placeholder": {
-        "tone": "sand",
-        "icon": "tray"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Corporate lunch service",
-        "ar": "خدمة غداء للشركات"
+        "en": "Hospitality table setting",
+        "ar": "تنسيق مائدة ضيافة"
       },
       "alt": {
-        "en": "Demo placeholder: corporate lunch service",
-        "ar": "صورة تجريبية مؤقتة: خدمة غداء للشركات"
-      },
-      "pages": [
-        "home",
-        "corporates"
-      ]
-    },
-    {
-      "id": "gallery-demo-02",
-      "category": "celebrations",
-      "src": null,
-      "width": 1200,
-      "height": 900,
-      "demo": true,
-      "placeholder": {
-        "tone": "sand",
-        "icon": "glass"
-      },
-      "label": {
-        "en": "Wedding table setting",
-        "ar": "تنسيق طاولة زفاف"
-      },
-      "alt": {
-        "en": "Demo placeholder: wedding table setting",
-        "ar": "صورة تجريبية مؤقتة: تنسيق طاولة زفاف"
+        "en": "Hospitality table setting",
+        "ar": "تنسيق مائدة ضيافة"
       },
       "pages": [
         "home",
@@ -2599,46 +2598,61 @@
       ]
     },
     {
-      "id": "gallery-demo-03",
-      "category": "kitchen",
-      "src": null,
+      "id": "gallery-demo-02",
+      "category": "b2b",
+      "src": "/assets/images/photos/gallery-demo-02.jpg",
       "width": 1200,
       "height": 900,
       "demo": true,
-      "placeholder": {
-        "tone": "plum",
-        "icon": "chef"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Kitchen preparation",
-        "ar": "التحضير في المطبخ"
+        "en": "Croissant selection",
+        "ar": "تشكيلة كرواسون"
       },
       "alt": {
-        "en": "Demo placeholder: kitchen preparation",
-        "ar": "صورة تجريبية مؤقتة: التحضير في المطبخ"
+        "en": "Croissant selection",
+        "ar": "تشكيلة كرواسون"
       },
       "pages": [
         "home"
       ]
     },
     {
+      "id": "gallery-demo-03",
+      "category": "corporates",
+      "src": "/assets/images/photos/gallery-demo-03.jpg",
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
+      "label": {
+        "en": "Buffet service detail",
+        "ar": "تفاصيل خدمة البوفيه"
+      },
+      "alt": {
+        "en": "Buffet service detail",
+        "ar": "تفاصيل خدمة البوفيه"
+      },
+      "pages": [
+        "home",
+        "corporates"
+      ]
+    },
+    {
       "id": "gallery-demo-04",
       "category": "b2b",
-      "src": null,
+      "src": "/assets/images/photos/gallery-demo-04.jpg",
       "width": 1200,
       "height": 1500,
       "demo": true,
-      "placeholder": {
-        "tone": "ivory",
-        "icon": "bread"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Bakery selection",
-        "ar": "تشكيلة مخبوزات"
+        "en": "Whole cakes",
+        "ar": "كيك كامل"
       },
       "alt": {
-        "en": "Demo placeholder: bakery selection",
-        "ar": "صورة تجريبية مؤقتة: تشكيلة مخبوزات"
+        "en": "Whole cakes",
+        "ar": "كيك كامل"
       },
       "pages": [
         "home"
@@ -2647,21 +2661,18 @@
     {
       "id": "gallery-demo-05",
       "category": "celebrations",
-      "src": null,
+      "src": "/assets/images/photos/gallery-demo-05.jpg",
       "width": 1200,
       "height": 900,
       "demo": true,
-      "placeholder": {
-        "tone": "sand",
-        "icon": "cloche"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Reception service",
-        "ar": "خدمة استقبال"
+        "en": "Reception table",
+        "ar": "طاولة استقبال"
       },
       "alt": {
-        "en": "Demo placeholder: reception service",
-        "ar": "صورة تجريبية مؤقتة: خدمة استقبال"
+        "en": "Reception table",
+        "ar": "طاولة استقبال"
       },
       "pages": [
         "home",
@@ -2670,22 +2681,39 @@
     },
     {
       "id": "gallery-demo-06",
-      "category": "corporates",
-      "src": null,
+      "category": "b2b",
+      "src": "/assets/images/photos/gallery-demo-06.jpg",
       "width": 1200,
       "height": 1200,
       "demo": true,
-      "placeholder": {
-        "tone": "plum",
-        "icon": "box"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Meal boxes",
-        "ar": "علب وجبات"
+        "en": "Molded cakes",
+        "ar": "كيك القوالب"
       },
       "alt": {
-        "en": "Demo placeholder: meal boxes",
-        "ar": "صورة تجريبية مؤقتة: علب وجبات"
+        "en": "Molded cakes",
+        "ar": "كيك القوالب"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-07",
+      "category": "corporates",
+      "src": "/assets/images/photos/gallery-demo-07.jpg",
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
+      "label": {
+        "en": "Plated service",
+        "ar": "تقديم الأطباق"
+      },
+      "alt": {
+        "en": "Plated service",
+        "ar": "تقديم الأطباق"
       },
       "pages": [
         "home",
@@ -2693,69 +2721,41 @@
       ]
     },
     {
-      "id": "gallery-demo-07",
-      "category": "kitchen",
-      "src": null,
-      "width": 1200,
-      "height": 900,
-      "demo": true,
-      "placeholder": {
-        "tone": "ivory",
-        "icon": "shield"
-      },
-      "label": {
-        "en": "Food safety checks",
-        "ar": "فحوصات سلامة الغذاء"
-      },
-      "alt": {
-        "en": "Demo placeholder: food safety checks",
-        "ar": "صورة تجريبية مؤقتة: فحوصات سلامة الغذاء"
-      },
-      "pages": [
-        "home"
-      ]
-    },
-    {
       "id": "gallery-demo-08",
-      "category": "b2b",
-      "src": null,
+      "category": "kitchen",
+      "src": "/assets/images/photos/gallery-demo-08.jpg",
       "width": 1200,
       "height": 1200,
       "demo": true,
-      "placeholder": {
-        "tone": "sand",
-        "icon": "bread"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Pastry display",
-        "ar": "عرض المعجنات"
+        "en": "Focaccia from the bakery",
+        "ar": "فوكاتشيا من المخبز"
       },
       "alt": {
-        "en": "Demo placeholder: pastry display",
-        "ar": "صورة تجريبية مؤقتة: عرض المعجنات"
+        "en": "Focaccia from the bakery",
+        "ar": "فوكاتشيا من المخبز"
       },
       "pages": [
-        "home"
+        "home",
+        "corporates"
       ]
     },
     {
       "id": "gallery-demo-09",
       "category": "celebrations",
-      "src": null,
+      "src": "/assets/images/photos/gallery-demo-09.jpg",
       "width": 1200,
       "height": 1500,
       "demo": true,
-      "placeholder": {
-        "tone": "sand",
-        "icon": "crown"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "VIP hospitality",
-        "ar": "ضيافة كبار الضيوف"
+        "en": "Floral table detail",
+        "ar": "تفاصيل الزهور على المائدة"
       },
       "alt": {
-        "en": "Demo placeholder: vip hospitality",
-        "ar": "صورة تجريبية مؤقتة: ضيافة كبار الضيوف"
+        "en": "Floral table detail",
+        "ar": "تفاصيل الزهور على المائدة"
       },
       "pages": [
         "home",
@@ -2764,22 +2764,60 @@
     },
     {
       "id": "gallery-demo-10",
-      "category": "corporates",
-      "src": null,
+      "category": "b2b",
+      "src": "/assets/images/photos/gallery-demo-10.jpg",
       "width": 1200,
       "height": 900,
       "demo": true,
-      "placeholder": {
-        "tone": "ivory",
-        "icon": "crescent"
-      },
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
       "label": {
-        "en": "Ramadan buffet",
-        "ar": "بوفيه رمضان"
+        "en": "Éclair range",
+        "ar": "تشكيلة الإكلير"
       },
       "alt": {
-        "en": "Demo placeholder: ramadan buffet",
-        "ar": "صورة تجريبية مؤقتة: بوفيه رمضان"
+        "en": "Éclair range",
+        "ar": "تشكيلة الإكلير"
+      },
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "id": "gallery-demo-11",
+      "category": "kitchen",
+      "src": "/assets/images/photos/gallery-demo-11.jpg",
+      "width": 1200,
+      "height": 900,
+      "demo": true,
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
+      "label": {
+        "en": "Pâtisserie cakes",
+        "ar": "كيك الباتيسري"
+      },
+      "alt": {
+        "en": "Pâtisserie cakes",
+        "ar": "كيك الباتيسري"
+      },
+      "pages": [
+        "home",
+        "corporates"
+      ]
+    },
+    {
+      "id": "gallery-demo-12",
+      "category": "kitchen",
+      "src": "/assets/images/photos/gallery-demo-12.jpg",
+      "width": 1200,
+      "height": 1500,
+      "demo": true,
+      "source": "Derived from client-supplied catalogue assets (buffet photograph p.2, product cut-outs, cover texture). Demonstration only — replace with final photography.",
+      "label": {
+        "en": "Pain Suisse selection",
+        "ar": "تشكيلة بان سويس"
+      },
+      "alt": {
+        "en": "Pain Suisse selection",
+        "ar": "تشكيلة بان سويس"
       },
       "pages": [
         "home",

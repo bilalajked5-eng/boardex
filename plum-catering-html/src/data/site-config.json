@@ -97,7 +97,20 @@
     "_consentModeTypeNote": "basic = GTM loads only after the visitor grants analytics or advertising consent (recommended default pending legal review). advanced = GTM loads immediately with all consent denied by default."
   },
   "media": {
-    "heroVideo": null,
+    "heroVideo": {
+      "sources": [
+        {
+          "src": "/assets/video/plum-hero-sample.webm",
+          "type": "video/webm"
+        },
+        {
+          "src": "/assets/video/plum-hero-sample.mp4",
+          "type": "video/mp4"
+        }
+      ],
+      "status": "sample",
+      "_comment": "SAMPLE reel rendered from the client catalogue photography (Ken Burns). Replace with the approved brand film; keep the poster image."
+    },
     "heroPoster": "hero-poster",
     "kitchenFilm": null,
     "kitchenPoster": "kitchen-poster"

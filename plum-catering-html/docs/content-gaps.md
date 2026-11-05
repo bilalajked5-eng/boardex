@@ -14,12 +14,12 @@ Everything below is either missing or provisional. In a **review build** (`npm r
 ## 2. Media
 | Item | Target | Supplied |
 |---|---|---|
-| Gallery photos | **117** | **0**. 10 labelled demo placeholders are shown for layout review only and are never duplicated to reach the target |
-| Hero video (MP4/WebM, muted, about 10–20 s) + poster | 1 | 0. Placeholder poster is shown and no video is loaded |
+| Gallery photos | **117** | **0 final photos.** 12 demonstration images are **derived from the client's own catalogue** (buffet photograph, product cut-outs) by `src/build/make-photos.py`; they are marked `demo:true` and must be replaced by approved photography |
+| Hero video (MP4/WebM, muted, about 10–20 s) + poster | 1 | **Sample only**: a 12-second Ken Burns reel rendered from the catalogue photography (`src/assets/video/plum-hero-sample.*`, 1.3 MB each). Replace with the approved brand film |
 | Kitchen film + captions (AR/EN `.vtt`) + poster | 1 | 0 |
-| Service section photography (Corporates ×7, Celebrations ×6, service cards ×4, About, Team, Kitchen) | about 25 | 0 |
+| Service section photography (Corporates ×7, Celebrations ×6, service cards ×4, About, Team, Kitchen) | about 25 | 0 final; all slots filled with crops/collages derived from the catalogue (demo) |
 | Product photography | 76 | **76 supplied** via the catalogue PDF (≈570 px extracted, soft-masked). Higher-resolution originals are recommended for the product hero |
-| Client logos with written approval for each | ? | 0 |
+| Client logos with written approval for each | ? | 0. The auto-scrolling logo slider shows **8 fictional demo marks** (`client-logos.json → demoLogos`) in review builds only; they are hidden in clean builds and must never be presented as real clients |
 
 ## 3. Company facts (all provisional, from Blueprint §1)
 - Central kitchen area of about 1,200 m². **Confirm.**

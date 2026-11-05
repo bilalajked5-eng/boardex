@@ -1,4 +1,102 @@
 {
-  "_note": "Approved client logos only. None supplied yet — the LogoWall renders a clearly labelled pending state. Entry shape: {id, name:{ar,en}, src, width, height, approved:true, approvalRef}",
-  "logos": []
+  "_note": "Approved client logos only in `logos` (none supplied). `demoLogos` are fictional, generic marks used ONLY to demonstrate the auto-scrolling logo slider in review builds; they are never shown in clean builds and must never be presented as real clients.",
+  "logos": [],
+  "demoLogos": [
+    {
+      "id": "demo-logo-01",
+      "name": {
+        "en": "Aurora Group",
+        "ar": "مجموعة أورورا"
+      },
+      "src": "/assets/images/logos/demo-logo-01.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-02",
+      "name": {
+        "en": "Horizon Hotels",
+        "ar": "فنادق هورايزن"
+      },
+      "src": "/assets/images/logos/demo-logo-02.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-03",
+      "name": {
+        "en": "Nova Clinics",
+        "ar": "عيادات نوفا"
+      },
+      "src": "/assets/images/logos/demo-logo-03.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-04",
+      "name": {
+        "en": "Meridian Bank",
+        "ar": "بنك ميريديان"
+      },
+      "src": "/assets/images/logos/demo-logo-04.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-05",
+      "name": {
+        "en": "Atlas Energy",
+        "ar": "أطلس للطاقة"
+      },
+      "src": "/assets/images/logos/demo-logo-05.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-06",
+      "name": {
+        "en": "Summit University",
+        "ar": "جامعة سَمِت"
+      },
+      "src": "/assets/images/logos/demo-logo-06.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-07",
+      "name": {
+        "en": "Delta Foods",
+        "ar": "دلتا للأغذية"
+      },
+      "src": "/assets/images/logos/demo-logo-07.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    },
+    {
+      "id": "demo-logo-08",
+      "name": {
+        "en": "Crescent Events",
+        "ar": "كريسنت للفعاليات"
+      },
+      "src": "/assets/images/logos/demo-logo-08.svg",
+      "width": 220,
+      "height": 64,
+      "approved": false,
+      "demo": true
+    }
+  ]
 }

@@ -29,6 +29,9 @@ Reviewed full-page screenshots of EN/AR Home, B2B, product, Corporates, FM Comin
 - Firefox/Safari not tested; native `<dialog>` is used (supported in all evergreen browsers).
 - Live website unreachable from this session, so content parity with the current site is unverified.
 
+## Clean theme + imagery (fourth pass)
+White minimal theme (`theme-clean.css`, loaded last): plum as accent only, smaller editorial type, soft-shadow cards with hover lift and image zoom, no utility bar, Facility Management in the main nav as Coming Soon, full-width home hero with a sample video reel, auto-scrolling logo slider (pauses on hover, static under reduced motion). All image slots filled with imagery derived from the client's catalogue (no stock).
+
 ## v2 structure (third pass)
 Rebuilt on the client's demo IA: utility bar, dropdown mega-nav with 7/6/7 sub-links, split editorial heroes with numbered visual panels, stats strips, numbered outlined cards, 13 service sub-pages, 7 product-family pages, Gallery, Contact & Quotations, 3-step enquiry form, floating Enquire/WhatsApp actions. Static QA: 0 failures (214 files). Visual review of home, B2B, contact, a service page, a family page and Arabic mobile performed from screenshots.
 

@@ -4,7 +4,7 @@ import { route, productRoute, familyRoute, serviceRoute, familyAnchor } from './
 import { quoteButton, whatsappControl, whatsappHref } from './layout.mjs';
 import {
   splitHero, hero, sectionHead, statsStrip, homeStats, ncard, ncardGrid, serviceCards, familyCards, familyTiles, listPanel, checkList,
-  audienceGrid, chipCloud, featureCards, steps, kitchenFacts, kitchenFilm, faq, gallery, lightbox, logoWall, ctaBand, productCard, finder, breadcrumbs, crumbList, ulink,
+  audienceGrid, chipCloud, featureCards, steps, kitchenFacts, kitchenFilm, faq, gallery, lightbox, logoWall, logoMarquee, ctaBand, productCard, finder, breadcrumbs, crumbList, ulink,
 } from './components.mjs';
 import { graph, serviceNode, productNode } from './schema.mjs';
 
@@ -18,17 +18,16 @@ export function home(ctx) {
   const L = ctx.lang;
   const hub = ctx.pages.serviceHub;
   const main = `
-${splitHero(ctx, {
-  eyebrow: c.hero.eyebrow, h1: c.hero.h1, accent: c.hero.accent, lead: esc(c.hero.lead), mediaId: ctx.config.media.heroPoster, video: ctx.config.media.heroVideo,
-  panelLabel: c.hero.panelLabel, panelText: c.hero.panelText, panelNote: c.hero.panelNote, meta: c.hero.meta,
-  ctas: quoteButton(ctx, { label: ctx.ui.cta.planEvent }) + secondary(ctx, route('b2b', L), ctx.ui.cta.exploreB2B),
+${hero(ctx, {
+  eyebrow: c.hero.eyebrow, h1: c.hero.h1, lead: esc(c.hero.lead), mediaId: ctx.config.media.heroPoster, video: ctx.config.media.heroVideo, meta: c.hero.meta,
+  ctas: quoteButton(ctx, { label: ctx.ui.cta.planEvent, cls: 'btn btn--light' }) + `<a class="btn btn--outline-light" href="${route('b2b', L)}">${esc(ctx.ui.cta.exploreB2B)}</a>`,
 })}
 <div class="container section--stats">${homeStats(ctx)}</div>
 
 <section class="section" id="services" aria-labelledby="start-title">
   <div class="container">
     ${sectionHead(ctx, { eyebrow: c.start.eyebrow, h2: c.start.h2, intro: esc(c.start.intro), id: 'start-title' })}
-    ${ncardGrid(c.start.cards.map((k) => ncard(ctx, { num: k.num, label: k.label, h3: k.h3, body: k.body, href: route(k.key, L), cta: k.cta, cls: 'ncard--big' })), 'hub-grid')}
+    ${ncardGrid(c.start.cards.map((k) => ncard(ctx, { num: k.num, label: k.label, h3: k.h3, body: k.body, href: route(k.key, L), cta: k.cta, cls: 'ncard--big', mediaId: `svc-${k.key}` })), 'hub-grid')}
   </div>
 </section>
 
@@ -98,7 +97,8 @@ ${splitHero(ctx, {
 </section>
 
 ${when(ctx.clientLogos.length || reviewMode(ctx), () => `<section class="section section--ivory" aria-labelledby="clients-title">
-  <div class="container">${sectionHead(ctx, { eyebrow: c.clients.eyebrow, h2: c.clients.h2, intro: esc(c.clients.intro), id: 'clients-title' })}${logoWall(ctx)}</div>
+  <div class="container">${sectionHead(ctx, { eyebrow: c.clients.eyebrow, h2: c.clients.h2, intro: esc(c.clients.intro), id: 'clients-title', center: true })}</div>
+  ${logoMarquee(ctx)}
 </section>`)}
 
 ${when(ctx.config.facilityManagement.launchMode !== 'live', () => `<section class="section" aria-labelledby="future-title">
@@ -199,7 +199,7 @@ ${when(reviewMode(ctx), () => `<section class="section" aria-labelledby="team-ti
 </section>
 
 ${when(ctx.clientLogos.length || reviewMode(ctx), () => `<section class="section section--ivory" id="clients" aria-labelledby="clients-title">
-  <div class="container">${sectionHead(ctx, { h2: c.clients.h2, intro: esc(c.clients.intro), id: 'clients-title' })}${logoWall(ctx)}</div>
+  <div class="container">${sectionHead(ctx, { h2: c.clients.h2, intro: esc(c.clients.intro), id: 'clients-title', center: true })}</div>${logoMarquee(ctx)}
 </section>`)}
 
 ${ctaBand(ctx, { eyebrow: c.finalCta.eyebrow, h2: c.finalCta.h2, body: c.finalCta.body })}`;

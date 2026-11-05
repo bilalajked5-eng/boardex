@@ -22,7 +22,9 @@ if (args.has('--clean')) config.prototype.showReviewFlags = false;
 const content = { ar: readJSON('content.ar.json'), en: readJSON('content.en.json') };
 const productsData = readJSON('products.json');
 const media = readJSON('media-manifest.json');
-const clientLogos = readJSON('client-logos.json').logos;
+const logosData = readJSON('client-logos.json');
+const clientLogos = logosData.logos;
+const demoLogos = logosData.demoLogos || [];
 media.byId = Object.fromEntries(media.images.map((m) => [m.id, m]));
 const categories = productsData.categories;
 const categoriesById = Object.fromEntries(categories.map((c) => [c.id, c]));
@@ -81,7 +83,7 @@ const copyDir = (from, to) => {
 
 function makeCtx(lang, pageKey, p = {}) {
   return {
-    lang, pageKey, config, media, clientLogos, categories, categoriesById, products, productsById, buildId,
+    lang, pageKey, config, media, clientLogos, demoLogos, categories, categoriesById, products, productsById, buildId,
     ui: content[lang].ui, pages: content[lang].pages, isIndexableProduct,
     ...p,
   };
@@ -92,7 +94,7 @@ fs.rmSync(DIST, { recursive: true, force: true });
 fs.rmSync(PREVIEW, { recursive: true, force: true });
 const ASSETS = path.join(DIST, 'assets');
 fs.mkdirSync(path.join(ASSETS, 'styles'), { recursive: true });
-const css = ['tokens.css', 'main.css', 'components.css', 'responsive.css'].map((f) => `/* ${f} */\n` + fs.readFileSync(path.join(SRC, 'styles', f), 'utf8')).join('\n');
+const css = ['tokens.css', 'main.css', 'components.css', 'responsive.css', 'theme-clean.css'].map((f) => `/* ${f} */\n` + fs.readFileSync(path.join(SRC, 'styles', f), 'utf8')).join('\n');
 fs.writeFileSync(path.join(ASSETS, 'styles', 'site.css'), css);
 copyDir(path.join(SRC, 'scripts'), path.join(ASSETS, 'scripts'));
 for (const d of ['logo', 'images', 'video', 'pdf', 'fonts']) copyDir(path.join(SRC, 'assets', d), path.join(ASSETS, d));

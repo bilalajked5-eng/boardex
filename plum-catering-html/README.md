@@ -40,8 +40,8 @@ docs/              inventory, gaps, SEO matrix, redirects, API contract, trackin
 ## Demo content vs real data
 | Real / source-backed | Demo / placeholder (clearly labelled in review builds) |
 |---|---|
-| Route plan, headings, page structure, Arabic & English UI/marketing copy written for this site | All photography and video (SVG placeholders) |
-| Brand tokens from the guidelines | Client logo slots |
+| Route plan, headings, page structure, Arabic & English UI/marketing copy written for this site | Photography derived from the client catalogue (crops/collages) and a sample video reel rendered from it — replace with final assets |
+| Brand tokens from the guidelines | 8 fictional demo logos in the slider (review builds only) |
 | Provisional facts quoted by the Blueprint (flagged "To confirm") | — |
 | Interim logo from the brand board | Privacy policy bracketed placeholders |
 

@@ -47,9 +47,11 @@ export function splitHero(ctx, { num, eyebrow, h1, accent, lead, ctas = '', meta
 }
 
 /* Retained: full-bleed hero (used by the FM live template) */
-export function hero(ctx, { mediaId, eyebrow, h1, lead, ctas = '', extra = '', sub = false, crumbs = null }) {
-  return `<section class="hero${sub ? ' hero--sub' : ''}" aria-labelledby="page-title">
-  <div class="hero__media">${img(ctx, mediaId, { eager: true, alt: '' })}</div>
+export function hero(ctx, { mediaId, eyebrow, h1, lead, ctas = '', extra = '', sub = false, crumbs = null, video = null, meta = [] }) {
+  const m = mediaEntry(ctx, mediaId);
+  const videoHtml = video ? `<video muted loop playsinline autoplay preload="metadata" poster="${esc(imgSrc(m))}" data-hero-video aria-hidden="true">${video.sources.map((s) => `<source src="${esc(s.src)}" type="${esc(s.type)}">`).join('')}</video>` : '';
+  return `<section class="hero${sub ? ' hero--sub' : ''}${video ? ' hero--video' : ''}" aria-labelledby="page-title">
+  <div class="hero__media">${img(ctx, mediaId, { eager: true, alt: '' })}${videoHtml}</div>
   <div class="hero__overlay" aria-hidden="true"></div>
   ${when(crumbs, () => `<div class="hero__breadcrumbs"><div class="container">${crumbs}</div></div>`)}
   <div class="container hero__inner"><div class="hero__content">
@@ -57,8 +59,10 @@ export function hero(ctx, { mediaId, eyebrow, h1, lead, ctas = '', extra = '', s
       <h1 id="page-title">${esc(h1)}</h1>
       ${lead ? `<p class="lead">${lead}</p>` : ''}
       ${ctas ? `<div class="btn-row">${ctas}</div>` : ''}${extra}
+      ${meta.length ? `<ul class="hero__meta" role="list">${join(meta, (x) => `<li>${esc(x)}</li>`)}</ul>` : ''}
   </div></div>
   ${placeholderTag(ctx, mediaId)}
+  ${video ? `<button class="video-toggle" type="button" data-video-toggle aria-pressed="false">${icon('pause')}<span>${esc(ctx.ui.video.pause)}</span></button>` : ''}
 </section>`;
 }
 
@@ -88,8 +92,9 @@ export function homeStats(ctx) {
 }
 
 /* ---------------- Numbered outlined cards ---------------- */
-export function ncard(ctx, { num, label, h3, body, href, cta, cls = '', ctaEl }) {
+export function ncard(ctx, { num, label, h3, body, href, cta, cls = '', ctaEl, mediaId }) {
   return `<article class="ncard ${cls} reveal">
+    ${mediaId ? `<div class="ncard__media">${img(ctx, mediaId, { sizes: '(min-width:1100px) 33vw, (min-width:768px) 50vw, 100vw' })}</div>` : ''}
     ${num ? `<span class="ncard__num">${esc(num)}</span>` : ''}
     ${label ? `<span class="ncard__label">${esc(label)}</span>` : ''}
     <h3>${href ? `<a href="${esc(href)}">${esc(h3)}</a>` : esc(h3)}</h3>
@@ -99,19 +104,20 @@ export function ncard(ctx, { num, label, h3, body, href, cta, cls = '', ctaEl })
 }
 export const ncardGrid = (cards, cls = 'hub-grid') => `<div class="${cls}">${cards.join('')}</div>`;
 
-export function serviceCards(ctx, hubKey, { exclude = null, limit = null } = {}) {
+export function serviceCards(ctx, hubKey, { exclude = null, limit = null, media = true } = {}) {
   const items = ctx.pages[hubKey].services.items;
   const total = items.length;
   let list = items.map((s, i) => ({ s, i })).filter(({ s }) => s.slug !== exclude);
   if (limit) list = list.slice(0, limit);
-  return list.map(({ s, i }) => ncard(ctx, { num: `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`, h3: s.title || s.h3, body: s.short || s.body, href: serviceRoute(hubKey, s.slug, ctx.lang), cta: ctx.ui.cta.exploreService }));
+  return list.map(({ s, i }) => ncard(ctx, { num: `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`, h3: s.title || s.h3, body: s.short || s.body, href: serviceRoute(hubKey, s.slug, ctx.lang), cta: ctx.ui.cta.exploreService, mediaId: media ? s.img : null }));
 }
 
 export function familyCards(ctx, { exclude = null } = {}) {
   const b = ctx.pages.b2b.families;
   return ctx.categories.filter((c) => c.id !== exclude).map((c) => {
     const n = ctx.products.filter((p) => p.category === c.id).length;
-    return ncard(ctx, { label: fmt(b.options, { n }), h3: c.name[ctx.lang], body: ctx.pages.familyBlurbs[c.id], href: familyRoute(c.slug, ctx.lang), cta: ctx.ui.cta.browseRange });
+    const first = ctx.products.find((p) => p.category === c.id && p.heroImage);
+    return ncard(ctx, { label: fmt(b.options, { n }), h3: c.name[ctx.lang], body: ctx.pages.familyBlurbs[c.id], href: familyRoute(c.slug, ctx.lang), cta: ctx.ui.cta.browseRange, mediaId: first?.heroImage });
   });
 }
 export function familyTiles(ctx) {
@@ -202,6 +208,16 @@ export function logoWall(ctx) {
   if (!reviewMode(ctx)) return '';
   return `<div><ul class="logo-wall" role="list" aria-hidden="true">${Array.from({ length: 8 }, (_, i) => `<li class="logo-slot logo-slot--pending">${esc(ctx.ui.logos.slot)} ${String(i + 1).padStart(2, '0')}</li>`).join('')}</ul>
   <p class="logo-wall__note">${pending(ctx, ctx.ui.logos.pending)}</p></div>`;
+}
+
+/* ---------------- Logo marquee (auto-scrolling) ---------------- */
+export function logoMarquee(ctx) {
+  const real = ctx.clientLogos.filter((l) => l.approved && l.src);
+  const list = real.length ? real : reviewMode(ctx) ? ctx.demoLogos : [];
+  if (!list.length) return '';
+  const item = (l) => `<li class="marquee__item"><img src="${esc(l.src)}" width="${l.width}" height="${l.height}" alt="${esc(l.name[ctx.lang])}${l.demo ? ` (${esc(ctx.ui.review.demo)})` : ''}" loading="lazy"></li>`;
+  return `<div class="marquee" data-marquee><ul class="marquee__track" role="list">${join(list, item)}${join(list, item)}</ul></div>
+  ${!real.length ? `<p class="logo-wall__note">${pending(ctx, ctx.ui.logos.pending)}</p>` : ''}`;
 }
 
 /* ---------------- CTA band ---------------- */

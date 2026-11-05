@@ -34,10 +34,10 @@ Status legend: **implemented** · **prototype-only** (works in HTML, must be re-
 | 28 | Bilingual cookie consent (Accept/Reject/Customise/Change) | `cookie-consent.js`, `layout.mjs → cookieUI()` | implemented (**requires client approval** of legal wording) |
 | 29 | GTM Consent Mode v2 (4 signals, default denied) | inline head script, `cookie-consent.js` | implemented |
 | 30 | GTM + Google Ads conversion on confirmed lead | `tracking-adapter.js`, `docs/tracking-consent-setup.md` | implemented adapter; **pending real assets** (IDs) |
-| 31 | Video hero (muted, poster, pause control, reduced-motion fallback) | `components.mjs → hero()`, `navigation.js` | implemented; **pending real assets** (video) |
+| 31 | Video hero (muted, poster, pause control, reduced-motion fallback) | `components.mjs → hero()`, `navigation.js` | implemented with a **sample reel** derived from catalogue photos; final brand film **pending real assets** |
 | 32 | Kitchen film with controls/captions | `components.mjs → kitchenFilm()` | implemented; **pending real assets** |
 | 33 | 117-image categorised gallery, lazy, filters, lightbox, keyboard | `components.mjs → gallery()/lightbox()`, `gallery.js` | implemented; **pending real assets** (0/117) |
-| 34 | Client logo wall (approved only) | `logoWall()`, `client-logos.json` | implemented; **pending real assets** |
+| 34 | Client logo wall (approved only) | `logoMarquee()`, `client-logos.json` | implemented (auto-scrolling slider; demo marks in review builds); real logos **pending real assets** |
 | 35 | Restrained animations, reduced-motion, nothing hidden without JS | `main.css .reveal`, `navigation.js` | implemented (tested) |
 | 36 | FAQ accordion accessible | `faq()`, `navigation.js` | implemented |
 | 37 | Cross-link map (Blueprint §5) | `pages.mjs` CTA bands & links | implemented |
