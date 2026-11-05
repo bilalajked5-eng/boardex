@@ -24,6 +24,16 @@
   .form-grid { grid-template-columns: 1fr 1fr; }
   .catalogue-tools { grid-template-columns: minmax(240px, 340px) 1fr; align-items: center; }
   .catalogue-tools .catalogue-status { grid-column: 1 / -1; }
+  .hero-split__grid { grid-template-columns: 1.15fr 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats li { border-block-end: 0; border-inline-end: 1px solid var(--border); }
+  .stats li:nth-child(2n) { border-inline-end: 0; }
+  .stats li:nth-child(-n+2) { border-block-end: 1px solid var(--border); }
+  .hub-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: 1.2fr 1fr; }
+  .two-col--even { grid-template-columns: 1fr 1fr; }
+  .audience-grid { grid-template-columns: repeat(4, 1fr); }
+  .finder { grid-template-columns: minmax(260px, 380px) 1fr; align-items: start; }
 }
 
 /* Desktop */
@@ -41,6 +51,11 @@
   .legal-layout { grid-template-columns: 260px 1fr; gap: 64px; }
   .toc { position: sticky; inset-block-start: 110px; align-self: start; }
   .services-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .stats li, .stats li:nth-child(2n) { border-block-end: 0; border-inline-end: 1px solid var(--border); }
+  .stats li:nth-child(-n+2) { border-block-end: 0; }
+  .stats li:last-child { border-inline-end: 0; }
+  .hub-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 1360px) {
   .product-grid { grid-template-columns: repeat(4, 1fr); }
@@ -82,6 +97,18 @@
   .lightbox__prev, .lightbox__next { inset-block-start: auto; inset-block-end: 16px; transform: none; }
 
   /* Sticky bottom contact bar — hidden while consent banner / modal is open */
+  .floating { inset-inline: 12px; inset-block-end: 12px; }
+  .finder__results li { grid-template-columns: 1fr; gap: 6px; }
+  .btn { white-space: normal; text-align: center; }
+  .two-col > *, .hub-grid > *, .split > *, .grid > * { min-width: 0; }
+  .finder__results li .finder__fam { white-space: normal; }
+  .utility-bar__inner { font-size: 0.75rem; }
+  .floating .btn { flex: 1; }
+  .hero-split h1 { font-size: clamp(2.25rem, 10vw, 2.75rem); }
+  .ncard--big { min-block-size: 0; }
+  .ncard--big h3 { margin-block-start: 20px; }
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+  .stepper { gap: 4px; }
   .mobile-bar {
     display: flex; gap: 10px; position: fixed; inset-inline: 0; inset-block-end: 0; z-index: var(--z-mobilebar);
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(248,246,242,0.98); border-block-start: 1px solid var(--border);

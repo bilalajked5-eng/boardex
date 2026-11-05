@@ -1,6 +1,6 @@
 {
-  "ranAt": "2026-11-05T12:04:04.972Z",
-  "total": 95,
+  "ranAt": "2026-11-05T12:56:19.233Z",
+  "total": 127,
   "failed": 0,
   "results": [
     {
@@ -85,6 +85,46 @@
     },
     {
       "name": "[desktop] /en/products/honey-cake-whole-cake/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/products/bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/products/croissants/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /en/services/corporates/healthcare/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[desktop] /ar/services/munasabat/weddings-engagements/ no errors & no horizontal overflow",
       "ok": true,
       "detail": ""
     },
@@ -179,6 +219,46 @@
       "detail": ""
     },
     {
+      "name": "[tablet] /en/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/products/bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/products/croissants/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /en/services/corporates/healthcare/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[tablet] /ar/services/munasabat/weddings-engagements/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "[tablet] /en/does-not-exist/ no errors & no horizontal overflow",
       "ok": true,
       "detail": ""
@@ -269,6 +349,46 @@
       "detail": ""
     },
     {
+      "name": "[mobile] /en/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/gallery/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/contact/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/products/bread/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/products/croissants/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /en/services/corporates/healthcare/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] /ar/services/munasabat/weddings-engagements/ no errors & no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "[mobile] /en/does-not-exist/ no errors & no horizontal overflow",
       "ok": true,
       "detail": ""
@@ -309,12 +429,32 @@
       "detail": ""
     },
     {
+      "name": "dropdown opens on click",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dropdown lists 7 corporate services + overview",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dropdown closes with Escape",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "quote modal opens from header CTA",
       "ok": true,
       "detail": ""
     },
     {
       "name": "focus moves into modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "step 1 visible, step 3 hidden",
       "ok": true,
       "detail": ""
     },
@@ -329,17 +469,27 @@
       "detail": ""
     },
     {
-      "name": "empty submit shows validation errors",
+      "name": "step 1 requires enquiry category",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "conditional fields: event date shown for celebration",
+      "name": "service detail filtered to celebration services",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "conditional fields: B2B volume hidden for celebration",
+      "name": "advances to step 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "advances to step 3 with submit visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "empty contact step shows validation errors",
       "ok": true,
       "detail": ""
     },
@@ -384,7 +534,7 @@
       "detail": ""
     },
     {
-      "name": "product quote preselects B2B and shows volume field",
+      "name": "product quote preselects B2B + Bread family",
       "ok": true,
       "detail": ""
     },
@@ -414,27 +564,37 @@
       "detail": ""
     },
     {
-      "name": "catalogue search filters products (4 sourdough breads)",
+      "name": "finder renders all 76 products as links (crawlable)",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "family chip filter hides other families",
+      "name": "finder shows 8 by default",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "Arabic catalogue search works (4 ساوردو)",
+      "name": "finder search filters products (4 sourdough breads)",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "mobile bar stays off-screen while consent banner is open",
+      "name": "Bread family page lists 21 product cards",
       "ok": true,
-      "detail": "bar y=851"
+      "detail": ""
     },
     {
-      "name": "mobile bar appears after consent choice",
+      "name": "Arabic finder search works",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "floating actions hidden while consent banner is open",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "floating actions appear after consent choice",
       "ok": true,
       "detail": ""
     },
@@ -446,7 +606,7 @@
     {
       "name": "RTL drawer slides from the left edge",
       "ok": true,
-      "detail": "x=-0.73175048828125"
+      "detail": "x=-0.897918701171875"
     },
     {
       "name": "drawer closes with Escape",
@@ -464,7 +624,7 @@
       "detail": ""
     },
     {
-      "name": "no-JS: product links crawlable",
+      "name": "no-JS: all 76 product links crawlable on the hub",
       "ok": true,
       "detail": ""
     },

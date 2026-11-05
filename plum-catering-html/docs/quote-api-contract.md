@@ -13,10 +13,13 @@ The front-end form (`src/scripts/quote-modal.js`) is complete. **No backend exis
   "phone": "string, E.164 preferred",
   "company": "string, optional",
   "service_type": "corporate | celebration | b2b | facility",
-  "event_date": "YYYY-MM-DD, corporate/celebration only",
-  "guest_count": "integer, corporate/celebration only",
-  "product_name": "string, b2b only",
-  "supply_volume": "string, b2b only",
+  "service_detail": "optional slug of the service page or product family, e.g. healthcare, weddings-engagements, bread",
+  "interest": "string, optional — what the visitor is planning",
+  "quantity": "string, optional — approximate guest count or quantity",
+  "city": "string, optional",
+  "preferred_date": "string, optional — a date or a frequency such as weekly",
+  "format": "buffet | served | boxes | reception | live | recurring | oneTime | '' (not decided)",
+  "product_name": "string, set automatically on product pages",
   "product_id": "string, set automatically on product pages",
   "product_category": "string",
   "source_path": "/en/products/brown-sourdough-bread/",
@@ -26,7 +29,7 @@ The front-end form (`src/scripts/quote-modal.js`) is complete. **No backend exis
   "marketing_consent": false
 }
 ```
-Fields for a service that isn't selected are disabled and therefore left out. The honeypot field `website` is stripped on the client, and the server must also reject any request where it is non-empty.
+The form is a 3-step modal (enquiry → details → contact); only `service_type`, `name`, `email`, `phone` and `privacy_ack` are required. The honeypot field `website` is stripped on the client, and the server must also reject any request where it is non-empty.
 
 ## Responses
 | Case | HTTP | Body | Front-end behaviour |

@@ -17,7 +17,7 @@ if (SHOTS) fs.mkdirSync(SHOT_DIR, { recursive: true });
 const results = [];
 const check = (name, ok, detail = '') => { results.push({ name, ok: !!ok, detail }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? ` — ${detail}` : ''}`); };
 
-const PAGES = ['/ar/', '/en/', '/ar/about-us/', '/en/about-us/', '/ar/services/sharikat/', '/en/services/corporates/', '/ar/services/munasabat/', '/en/services/celebrations/', '/ar/services/qitaa-al-aamal/', '/en/services/b2b/', '/ar/services/idarat-al-marafiq/', '/en/services/facility-management/', '/ar/privacy/', '/en/privacy/', '/ar/products/brown-sourdough-bread/', '/en/products/brown-sourdough-bread/', '/en/products/honey-cake-whole-cake/', '/en/does-not-exist/'];
+const PAGES = ['/ar/', '/en/', '/ar/about-us/', '/en/about-us/', '/ar/services/sharikat/', '/en/services/corporates/', '/ar/services/munasabat/', '/en/services/celebrations/', '/ar/services/qitaa-al-aamal/', '/en/services/b2b/', '/ar/services/idarat-al-marafiq/', '/en/services/facility-management/', '/ar/privacy/', '/en/privacy/', '/ar/products/brown-sourdough-bread/', '/en/products/brown-sourdough-bread/', '/en/products/honey-cake-whole-cake/', '/en/gallery/', '/ar/gallery/', '/en/contact/', '/ar/contact/', '/en/products/bread/', '/ar/products/croissants/', '/en/services/corporates/healthcare/', '/ar/services/munasabat/weddings-engagements/', '/en/does-not-exist/'];
 const VIEWPORTS = [{ name: 'desktop', width: 1440, height: 900 }, { name: 'tablet', width: 768, height: 1024 }, { name: 'mobile', width: 390, height: 844 }];
 
 const browser = await chromium.launch();
@@ -43,7 +43,7 @@ for (const vp of VIEWPORTS) {
     await scrollThrough(page);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     check(`[${vp.name}] ${p} no errors & no horizontal overflow`, !errors.length && overflow <= 0, errors.join('; ') || (overflow > 0 ? `overflow ${overflow}px` : ''));
-    if (SHOTS && ['/ar/', '/en/', '/en/services/b2b/', '/ar/services/qitaa-al-aamal/', '/ar/products/brown-sourdough-bread/', '/en/services/corporates/', '/ar/services/idarat-al-marafiq/', '/en/about-us/', '/ar/privacy/'].includes(p)) {
+    if (SHOTS && ['/ar/', '/en/', '/en/services/b2b/', '/ar/services/qitaa-al-aamal/', '/ar/products/brown-sourdough-bread/', '/en/services/corporates/', '/ar/services/idarat-al-marafiq/', '/en/about-us/', '/ar/privacy/', '/en/contact/', '/en/gallery/', '/en/products/bread/', '/en/services/corporates/healthcare/'].includes(p)) {
       await page.screenshot({ path: path.join(SHOT_DIR, `${vp.name}${p.replace(/\//g, '_')}.png`), fullPage: true });
     }
     await page.close();
@@ -74,24 +74,37 @@ await page.click('#cookie-prefs button[type="submit"]');
 const upd = await page.evaluate(() => window.dataLayer.filter((e) => e[0] === 'consent' && e[1] === 'update').pop()?.[2]);
 check('customised consent updates analytics_storage=granted, ads denied', upd?.analytics_storage === 'granted' && upd?.ad_storage === 'denied');
 
-// Quote modal: open, focus, Escape, focus restore
+// Dropdown navigation
+const corpBtn = page.locator('[data-nav-item] [data-nav-toggle]').first();
+await corpBtn.click();
+check('dropdown opens on click', await page.isVisible('#mega-corporates') && (await corpBtn.getAttribute('aria-expanded')) === 'true');
+check('dropdown lists 7 corporate services + overview', (await page.locator('#mega-corporates a').count()) === 8);
+await page.keyboard.press('Escape');
+check('dropdown closes with Escape', !(await page.isVisible('#mega-corporates')));
+
+// Quote modal (stepped): open, focus, Escape, focus restore
 const trigger = page.locator('header [data-quote-open]').first();
 await trigger.click();
 check('quote modal opens from header CTA', await page.isVisible('#quote-modal'));
 check('focus moves into modal', await page.evaluate(() => !!document.activeElement?.closest('#quote-modal')));
+check('step 1 visible, step 3 hidden', (await page.isVisible('[data-step="1"]')) && !(await page.isVisible('[data-step="3"]')));
 await page.keyboard.press('Escape');
 check('Escape closes modal', !(await page.isVisible('#quote-modal')));
 check('focus restored to trigger', await page.evaluate(() => document.activeElement?.matches('header [data-quote-open]')));
 
-// Validation + honest pending state (no endpoint configured)
+// Stepper validation + honest pending state (no endpoint configured)
 await trigger.click();
-await page.click('#quote-form [data-submit]');
-check('empty submit shows validation errors', (await page.getAttribute('#q-name', 'aria-invalid')) === 'true' && (await page.textContent('#q-privacy-error')).length > 0);
-await page.fill('#q-name', 'QA Tester'); await page.fill('#q-email', 'qa@example.com'); await page.fill('#q-phone', '+966 50 000 0000');
+await page.click('[data-step-next]');
+check('step 1 requires enquiry category', (await page.getAttribute('#q-service', 'aria-invalid')) === 'true' && (await page.isVisible('[data-step="1"]')));
 await page.selectOption('#q-service', 'celebration');
-check('conditional fields: event date shown for celebration', await page.isVisible('#q-date'));
-check('conditional fields: B2B volume hidden for celebration', !(await page.isVisible('#q-volume')));
-await page.check('#q-privacy');
+check('service detail filtered to celebration services', await page.evaluate(() => [...document.querySelectorAll('#q-detail option[data-type]')].filter((o) => !o.disabled).every((o) => o.dataset.type === 'celebration')));
+await page.click('[data-step-next]');
+check('advances to step 2', await page.isVisible('[data-step="2"]'));
+await page.click('[data-step-next]');
+check('advances to step 3 with submit visible', (await page.isVisible('[data-step="3"]')) && (await page.isVisible('[data-submit]')));
+await page.click('#quote-form [data-submit]');
+check('empty contact step shows validation errors', (await page.getAttribute('#q-name', 'aria-invalid')) === 'true' && (await page.textContent('#q-privacy-error')).length > 0);
+await page.fill('#q-name', 'QA Tester'); await page.fill('#q-email', 'qa@example.com'); await page.fill('#q-phone', '+966 50 000 0000'); await page.check('#q-privacy');
 await page.click('#quote-form [data-submit]');
 await page.waitForSelector('.form-status--pending');
 check('no endpoint → "integration pending" message, no success claimed', (await page.isVisible('.form-status--pending')) && !(await page.isVisible('.form-status--success')));
@@ -129,7 +142,8 @@ async function mockedProductPage(response) {
 }
 page = await mockedProductPage({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: true, reference: 'PLM-TEST-0001' }) });
 check('product quote attaches product', (await page.isVisible('[data-attached]')) && (await page.inputValue('input[name="product_id"]')) === 'prd-brown-sourdough-bread');
-check('product quote preselects B2B and shows volume field', (await page.inputValue('#q-service')) === 'b2b' && (await page.isVisible('#q-volume')));
+check('product quote preselects B2B + Bread family', (await page.inputValue('#q-service')) === 'b2b' && (await page.inputValue('#q-detail')) === 'bread');
+await page.click('[data-step-next]'); await page.click('[data-step-next]');
 await page.fill('#q-name', 'QA Tester'); await page.fill('#q-email', 'qa@example.com'); await page.fill('#q-phone', '+966500000000'); await page.check('#q-privacy');
 await page.click('#quote-form [data-submit]');
 await page.waitForSelector('.form-status--success');
@@ -137,6 +151,7 @@ check('server-confirmed success shows reference', (await page.textContent('#quot
 check('generate_lead fired only after server success', await page.evaluate(() => window.dataLayer.some((e) => e.event === 'generate_lead' && e.lead_reference === 'PLM-TEST-0001')));
 await page.close();
 page = await mockedProductPage({ status: 500, contentType: 'application/json', body: JSON.stringify({ ok: false }) });
+await page.click('[data-step-next]'); await page.click('[data-step-next]');
 await page.fill('#q-name', 'QA Tester'); await page.fill('#q-email', 'qa@example.com'); await page.fill('#q-phone', '+966500000000'); await page.check('#q-privacy');
 await page.click('#quote-form [data-submit]');
 await page.waitForSelector('.form-status--error');
@@ -150,19 +165,19 @@ check('language switch → same product in Arabic', (await page.getAttribute('he
 await page.goto(`${BASE}/ar/services/sharikat/`);
 check('language switch → corresponding service page', (await page.getAttribute('header [data-lang-switch]', 'href')) === '/en/services/corporates/');
 
-// B2B filters
+// B2B finder + family page
 await page.goto(`${BASE}/en/services/b2b/`, { waitUntil: 'networkidle' });
+check('finder renders all 76 products as links (crawlable)', (await page.locator('[data-finder] [data-product] a:not(.ulink)').count()) === 76);
+check('finder shows 8 by default', (await page.locator('[data-finder] [data-product]:visible').count()) === 8);
 await page.fill('[data-product-search]', 'sourdough');
 await page.waitForTimeout(300);
-check('catalogue search filters products (4 sourdough breads)', (await page.locator('[data-product]:visible').count()) === 4 && (await page.textContent('[data-catalogue-status]')).includes('4'));
-await page.fill('[data-product-search]', '');
-await page.click('[data-family-filter="molded-cakes"]');
-await page.waitForTimeout(100);
-check('family chip filter hides other families', !(await page.isVisible('#family-bread')) && (await page.isVisible('#family-molded-cakes')));
+check('finder search filters products (4 sourdough breads)', (await page.locator('[data-finder] [data-product]:visible').count()) === 4 && (await page.textContent('[data-finder-status]')).includes('4'));
+await page.goto(`${BASE}/en/products/bread/`, { waitUntil: 'networkidle' });
+check('Bread family page lists 21 product cards', (await page.locator('[data-product-card]').count()) === 21);
 await page.goto(`${BASE}/ar/services/qitaa-al-aamal/`, { waitUntil: 'networkidle' });
 await page.fill('[data-product-search]', 'ساوردو');
 await page.waitForTimeout(300);
-check('Arabic catalogue search works (4 ساوردو)', (await page.locator('[data-product]:visible').count()) === 4);
+check('Arabic finder search works', (await page.locator('[data-finder] [data-product]:visible').count()) === 4);
 await page.close();
 await ctx.close();
 
@@ -172,12 +187,10 @@ page = await m.newPage();
 await page.goto(`${BASE}/ar/`, { waitUntil: 'networkidle' });
 await page.evaluate(() => window.scrollTo({ top: 1200, behavior: 'instant' }));
 await page.waitForTimeout(500);
-const barBox = await page.locator('[data-mobile-bar]').boundingBox();
-check('mobile bar stays off-screen while consent banner is open', barBox.y >= 844 - 1, `bar y=${Math.round(barBox.y)}`);
+check('floating actions hidden while consent banner is open', (await page.locator('[data-floating]').evaluate((el) => getComputedStyle(el).opacity)) === '0');
 await page.click('[data-cookie-banner] [data-consent="accept"]');
 await page.waitForTimeout(500);
-const barBox2 = await page.locator('[data-mobile-bar]').boundingBox();
-check('mobile bar appears after consent choice', barBox2.y < 844);
+check('floating actions appear after consent choice', (await page.locator('[data-floating]').evaluate((el) => getComputedStyle(el).opacity)) === '1');
 await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
 await page.tap('[data-drawer-open]');
 check('mobile drawer opens', await page.isVisible('#site-drawer'));
@@ -199,7 +212,7 @@ const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { wi
 page = await nojs.newPage();
 await page.goto(`${BASE}/en/services/b2b/`);
 check('no-JS: H1 visible', await page.isVisible('h1'));
-check('no-JS: product links crawlable', (await page.locator('a[href^="/en/products/"]').count()) >= 3);
+check('no-JS: all 76 product links crawlable on the hub', (await page.locator('[data-finder] [data-product] a:not(.ulink)').count()) === 76);
 check('no-JS: FAQ answers visible', await page.isVisible('#b2b-faq-1'));
 check('no-JS: reveal content visible', await page.evaluate(() => [...document.querySelectorAll('.reveal')].every((el) => getComputedStyle(el).opacity === '1')));
 await nojs.close();

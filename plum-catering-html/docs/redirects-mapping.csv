@@ -12,4 +12,5 @@ old_path,new_path,status_code,source,status,notes
 /ar/privacy/,/ar/privacy/,none,Blueprint §2,preserved,Existing URL kept
 /en/privacy/,/en/privacy/,none,Blueprint §2,preserved,Existing URL kept
 /,/ar/,302 (or 301 once final),Recommendation,to-configure,Root language entry → Arabic default. Use 302 if Accept-Language negotiation is added later; otherwise 301.
+NEW-URLS,/{lang}/gallery/ · /{lang}/contact/ · /{lang}/services/{hub}/{service}/ · /{lang}/products/{family}/,none,v2 IA,new,New routes introduced by the demo structure — no legacy equivalents; nothing to redirect
 PENDING-CRAWL,,301,GSC / crawl export,pending,Any other indexed legacy URL (e.g. old product anchors / query URLs / trailing-slash variants) must be mapped one-to-one after a real crawl. No URLs have been invented.

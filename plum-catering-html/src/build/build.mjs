@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PAGE_ROUTES, route, productRoute } from '../templates/routes.mjs';
+import { PAGE_ROUTES, route, productRoute, serviceRoute, familyRoute } from '../templates/routes.mjs';
 import { placeholderSVG, esc } from '../templates/helpers.mjs';
 import { document } from '../templates/layout.mjs';
 import * as Pages from '../templates/pages.mjs';
@@ -34,6 +34,7 @@ const LANGS = ['ar', 'en'];
 /* ---------------- Data validation (fail the build on integrity errors) ---------------- */
 const errors = [];
 const seen = { id: new Set(), ar: new Set(), en: new Set() };
+const familySlugs = new Set(categories.map((c) => c.slug));
 for (const p of products) {
   if (seen.id.has(p.id)) errors.push(`Duplicate product id ${p.id}`);
   seen.id.add(p.id);
@@ -42,6 +43,7 @@ for (const p of products) {
     const s = p.slug?.[l];
     if (!s || !/^[a-z0-9؀-ۿ-]+$/.test(s)) errors.push(`${p.id}: invalid ${l} slug "${s}"`);
     if (seen[l].has(s)) errors.push(`${p.id}: slug collision in ${l}: ${s}`);
+    if (familySlugs.has(s)) errors.push(`${p.id}: slug ${s} collides with a product-family route`);
     seen[l].add(s);
     if (!p.name?.[l]) errors.push(`${p.id}: missing ${l} name`);
   }
@@ -100,7 +102,7 @@ for (const m of [...media.images, ...media.gallery]) if (!m.src) fs.writeFileSyn
 
 /* ---------------- Pages ---------------- */
 const matrix = [];
-const pageRenderers = { home: Pages.home, about: Pages.about, corporates: Pages.corporates, celebrations: Pages.celebrations, b2b: Pages.b2b, facility: Pages.facility, privacy: Pages.privacy };
+const pageRenderers = { home: Pages.home, about: Pages.about, corporates: Pages.corporates, celebrations: Pages.celebrations, b2b: Pages.b2b, facility: Pages.facility, gallery: Pages.galleryPage, contact: Pages.contact, privacy: Pages.privacy };
 const defaultService = { corporates: 'corporate', celebrations: 'celebration', b2b: 'b2b' };
 
 function render(ctx, result, indexable) {
@@ -122,6 +124,35 @@ for (const key of Object.keys(PAGE_ROUTES)) {
     if (key === 'privacy') { indexable = result.indexable; status = indexable ? 'approved' : 'legal-review-draft (noindex)'; }
     write(DIST, p, render(ctx, result, indexable));
     record({ path: p, lang, type: 'page', key, status, indexable, canonical: indexable ? config.productionBaseUrl + p : '', alt_ar: alternates.ar, alt_en: alternates.en, title: result.meta.title });
+  }
+}
+
+/* Service sub-pages (7 corporate + 6 celebration) */
+for (const hubKey of ['corporates', 'celebrations']) {
+  const slugs = content.en.pages[hubKey].services.items.map((s) => s.slug);
+  for (const slug of slugs) {
+    for (const lang of LANGS) {
+      const item = content[lang].pages[hubKey].services.items.find((s) => s.slug === slug);
+      const p = serviceRoute(hubKey, slug, lang);
+      const alternates = { ar: serviceRoute(hubKey, slug, 'ar'), en: serviceRoute(hubKey, slug, 'en') };
+      const ctx = makeCtx(lang, 'service', { path: p, alternates, navParent: hubKey, defaultService: defaultService[hubKey], defaultDetail: slug, pageTitleShort: item.title || item.h3 });
+      const result = Pages.servicePage(ctx, hubKey, item);
+      write(DIST, p, render(ctx, result, true));
+      record({ path: p, lang, type: 'service', key: `${hubKey}/${slug}`, status: 'ready-for-review', indexable: true, canonical: config.productionBaseUrl + p, alt_ar: alternates.ar, alt_en: alternates.en, title: result.meta.title });
+    }
+  }
+}
+
+/* Product-family pages */
+for (const cat of categories) {
+  for (const lang of LANGS) {
+    const p = familyRoute(cat.slug, lang);
+    const alternates = { ar: familyRoute(cat.slug, 'ar'), en: familyRoute(cat.slug, 'en') };
+    const ctx = makeCtx(lang, 'family', { path: p, alternates, navParent: 'b2b', defaultService: 'b2b', defaultDetail: cat.slug, pageTitleShort: cat.name[lang] });
+    const result = Pages.family(ctx, cat);
+    const hasProducts = products.some((x) => x.category === cat.id && x.status !== 'archived');
+    write(DIST, p, render(ctx, result, hasProducts));
+    record({ path: p, lang, type: 'family', key: cat.id, status: hasProducts ? 'ready-for-review' : 'empty (noindex)', indexable: hasProducts, canonical: hasProducts ? config.productionBaseUrl + p : '', alt_ar: alternates.ar, alt_en: alternates.en, title: result.meta.title });
   }
 }
 
@@ -204,7 +235,7 @@ const sitemapFile = (rows) => `<?xml version="1.0" encoding="UTF-8"?>
 ${rows.map(urlXml).join('\n')}
 </urlset>
 `;
-const pagesRows = indexables.filter((r) => r.type === 'page');
+const pagesRows = indexables.filter((r) => r.type !== 'product');
 const productRows = indexables.filter((r) => r.type === 'product');
 fs.writeFileSync(path.join(DIST, 'sitemap-pages.xml'), sitemapFile(pagesRows));
 const sitemaps = ['sitemap-pages.xml'];
@@ -235,6 +266,8 @@ fs.mkdirSync(path.join(ROOT, 'docs'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'docs', 'seo-url-matrix.csv'), csv.join('\n') + '\n');
 
 const report = {
+  servicePages: matrix.filter((r) => r.type === 'service').length,
+  familyPages: matrix.filter((r) => r.type === 'family').length,
   builtAt: new Date().toISOString(),
   mode: config.prototype.showReviewFlags ? 'review' : 'clean',
   corePages: matrix.filter((r) => r.type === 'page').length,

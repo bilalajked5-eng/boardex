@@ -4,9 +4,9 @@ Status legend: **implemented** · **prototype-only** (works in HTML, must be re-
 
 | # | Requirement | Where | Status |
 |---|---|---|---|
-| 1 | 7 core pages × AR/EN with blueprint routes | `routes.mjs`, `dist/ar/*`, `dist/en/*` | implemented |
+| 1 | 7 core pages × AR/EN with blueprint routes (+ Gallery, Contact, 13 service pages, 7 family pages from the client demo IA) | `routes.mjs`, `dist/ar/*`, `dist/en/*` | implemented |
 | 2 | Arabic default RTL, English LTR, `lang`/`dir`, logical CSS | `layout.mjs → document()`, all CSS | implemented |
-| 3 | Exact H1s and H2/H3 hierarchy per page | `content.*.json`, `pages.mjs` | implemented (service H2 wording from Blueprint) |
+| 3 | Exact H1s and H2/H3 hierarchy per page | `content.*.json`, `pages.mjs` | implemented — blueprint H1/H2 kept; section order follows the client demo |
 | 4 | Unique title/description per page & locale | `content.*.json → meta`, product generator | implemented |
 | 5 | Self-canonical + reciprocal `ar-SA`/`en-SA` hreflang + `x-default` | `layout.mjs → head()` | implemented |
 | 6 | XML sitemap (segmented), indexable only | `build.mjs` → `sitemap.xml`, `sitemap-pages.xml`, `sitemap-products.xml` | implemented |
@@ -24,9 +24,9 @@ Status legend: **implemented** · **prototype-only** (works in HTML, must be re-
 | 18 | Facility Management Coming Soon: public, noindex, no false claim, links to live services | `pages.mjs → facility` | implemented |
 | 19 | FM phase-2 full template behind `launch_mode` flag | `site-config → facilityManagement.launchMode`, `preview/facility-live/*` | implemented (**requires client approval** to switch) |
 | 20 | Privacy policy structure (11 H2s), TOC, cookie settings link | `pages.mjs → privacy` | implemented as review draft; **requires client approval** (noindex until `legal.privacyApproved`) |
-| 21 | Sticky responsive header, drawer, language switcher preserving page/product | `layout.mjs`, `navigation.js` | implemented |
+| 21 | Utility bar, sticky header with dropdown groups, drawer with collapsible groups, language switcher preserving page/product | `layout.mjs`, `navigation.js` | implemented |
 | 22 | Footer with services, company, contact, legal, cookie prefs | `layout.mjs → footer()` | implemented (phone + email from catalogue; address pending) |
-| 23 | Accessible quote modal: focus trap, Esc, restore, validation, conditional fields, privacy + marketing consent | `layout.mjs → quoteModal()`, `quote-modal.js` | implemented |
+| 23 | Accessible 3-step quote modal: focus trap, Esc, restore, per-step validation, service-detail filtering, privacy + marketing consent | `layout.mjs → quoteModal()`, `quote-modal.js` | implemented |
 | 24 | Quote prefill by service / product | `data-quote-open` attributes | implemented |
 | 25 | Quote → Microsoft 365 email | `docs/quote-api-contract.md` | **requires backend** |
 | 26 | Honest success: only on server confirmation; lead event only then | `quote-modal.js`, `tracking-adapter.js`; tested in `browser-qa.mjs` | implemented |
@@ -51,6 +51,6 @@ Status legend: **implemented** · **prototype-only** (works in HTML, must be re-
 | 45 | Cloudflare configuration | `docs/deployment-and-redirects.md` | **requires server deployment** |
 | 46 | Search Console verification & submission | `docs/deployment-and-redirects.md §5` | **requires server deployment** (no fake token) |
 | 47 | All text/media editable in WordPress without page builder | `docs/wordpress-handoff.md`, JSON content model | **future** (phase 3) |
-| 48 | Optional category landing pages / blog | `routes.mjs`, WP taxonomy plan | future-ready, not published |
+| 48 | Category landing pages (/products/{family}/) | `pages.mjs → family` | implemented (14 indexable, unique intro + real products); blog remains future-ready |
 | 49 | Source inventory, content gaps, URL matrix, API contract, tracking, WP handoff, deployment, QA, traceability | `docs/*` | implemented |
 | 50 | No invented facts, prices, allergens, testimonials | review flags + clean-build omission; `qa.mjs` | implemented |

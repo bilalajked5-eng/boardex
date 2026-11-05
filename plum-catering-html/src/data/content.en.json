@@ -12,7 +12,21 @@
       "comingSoon": "Coming Soon",
       "privacy": "Privacy Policy",
       "menu": "Menu",
-      "close": "Close menu"
+      "close": "Close menu",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "overview": "Overview",
+      "groups": {
+        "corporates": "Corporate catering",
+        "celebrations": "Celebrations & events",
+        "b2b": "Product families"
+      },
+      "utility": {
+        "location": "Riyadh central kitchen · Enquiries across Saudi Arabia",
+        "phone": "Phone",
+        "open": "Open menu"
+      },
+      "submenu": "Open submenu"
     },
     "cta": {
       "quote": "Request a Quote",
@@ -26,7 +40,31 @@
       "productQuote": "Request a Quote for This Product",
       "b2bQuote": "Request B2B Quote",
       "viewGallery": "View the full gallery",
-      "aboutLink": "More about Plum Catering"
+      "aboutLink": "More about Plum Catering",
+      "quoteShort": "Get a Quote",
+      "enquire": "Enquire",
+      "talk": "Talk to our team",
+      "exploreService": "Explore service",
+      "browseRange": "Browse range",
+      "requestQuotation": "Request a quotation",
+      "contactDetails": "Contact details",
+      "backToServices": "Back to all services",
+      "allFamilies": "Explore all seven families",
+      "askProduct": "Ask about this product",
+      "tailoredQuote": "Request a tailored quote",
+      "enquireRange": "Enquire about this range",
+      "planEvent": "Plan an event",
+      "exploreB2B": "Explore B2B supply",
+      "viewFuture": "View future service plans",
+      "showAll": "Show all products",
+      "seeAll": "See all",
+      "openPdf": "Open the official PDF catalogue",
+      "call": "Call",
+      "openWhatsapp": "Open WhatsApp",
+      "openForm": "Open the enquiry form",
+      "exploreGallery": "Explore the gallery",
+      "meetPlum": "Meet Plum Catering",
+      "browseAll": "Browse all products"
     },
     "lang": {
       "switchTo": "العربية",
@@ -57,7 +95,14 @@
       "prev": "Previous image",
       "next": "Next image",
       "of": "of",
-      "status": "{n} of {target} approved gallery photos supplied. Labelled placeholders are shown for layout review only."
+      "status": "{n} of {target} approved gallery photos supplied. Labelled placeholders are shown for layout review only.",
+      "collections": {
+        "all": "All",
+        "corporates": "Events",
+        "celebrations": "Celebrations",
+        "kitchen": "Kitchen",
+        "b2b": "Food & bakery"
+      }
     },
     "logos": {
       "pending": "Client logos will appear here once each brand has approved their use. No logos have been supplied yet.",
@@ -88,7 +133,12 @@
       "cookieSettings": "Cookie preferences",
       "rights": "All rights reserved.",
       "contactPending": "Phone, email and address will be published here once confirmed by the client.",
-      "quotePrompt": "The fastest way to reach us is the quote request form."
+      "quotePrompt": "The fastest way to reach us is the quote request form.",
+      "explore": "Explore",
+      "discover": "Discover",
+      "kitchen": "Our Kitchen",
+      "brandLine": "A brand of {parent} · Riyadh, Saudi Arabia",
+      "brandLineNoParent": "Riyadh, Saudi Arabia"
     },
     "quote": {
       "title": "Request a Quote",
@@ -133,7 +183,38 @@
       "pendingIntegration": "Online form delivery is not connected yet in this prototype, so your request has not been sent. Once the secure server integration is live, requests will be delivered to the Plum team by email.",
       "successTitle": "Thank you — your request has been received",
       "success": "Our team will review your request and contact you. A reference number: {ref}",
-      "attached": "Attached product"
+      "attached": "Attached product",
+      "stepLabel": "Step {n} of {total}",
+      "steps": [
+        "Your enquiry",
+        "Details",
+        "Your contact"
+      ],
+      "back": "Back",
+      "next": "Continue",
+      "category": "Enquiry category",
+      "detail": "Service",
+      "detailPlaceholder": "Choose a service (optional)",
+      "interest": "What are you planning?",
+      "interestHint": "For example: a staff iftar for 120, weekly croissant supply",
+      "quantity": "Approximate guest count or quantity",
+      "quantityHint": "e.g. 150 guests or 500 units per week",
+      "city": "City / venue location",
+      "preferredDate": "Preferred date",
+      "preferredDateHint": "A date, or a frequency such as “weekly”",
+      "format": "Service or buying format",
+      "formatNotDecided": "Not decided yet",
+      "formats": {
+        "buffet": "Buffet",
+        "served": "Served meal",
+        "boxes": "Meal boxes",
+        "reception": "Reception / canapés",
+        "live": "Live station",
+        "recurring": "Recurring supply",
+        "oneTime": "One-time product supply"
+      },
+      "summaryTitle": "Your enquiry",
+      "eyebrow": "Request a quotation"
     },
     "cookie": {
       "title": "Your cookie choices",
@@ -161,6 +242,12 @@
     },
     "mobileBar": {
       "label": "Quick contact"
+    },
+    "floating": {
+      "label": "Quick actions"
+    },
+    "stats": {
+      "label": "Key facts"
     }
   },
   "pages": {
@@ -170,10 +257,18 @@
         "description": "Plum Catering provides corporate catering, celebration and event catering, and wholesale bakery supply from its central kitchen in Riyadh. Request a quote."
       },
       "hero": {
-        "eyebrow": "Plum Catering · Riyadh",
+        "eyebrow": "Catering · Hospitality · B2B Supply",
         "h1": "Catering Services in Riyadh for Businesses and Celebrations",
-        "lead": "From daily corporate dining to weddings and private occasions, Plum prepares every menu in its own central kitchen and delivers it with care, consistency and attention to detail.",
-        "links": "Discover {corporates} and {celebrations}"
+        "lead": "From corporate gatherings and private celebrations to bakery supply for hospitality businesses, Plum brings considered food and coordinated service to the table. Enquiries across Saudi Arabia are welcome, with location coverage confirmed individually.",
+        "links": "Discover {corporates} and {celebrations}",
+        "accent": "for Businesses and Celebrations",
+        "meta": [
+          "Riyadh central kitchen",
+          "Saudi enquiries · coverage confirmed per request"
+        ],
+        "panelLabel": "The food experience",
+        "panelText": "Made to bring us together.",
+        "panelNote": "Brand film / editorial visual area"
       },
       "about": {
         "h2": "About Plum Catering",
@@ -181,7 +276,17 @@
         "approach": {
           "h3": "Our Approach",
           "body": "Listen first, plan carefully, prepare with discipline and serve with warmth — the same principles applied to every order."
-        }
+        },
+        "eyebrow": "About Plum",
+        "h2alt": "A kitchen-led hospitality business",
+        "body2": "Our approach is straightforward: understand the occasion, plan the details and serve food that feels appropriate to the people around the table.",
+        "approachLabel": "Our approach",
+        "approachSteps": [
+          "Listen to the brief",
+          "Develop the menu",
+          "Plan the service",
+          "Deliver the occasion"
+        ]
       },
       "services": {
         "h2": "Our Catering Services",
@@ -250,16 +355,35 @@
       },
       "cuisine": {
         "h2": "Food & Cuisine Expertise",
-        "body": "Our menus are planned around each client's occasion, guests and preferences. Explore how this works for {corporates} and for {celebrations}.",
-        "pendingNote": "List the cuisines and menu styles Plum actually serves (e.g. Saudi, Levantine, International). Only confirmed cuisines will be published."
+        "body": "Cuisine inspirations seen in Plum’s current portfolio. Specific combinations and menus are discussed during the quotation process.",
+        "pendingNote": "Cuisine list taken from the client’s design concept; confirm each cuisine is actually served before publication.",
+        "eyebrow": "Cuisine inspiration",
+        "h2alt": "A menu with room for the world",
+        "chips": [
+          "Saudi",
+          "Lebanese",
+          "Egyptian",
+          "Persian",
+          "Mediterranean",
+          "Indian",
+          "Burger & Grill",
+          "Italian",
+          "International",
+          "Fusion",
+          "Desserts & Pastries"
+        ]
       },
       "work": {
         "h2": "Our Work",
-        "intro": "A selection from recent corporate services, celebrations and our kitchen."
+        "intro": "Real work should speak louder than stock imagery. Approved kitchen and event media is organized into curated collections on the gallery page.",
+        "eyebrow": "Our work",
+        "h2alt": "A closer look at Plum at work"
       },
       "clients": {
         "h2": "Trusted by Our Clients",
-        "intro": "Organisations and families across Riyadh rely on Plum for their catering."
+        "intro": "This is the placement for approved client logos. The final website displays only clients who have authorized public logo use.",
+        "eyebrow": "Client logo wall",
+        "h2alt": "Partnerships built on trust"
       },
       "faq": {
         "h2": "Frequently Asked Questions",
@@ -283,11 +407,115 @@
             "a": "Our service teams plan each event according to its guest count and format. Share your expected numbers in the quote form and we will advise on the best service style.",
             "review": true
           }
-        ]
+        ],
+        "eyebrow": "Good to know",
+        "h2alt": "Questions before you enquire"
       },
       "finalCta": {
         "h2": "Plan Your Next Event",
-        "body": "Share your date, guest count and the kind of experience you have in mind. We will prepare a proposal tailored to you."
+        "body": "Tell us the occasion, the people and where it will take place. We’ll help you start the conversation.",
+        "eyebrow": "Let’s talk",
+        "h2alt": "Let’s plan something worth gathering for"
+      },
+      "stats": {
+        "pillars": {
+          "value": "3",
+          "label": "Core pillars — catering, celebrations and B2B"
+        },
+        "kitchenLabel": "Central kitchen in Riyadh",
+        "certLabel": "Food-safety certification listed on the current site",
+        "productsLabel": "Catalogue products"
+      },
+      "start": {
+        "eyebrow": "Start with your needs",
+        "h2": "Choose your starting point",
+        "intro": "A clear route for every kind of visitor. Whether you are planning an event or sourcing baked goods for a business, start where your needs fit best.",
+        "cards": [
+          {
+            "num": "01",
+            "label": "For organizations",
+            "h3": "Corporate Catering",
+            "body": "Meetings, official occasions, healthcare, education, worksites and corporate meals.",
+            "cta": "Explore Corporate Catering",
+            "key": "corporates"
+          },
+          {
+            "num": "02",
+            "label": "For occasions",
+            "h3": "Celebrations & Events",
+            "body": "Weddings, private occasions, Ramadan hospitality, VIP service and receptions.",
+            "cta": "Explore Celebrations",
+            "key": "celebrations"
+          },
+          {
+            "num": "03",
+            "label": "For businesses",
+            "h3": "B2B Bakery & Pastry",
+            "body": "Browse 76 products in seven bakery and dessert families, with a direct supply enquiry.",
+            "cta": "Explore the Catalogue",
+            "key": "b2b"
+          }
+        ]
+      },
+      "explore": {
+        "eyebrow": "Services / two event pillars",
+        "h2": "Our Catering Services",
+        "intro": "Explore every catering service — each with its own page, approach and enquiry path.",
+        "seeAll": "See all {name} services"
+      },
+      "b2bBlock": {
+        "eyebrow": "B2B / trade partners",
+        "h2": "B2B Supply",
+        "h2alt": "Supplying the hospitality trade",
+        "lead": "A catalogue made for hospitality buyers, not an online shop. Find your product family, compare the range and send one clear sourcing enquiry.",
+        "meta": "76 products · 7 families · quote-based supply"
+      },
+      "how": {
+        "eyebrow": "How we work",
+        "h2": "From first enquiry to the table",
+        "steps": [
+          {
+            "h3": "Share your plans",
+            "body": "Tell us the occasion, location, date and guest count, or your business supply requirements."
+          },
+          {
+            "h3": "Shape the proposal",
+            "body": "Discuss available menus, product families, serving formats or supply needs with the team."
+          },
+          {
+            "h3": "Confirm the details",
+            "body": "Agree the proposed scope, timing and practical arrangements before an order is confirmed."
+          },
+          {
+            "h3": "Bring it together",
+            "body": "Food preparation and coordinated service follow the confirmed arrangement."
+          }
+        ]
+      },
+      "audiences": {
+        "eyebrow": "Who we serve",
+        "h2": "Built for different audiences",
+        "items": [
+          "Corporate teams",
+          "Government & institutions",
+          "Banks & offices",
+          "Hospitals & clinics",
+          "Schools & universities",
+          "Industrial businesses",
+          "Exhibitions & events",
+          "Hotels, restaurants & cafés"
+        ]
+      },
+      "future": {
+        "eyebrow": "Future expansion",
+        "h2": "One more service line is being prepared",
+        "num": "04",
+        "label": "Future services",
+        "body1": "Facility Management is a future offering, separate from the three active catering and B2B pillars.",
+        "body2": "Pest control and cleaning, linen and laundry, housekeeping, site maintenance and landscaping are shown as Coming Soon — never as active services.",
+        "statusLabel": "Status",
+        "status": "Coming soon.",
+        "statusBody": "No bookings or orders are being taken for these services."
       }
     },
     "about": {
@@ -296,9 +524,10 @@
         "description": "Learn about Plum Catering, a Riyadh catering and food-industry brand: who we are, our central kitchen, how we work and the services we provide."
       },
       "hero": {
-        "eyebrow": "About us",
+        "eyebrow": "Our story",
         "h1": "About Plum Catering",
-        "lead": "Plum Catering prepares and serves food for organisations, celebrations and foodservice businesses in Riyadh. Everything we do starts in our own central kitchen and is delivered by teams who care about the details."
+        "lead": "Good hospitality begins well before food reaches the table. Discover the kitchen, people-first approach and planning behind the Plum experience.",
+        "panelLabel": "About"
       },
       "who": {
         "h2": "Who We Are",
@@ -369,11 +598,58 @@
             "h3": "Delivery & setup",
             "body": "Our team delivers, sets up and — where agreed — serves your guests."
           }
-        ]
+        ],
+        "eyebrow": "Our method"
       },
       "finalCta": {
         "h2": "Work With Plum",
-        "body": "Whether you are planning a corporate programme, a celebration or a supply partnership, we would be glad to hear from you."
+        "body": "Choose your service and tell the team what you need.",
+        "eyebrow": "Let’s talk",
+        "h2alt": "Get to know what Plum can do for you"
+      },
+      "business": {
+        "eyebrow": "Our business",
+        "h2alt": "A practical approach to memorable hospitality",
+        "body2": "The business spans corporate and institutional catering, celebrations and events, and B2B bakery and pastry supply. Each area has different requirements, but all benefit from thoughtful food preparation and clear coordination.",
+        "listLabel": "Our business",
+        "list": [
+          "Corporate & institutional catering",
+          "Celebrations and events",
+          "B2B bakery and pastry supply"
+        ]
+      },
+      "kitchenV2": {
+        "eyebrow": "Our kitchen",
+        "h3": "Prepared with intention",
+        "list": [
+          "Kitchen and food preparation",
+          "Menu planning and coordination",
+          "Transport and service arrangements",
+          "Standards and food safety"
+        ],
+        "factsLabel": "Kitchen facts",
+        "areaLabel": "Published kitchen area",
+        "certLabel": "Listed food-safety certification"
+      },
+      "film": {
+        "eyebrow": "Behind the scenes",
+        "h2": "A view of the preparation process",
+        "h3": "From preparation to presentation",
+        "body": "An approved kitchen film introduces the production process, with a lightweight poster and click-to-play behaviour."
+      },
+      "audiences": {
+        "eyebrow": "Audiences",
+        "h2": "The people we work with",
+        "items": [
+          "Corporate offices and teams",
+          "Government organizations",
+          "Healthcare and education",
+          "Industrial sites and projects",
+          "Families and private hosts",
+          "Wedding and event coordinators",
+          "Hotels and restaurants",
+          "Cafés and hospitality buyers"
+        ]
       }
     },
     "corporates": {
@@ -382,10 +658,13 @@
         "description": "Corporate catering in Riyadh for businesses, government, healthcare, education and industrial sites — events, meal boxes and Ramadan catering. Request a proposal."
       },
       "hero": {
-        "eyebrow": "Corporates",
+        "eyebrow": "What we do",
         "h1": "Corporate Catering Services in Riyadh",
-        "lead": "Dependable catering for organisations — from boardroom lunches and conferences to recurring meal programmes for hospitals, schools and remote sites.",
-        "cta": "Request a Corporate Catering Quote"
+        "lead": "Catering for meetings, institutions and working teams — planned around the day, the guest and the practical detail.",
+        "cta": "Request a Corporate Catering Quote",
+        "num": "01",
+        "panelLabel": "Corporate",
+        "h2overview": "Catering Solutions for Organizations"
       },
       "overview": {
         "h2": "Catering Solutions for Organizations",
@@ -399,43 +678,232 @@
             "id": "corporate-business",
             "img": "corp-business",
             "h3": "Corporate & Business",
-            "body": "Meeting lunches, conferences, product launches and staff events, planned around your agenda. We help you choose menus and service styles — from boxed meals to buffets and served dining — that suit the occasion and the number of attendees."
+            "body": "Meeting lunches, conferences, product launches and staff events, planned around your agenda. We help you choose menus and service styles — from boxed meals to buffets and served dining — that suit the occasion and the number of attendees.",
+            "slug": "corporate-events",
+            "title": "Corporate & Business Catering",
+            "short": "Well-planned food service for meetings, conferences, launches and business gatherings.",
+            "who": "Companies, agencies, co-working communities and event organisers planning business occasions.",
+            "options": [
+              "Meeting and boardroom lunches",
+              "Conference and seminar catering",
+              "Product launches and client hospitality",
+              "Staff celebrations and town halls"
+            ],
+            "plan": [
+              "Clarify the format, attendance and timing",
+              "Review menu style, service format and venue access",
+              "Confirm the plan and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Can catering be arranged for recurring meetings?",
+                "a": "Yes. Recurring arrangements are discussed during planning, including menus, quantities and delivery schedules.",
+                "review": true
+              },
+              {
+                "q": "Do you provide service staff for business events?",
+                "a": "Service options are agreed per event according to the format and venue.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "royal-government",
             "img": "corp-royal",
             "h3": "Royal & Government Events",
-            "body": "Formal occasions call for careful protocol, presentation and timing. We coordinate closely with your organisers on menu, service sequence and setup so that hospitality runs discreetly and to plan."
+            "body": "Formal occasions call for careful protocol, presentation and timing. We coordinate closely with your organisers on menu, service sequence and setup so that hospitality runs discreetly and to plan.",
+            "slug": "government-official",
+            "title": "Royal & Government Catering",
+            "short": "Considered hospitality for formal, institutional and protocol-led events.",
+            "who": "Ministries, public bodies, diplomatic hosts and official event coordinators.",
+            "options": [
+              "Official receptions and ceremonies",
+              "Protocol-led dinners and hosted delegations",
+              "Conferences and public-sector forums",
+              "National-day and institutional occasions"
+            ],
+            "plan": [
+              "Understand the protocol, programme and guest profile",
+              "Align menu, service sequence and setup with the organisers",
+              "Confirm logistics and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "How early should official events be planned?",
+                "a": "As early as possible. Formal events benefit from time to align protocol, approvals and logistics.",
+                "review": true
+              },
+              {
+                "q": "Can you coordinate with our protocol team?",
+                "a": "Yes. Service sequence, timings and presentation are aligned with your organisers before the event.",
+                "review": false
+              }
+            ]
           },
           {
             "id": "hospitals-clinics",
             "img": "corp-hospitals",
             "h3": "Hospitals & Clinics",
-            "body": "Meal services for healthcare settings, planned with your facility team around schedules, service points and any menu requirements you define. Dietary and clinical menu specifications are agreed with your team before service begins."
+            "body": "Meal services for healthcare settings, planned with your facility team around schedules, service points and any menu requirements you define. Dietary and clinical menu specifications are agreed with your team before service begins.",
+            "slug": "healthcare",
+            "title": "Hospitals & Clinics Catering",
+            "short": "Practical catering conversations for healthcare teams, meetings and institutional occasions.",
+            "who": "Hospitals, clinics, medical offices and healthcare event coordinators.",
+            "options": [
+              "Staff and administrative meeting catering",
+              "Healthcare seminars and events",
+              "Planned workplace meal arrangements",
+              "Flexible enquiry-based serving formats"
+            ],
+            "plan": [
+              "Clarify the site type, purpose and number of meals",
+              "Review timing, food preferences and delivery requirements",
+              "Confirm feasibility and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Is this service for clinical or prescribed patient diets?",
+                "a": "Clinical and dietary menu specifications must be agreed with your facility team before any service begins.",
+                "review": true
+              },
+              {
+                "q": "Can recurring arrangements be discussed?",
+                "a": "Yes. Recurring meal programmes are planned with your team around schedules and service points.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "industrial-remote",
             "img": "corp-industrial",
             "h3": "Industrial & Remote Sites",
-            "body": "Catering for industrial and project sites where reliable, consistent meals matter to the workforce. Coverage, delivery schedules and service models are confirmed per site during planning."
+            "body": "Catering for industrial and project sites where reliable, consistent meals matter to the workforce. Coverage, delivery schedules and service models are confirmed per site during planning.",
+            "slug": "industrial-sites",
+            "title": "Industrial & Remote-Site Catering",
+            "short": "Meals planned around demanding work schedules and site requirements.",
+            "who": "Contractors, industrial operators, project camps and site managers.",
+            "options": [
+              "Daily workforce meal programmes",
+              "Shift-based meal timing",
+              "Packed meals for crews on the move",
+              "Site mobilisation and project-phase catering"
+            ],
+            "plan": [
+              "Clarify the site, headcount and shift pattern",
+              "Review delivery access, timing and service model",
+              "Confirm coverage and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Do you serve sites outside Riyadh?",
+                "a": "Coverage is confirmed per site. Share the location in your enquiry.",
+                "review": true
+              },
+              {
+                "q": "Can quantities change week to week?",
+                "a": "Changes in headcount are discussed as part of the recurring arrangement.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "schools-universities",
             "img": "corp-schools",
             "h3": "Schools & Universities",
-            "body": "Catering for educational institutions, from daily dining to campus events and graduations, planned with your administration around timetables and student numbers."
+            "body": "Catering for educational institutions, from daily dining to campus events and graduations, planned with your administration around timetables and student numbers.",
+            "slug": "education",
+            "title": "Schools & Universities Catering",
+            "short": "Food-service planning for educational events and institutional communities.",
+            "who": "Schools, universities, training institutes and campus event teams.",
+            "options": [
+              "Daily campus dining arrangements",
+              "Graduation ceremonies and open days",
+              "Faculty meetings and academic conferences",
+              "Student events and activity days"
+            ],
+            "plan": [
+              "Understand the institution, calendar and numbers",
+              "Review menus suitable for the audience and setting",
+              "Confirm timing and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Can menus be adapted for younger students?",
+                "a": "Menus are proposed for your approval and can be adapted to the audience.",
+                "review": false
+              },
+              {
+                "q": "Do you cater term-long programmes?",
+                "a": "Recurring programmes are discussed with your administration around the academic calendar.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "meal-boxes",
             "img": "corp-mealboxes",
             "h3": "Meal Boxes",
-            "body": "Individually packed meal boxes for meetings, training days, site visits and events — convenient to distribute, easy to plan and presented with care."
+            "body": "Individually packed meal boxes for meetings, training days, site visits and events — convenient to distribute, easy to plan and presented with care.",
+            "slug": "meal-boxes",
+            "title": "Corporate Meal Boxes",
+            "short": "Individually portioned meal formats for working days and organized occasions.",
+            "who": "Teams, training organisers, site visits and events that need individually packed meals.",
+            "options": [
+              "Boxed lunches for meetings and training days",
+              "Breakfast boxes for early starts",
+              "Individually packed event meals",
+              "Recurring weekly box programmes"
+            ],
+            "plan": [
+              "Clarify quantities, timing and delivery point",
+              "Review box contents and any menu preferences",
+              "Confirm the schedule and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Is there a minimum order for meal boxes?",
+                "a": "Share your expected quantity in the enquiry and the team will advise.",
+                "review": true
+              },
+              {
+                "q": "Can boxes be labelled per guest?",
+                "a": "Labelling and presentation options are discussed during planning.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "ramadan-catering",
             "img": "corp-ramadan",
             "h3": "Ramadan Catering",
-            "body": "Iftar and Suhoor catering for organisations during the holy month, including staff gatherings and hosted iftars. Because Ramadan is a busy season, we recommend planning early."
+            "body": "Iftar and Suhoor catering for organisations during the holy month, including staff gatherings and hosted iftars. Because Ramadan is a busy season, we recommend planning early.",
+            "slug": "corporate-ramadan",
+            "title": "Corporate Ramadan Catering",
+            "short": "Iftar and suhoor hospitality arranged around organizations and teams.",
+            "who": "Organisations hosting staff iftars, client suhoors and Ramadan gatherings.",
+            "options": [
+              "Staff iftar gatherings",
+              "Hosted client and partner iftars",
+              "Suhoor service for night-shift teams",
+              "Ramadan meal boxes and distributions"
+            ],
+            "plan": [
+              "Clarify the date, numbers and venue early",
+              "Review the menu and service style for the gathering",
+              "Confirm timing around iftar and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "How early should Ramadan catering be booked?",
+                "a": "Ramadan is a peak season. Early planning is strongly recommended.",
+                "review": true
+              },
+              {
+                "q": "Can you cater iftar at our offices?",
+                "a": "Yes. Venue access and setup are confirmed during planning.",
+                "review": false
+              }
+            ]
           }
         ]
       },
@@ -505,10 +973,13 @@
         "description": "Celebration and event catering in Riyadh: weddings, engagements, private occasions, Ramadan gatherings, VIP hospitality, live stations and canapés."
       },
       "hero": {
-        "eyebrow": "Celebrations",
+        "eyebrow": "Celebrate with Plum",
         "h1": "Celebration & Event Catering in Riyadh",
-        "lead": "Thoughtful menus and graceful service for the moments that matter — planned with you, prepared in our kitchen and presented beautifully on the day.",
-        "cta": "Plan Your Event"
+        "lead": "Menus and hospitality designed around the moments people gather to celebrate.",
+        "cta": "Plan Your Event",
+        "num": "02",
+        "panelLabel": "Celebrations",
+        "h2overview": "Catering Made for Your Occasion"
       },
       "overview": {
         "h2": "Catering Made for Your Occasion",
@@ -522,37 +993,199 @@
             "id": "weddings-engagements",
             "img": "cel-weddings",
             "h3": "Weddings & Engagements",
-            "body": "Catering for weddings and engagement celebrations, with menus, presentation and service planned around your programme and guest list."
+            "body": "Catering for weddings and engagement celebrations, with menus, presentation and service planned around your programme and guest list.",
+            "slug": "weddings-engagements",
+            "title": "Wedding & Engagement Catering",
+            "short": "Celebration menus and hospitality built around a meaningful occasion.",
+            "who": "Couples, families and wedding planners preparing engagements and weddings.",
+            "options": [
+              "Served dinners and buffets",
+              "Welcome receptions and canapé service",
+              "Dessert and sweet tables",
+              "Late-evening and after-party food"
+            ],
+            "plan": [
+              "Understand the programme, guests and venue",
+              "Shape the menu, presentation and service style",
+              "Confirm the timeline and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "How early should we book for a wedding?",
+                "a": "Weddings and peak-season dates benefit from early planning. Share your date as soon as you can.",
+                "review": true
+              },
+              {
+                "q": "Can the menu reflect family traditions?",
+                "a": "Yes. Menus are proposed around your guests and traditions and adjusted before confirmation.",
+                "review": false
+              }
+            ]
           },
           {
             "id": "private-occasions",
             "img": "cel-private",
             "h3": "Private Occasions",
-            "body": "Family gatherings, milestone birthdays, graduations and home receptions, served with the warmth and attention a private occasion deserves."
+            "body": "Family gatherings, milestone birthdays, graduations and home receptions, served with the warmth and attention a private occasion deserves.",
+            "slug": "private-occasions",
+            "title": "Private Occasion Catering",
+            "short": "Thoughtful menus for family moments, gatherings and celebrations.",
+            "who": "Families and private hosts celebrating birthdays, graduations, gatherings and home receptions.",
+            "options": [
+              "Family gatherings and home receptions",
+              "Birthdays and graduations",
+              "Intimate dinners",
+              "Seasonal and holiday celebrations"
+            ],
+            "plan": [
+              "Understand the occasion, numbers and setting",
+              "Review menu options and service style",
+              "Confirm the details and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Do you cater small private gatherings?",
+                "a": "Share your expected guest count and the team will advise on suitable options.",
+                "review": true
+              },
+              {
+                "q": "Can you deliver and set up at home?",
+                "a": "Setup and service options are agreed per occasion.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "ramadan-gatherings",
             "img": "cel-ramadan",
             "h3": "Ramadan Gatherings",
-            "body": "Iftar and Suhoor gatherings for family and friends, from intimate tables to larger hosted evenings."
+            "body": "Iftar and Suhoor gatherings for family and friends, from intimate tables to larger hosted evenings.",
+            "slug": "ramadan-events",
+            "title": "Ramadan Iftar & Suhoor Catering",
+            "short": "Welcoming Ramadan tables for private gatherings and hosted occasions.",
+            "who": "Families and hosts planning iftar and suhoor gatherings for relatives, friends and guests.",
+            "options": [
+              "Family iftar tables",
+              "Hosted suhoor evenings",
+              "Ramadan majlis hospitality",
+              "Larger community iftars"
+            ],
+            "plan": [
+              "Clarify the date, guests and venue early",
+              "Shape the iftar or suhoor menu",
+              "Confirm timings around iftar and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "How far in advance should Ramadan gatherings be booked?",
+                "a": "Ramadan is a busy season; early planning is recommended.",
+                "review": true
+              },
+              {
+                "q": "Can you serve traditional Ramadan dishes?",
+                "a": "Menus are proposed around your preferences and confirmed before the event.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "vip-hospitality",
             "img": "cel-vip",
             "h3": "Luxury VIP Catering",
-            "body": "Elevated hospitality for distinguished guests, with refined presentation and discreet, attentive service."
+            "body": "Elevated hospitality for distinguished guests, with refined presentation and discreet, attentive service.",
+            "slug": "vip-luxury",
+            "title": "Luxury & VIP Catering",
+            "short": "Discreet, considered food presentation for exceptional hosted occasions.",
+            "who": "Hosts of distinguished guests, private dinners and high-profile occasions.",
+            "options": [
+              "Fine-dining served menus",
+              "Discreet attentive service",
+              "Refined presentation and styling",
+              "Private chef-led experiences"
+            ],
+            "plan": [
+              "Understand the guests, setting and expectations",
+              "Design the menu, presentation and service flow",
+              "Confirm every detail and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "Can menus be fully bespoke?",
+                "a": "Yes. VIP menus are designed around the occasion and confirmed with you.",
+                "review": false
+              },
+              {
+                "q": "Is discreet service available?",
+                "a": "Service style, including discretion and timing, is planned with you.",
+                "review": true
+              }
+            ]
           },
           {
             "id": "live-cooking",
             "img": "cel-live",
             "h3": "Live Cooking Stations",
-            "body": "Chef-attended stations that bring theatre and freshness to your event, prepared in front of your guests."
+            "body": "Chef-attended stations that bring theatre and freshness to your event, prepared in front of your guests.",
+            "slug": "live-stations",
+            "title": "Live Cooking Stations",
+            "short": "Freshly prepared food experiences that become part of the occasion.",
+            "who": "Events where guests enjoy chef-attended stations as part of the experience.",
+            "options": [
+              "Chef-attended cooking stations",
+              "Grill and carving stations",
+              "Dessert and pastry stations",
+              "Interactive themed stations"
+            ],
+            "plan": [
+              "Understand the venue, space and guest flow",
+              "Select stations and menus for the occasion",
+              "Confirm setup needs and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "What does a live station need from the venue?",
+                "a": "Space, access and setup needs are confirmed during planning.",
+                "review": true
+              },
+              {
+                "q": "Can stations be combined with a buffet?",
+                "a": "Yes. Service formats can be combined according to your programme.",
+                "review": false
+              }
+            ]
           },
           {
             "id": "canapes-receptions",
             "img": "cel-canapes",
             "h3": "Canapés & Receptions",
-            "body": "Elegant bite-sized selections for receptions and standing events, served by our team or presented on styled displays."
+            "body": "Elegant bite-sized selections for receptions and standing events, served by our team or presented on styled displays.",
+            "slug": "canapes-receptions",
+            "title": "Canapés & Reception Catering",
+            "short": "Elegant small bites and practical service for guests who mingle.",
+            "who": "Receptions, openings, standing events and welcome gatherings.",
+            "options": [
+              "Passed canapés",
+              "Styled grazing displays",
+              "Reception drinks and refreshments",
+              "Short-format welcome gatherings"
+            ],
+            "plan": [
+              "Understand the format, duration and numbers",
+              "Select canapé menus and presentation",
+              "Confirm the service plan and request a tailored proposal"
+            ],
+            "faq": [
+              {
+                "q": "How many canapés per guest?",
+                "a": "Quantities are advised according to the format and duration of your reception.",
+                "review": true
+              },
+              {
+                "q": "Can canapés be served by staff?",
+                "a": "Service options are agreed per event.",
+                "review": true
+              }
+            ]
           }
         ]
       },
@@ -637,9 +1270,11 @@
         "description": "Wholesale breads, croissants, Danish, focaccia, éclairs and cakes for hotels, restaurants and cafés in Riyadh. Browse the Plum B2B catalogue and request a quote."
       },
       "hero": {
-        "eyebrow": "B2B Catalogue",
+        "eyebrow": "For hospitality businesses",
         "h1": "Wholesale Bakery & Pastry Supply in Riyadh",
-        "lead": "Breads, viennoiserie, pastries and cakes from the Plum central kitchen, supplied to hotels, restaurants, cafés and foodservice operators."
+        "lead": "Explore a structured range of bakery and dessert products for hotels, restaurants, cafés and other hospitality buyers. Browse by family and discuss your sourcing requirements with the team.",
+        "num": "03",
+        "panelLabel": "B2B supply"
       },
       "overview": {
         "h2": "B2B Supply for Foodservice Businesses",
@@ -675,7 +1310,9 @@
       },
       "finalCta": {
         "h2": "Start a Supply Partnership",
-        "body": "Tell us about your business, the products you are interested in and your expected quantities."
+        "body": "Tell us your product families, estimated quantities and business location.",
+        "eyebrow": "Let’s talk",
+        "h2alt": "Start a supply conversation"
       },
       "faq": {
         "h2": "B2B Frequently Asked Questions",
@@ -699,6 +1336,64 @@
             "a": "Storage guidance is specific to each product and will be shown on each product page once approved product documentation is supplied.",
             "review": true
           }
+        ],
+        "eyebrow": "Buyer guide"
+      },
+      "stats": {
+        "products": "Catalogue products",
+        "families": "Product families",
+        "trade": "Trade",
+        "tradeLabel": "Quote-based supply enquiries",
+        "pdf": "PDF",
+        "pdfLabel": "Official product catalogue"
+      },
+      "families": {
+        "eyebrow": "Product catalogue",
+        "h2": "Explore Our Product Range",
+        "intro": "See the full category range. Individual product information is organized for browsing; the site is not designed as an e-commerce checkout.",
+        "options": "{n} product options"
+      },
+      "finder": {
+        "eyebrow": "Quick product finder",
+        "h2": "Find a product by name",
+        "label": "Search all 76 catalogue items",
+        "placeholder": "Type a product name, e.g. sourdough",
+        "showing": "Showing {n} of {total} products",
+        "all": "All {total} products"
+      },
+      "trade": {
+        "eyebrow": "For trade buyers",
+        "h2": "B2B Supply for Foodservice Businesses",
+        "h3": "Tell us what your business needs",
+        "body": "Let the team know what type of business you run, which product families interest you, your estimated volumes and delivery location. This helps focus the next conversation.",
+        "list": [
+          "Hotels and hospitality groups",
+          "Restaurants and food-service operators",
+          "Cafés, bakeries and dessert outlets",
+          "Purchasing and procurement teams"
+        ]
+      },
+      "catalogueCard": {
+        "eyebrow": "Catalogue access",
+        "h3": "Product details, in one place",
+        "body": "Use the official Plum catalogue for current product specifications. Every product also has its own page on this site."
+      },
+      "processB2B": {
+        "eyebrow": "B2B process",
+        "h2": "How to enquire about supply",
+        "steps": [
+          {
+            "h3": "Select your products",
+            "body": "Identify the categories or specific product names relevant to your business."
+          },
+          {
+            "h3": "Share your requirements",
+            "body": "Include business type, city, estimated quantity and how often you may need delivery."
+          },
+          {
+            "h3": "Discuss the proposal",
+            "body": "Review actual formats, availability and commercial terms directly with the Plum team."
+          }
         ]
       }
     },
@@ -708,7 +1403,7 @@
           "title": "Facility Management — Coming Soon | Plum Catering",
           "description": "Plum Catering's facility management services are coming soon. In the meantime, explore our corporate catering, celebrations and B2B supply services."
         },
-        "eyebrow": "Future service",
+        "eyebrow": "Future offering",
         "h1": "Facility Management — Coming Soon",
         "lead": "We are preparing a facility management service line. It is not currently operational and we are not accepting facility management enquiries yet.",
         "plannedH2": "Planned service areas",
@@ -721,7 +1416,22 @@
           "Landscaping"
         ],
         "liveH2": "Explore Our Current Services",
-        "liveBody": "Our catering services are available today."
+        "liveBody": "Our catering services are available today.",
+        "num": "04",
+        "panelLabel": "Coming soon",
+        "plannedEyebrow": "Services in preparation",
+        "badge": "In preparation",
+        "plannedBody": "Planned offering. Details and availability will be published when the service formally launches.",
+        "info": {
+          "eyebrow": "Important information",
+          "h2": "A separate business line — not open yet",
+          "body1": "This page shows the future direction of the website without suggesting an active service or inviting orders that cannot yet be fulfilled.",
+          "body2": "Once a service is confirmed, each category will be expanded with a meaningful description, operational coverage and its own enquiry path.",
+          "statusLabel": "Current status",
+          "status": "Coming soon",
+          "statusBody": "For current catering or B2B requirements, please explore the active services."
+        },
+        "liveEyebrow": "Available now"
       },
       "live": {
         "meta": {
@@ -869,7 +1579,11 @@
             "For privacy questions, contact [privacy contact email — to be confirmed]. We may update this policy from time to time; the date at the top of this page shows the latest version."
           ]
         }
-      ]
+      ],
+      "hero": {
+        "eyebrow": "Website information",
+        "panelLabel": "Privacy"
+      }
     },
     "product": {
       "eyebrow": "B2B product",
@@ -907,7 +1621,8 @@
       },
       "draftBanner": "Draft product page — not indexed. Awaiting verified product data and client approval.",
       "energyBasisPending": "basis to be confirmed",
-      "inquiry": "Ask about this product on WhatsApp"
+      "inquiry": "Ask about this product on WhatsApp",
+      "familyLink": "See the {family} range"
     },
     "notFound": {
       "meta": {
@@ -917,6 +1632,164 @@
       "h1": "We couldn't find that page",
       "body": "The page may have moved or the address may be incorrect. These links will help you find your way.",
       "home": "Go to the home page"
+    },
+    "serviceHub": {
+      "findEyebrow": "Service categories",
+      "findH2": "Find the service that fits",
+      "findIntro": "Choose a service to explore its approach, what to discuss and the details needed for a tailored quotation.",
+      "briefEyebrow": "How it works",
+      "briefH3": "What we plan together",
+      "briefBody": "Every occasion has its own rhythm. The team will need the guest count, venue, preferred date and style of service to assess the request and prepare a relevant proposal.",
+      "briefItems": [
+        "Purpose and audience",
+        "Guest count, location and event timing",
+        "Cuisine and serving preferences",
+        "Practical requirements and quotation"
+      ],
+      "processLabel": "Service process",
+      "process": [
+        "Discuss the brief",
+        "Review menu options",
+        "Confirm the event plan"
+      ],
+      "faqEyebrow": "Your questions",
+      "ctaEyebrow": "Let’s talk",
+      "ctaH2": "Make the next event easier to plan",
+      "ctaBody": "Tell us your requirements and start with a clear conversation.",
+      "panelCountry": "Saudi Arabia"
+    },
+    "servicePage": {
+      "eyebrowSuffix": "Service",
+      "serviceLabel": "The service",
+      "builtEyebrow": "Your service",
+      "builtH2": "Built around your requirements",
+      "whoH3": "Who this service is for",
+      "enquiryEyebrow": "A good enquiry includes",
+      "enquiryItems": [
+        "What you are planning",
+        "Guest count or required quantity",
+        "Date, city and venue",
+        "Menu and service preferences"
+      ],
+      "optionsEyebrow": "Service options",
+      "optionsH2": "What you can discuss",
+      "optionBody": "Discuss this requirement in your brief so the team can assess the right approach and quotation.",
+      "planEyebrow": "Step by step",
+      "planH2": "How we would plan it",
+      "faqEyebrow": "Good to know",
+      "faqH2": "Before you get in touch",
+      "relatedEyebrow": "Related services",
+      "relatedH2": "You may also be looking for",
+      "ctaH2": "Start with the right details",
+      "ctaBody": "Tell us about the occasion, location and quantity. We’ll discuss a relevant proposal."
+    },
+    "familyBlurbs": {
+      "bread": "Sourdough, baguettes, rolls and buns for professional kitchens.",
+      "croissants": "Classic and filled croissant options for hospitality and café service.",
+      "danish-focaccia": "Savory focaccia, Danish pastries and Pain Suisse selections.",
+      "eclairs": "A varied éclair selection for displays, dessert menus and events.",
+      "miracle-cakes": "Individual premium cake selections for hospitality menus.",
+      "molded-cakes": "Portioned cakes and desserts for plated service and counters.",
+      "whole-cakes": "Full-size cakes for hospitality displays and shared occasions."
+    },
+    "family": {
+      "eyebrow": "B2B · Product family",
+      "h1": "{family} for Wholesale Supply",
+      "lead": "{blurb} Browse the product range and share your sourcing requirements with Plum’s B2B team.",
+      "metaTitle": "Wholesale {family} Supplier Riyadh | Plum B2B",
+      "metaDesc": "{blurb} {n} {family} products from Plum Catering’s central kitchen in Riyadh, supplied to hotels, restaurants and cafés. Request a quote.",
+      "statsRange": "Product range",
+      "statsProducts": "Products",
+      "statsFresh": "Fresh shelf life",
+      "statsFrozen": "Baked-frozen",
+      "collectionEyebrow": "Products",
+      "collectionH2": "The {family} collection",
+      "collectionIntro": "{n} named items from Plum’s published catalogue. Current pack details, availability and commercial terms are confirmed with the sales team.",
+      "othersEyebrow": "More from the catalogue",
+      "othersH2": "Browse other product families",
+      "ctaH2": "Interested in {family} supply?",
+      "ctaBody": "Start with your business location, quantities and preferred items.",
+      "notOffered": "Not offered"
+    },
+    "gallery": {
+      "meta": {
+        "title": "Plum at Work — Gallery | Plum Catering",
+        "description": "A gallery of Plum Catering at work in Riyadh: events, kitchen preparation, food and bakery, and service moments."
+      },
+      "hero": {
+        "eyebrow": "Selected work",
+        "h1": "Plum at Work",
+        "lead": "The moments behind each catering project: food, people, kitchen preparation and event setups.",
+        "panelLabel": "Gallery"
+      },
+      "collections": {
+        "eyebrow": "Media collections",
+        "h2": "Explore the story behind the service"
+      },
+      "note": "Final media library: client-approved images and film, organized by collection. Placeholders are shown until assets are supplied.",
+      "cta": {
+        "eyebrow": "Let’s talk",
+        "h2": "Inspired by what you see?",
+        "body": "Tell us about the occasion you are planning."
+      }
+    },
+    "contact": {
+      "meta": {
+        "title": "Contact & Quotations | Plum Catering",
+        "description": "Contact Plum Catering in Riyadh for event quotations, B2B bakery supply enquiries, phone and WhatsApp."
+      },
+      "hero": {
+        "eyebrow": "Start a conversation",
+        "h1": "Contact & Quotations",
+        "lead": "Choose the type of enquiry that fits your plans. Share your event or trade requirements and the right team will follow up.",
+        "panelLabel": "Contact"
+      },
+      "channels": {
+        "eyebrow": "Contact channels",
+        "h2": "How would you like to get in touch",
+        "items": [
+          {
+            "num": "01",
+            "label": "Catering",
+            "h3": "Event quotation",
+            "body": "Share date, guest count, city and preferred catering format.",
+            "cta": "Open catering enquiry",
+            "service": "celebration"
+          },
+          {
+            "num": "02",
+            "label": "Trade",
+            "h3": "B2B supply enquiry",
+            "body": "Share your product interests, volume, business type and location.",
+            "cta": "Open B2B enquiry",
+            "service": "b2b"
+          },
+          {
+            "num": "03",
+            "label": "Direct",
+            "h3": "Phone or WhatsApp",
+            "body": "For questions, use the contact number currently published by Plum."
+          }
+        ]
+      },
+      "brief": {
+        "eyebrow": "How to enquire",
+        "h2": "A clear brief makes a better proposal",
+        "lead": "A useful enquiry tells the team what matters without making the visitor fill in an endless form.",
+        "items": [
+          "Your name and contact information",
+          "Business or event type",
+          "City, date and expected size",
+          "Menu or product interests",
+          "Anything else the team should know"
+        ]
+      },
+      "base": {
+        "label": "Base location",
+        "h3": "Riyadh, Saudi Arabia",
+        "body": "For events or supply enquiries in other Saudi cities, share the destination so service coverage and logistics can be confirmed.",
+        "note": "No online booking, checkout or payment gateway."
+      }
     }
   }
 }

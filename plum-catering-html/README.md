@@ -1,6 +1,6 @@
 # Plum Catering — premium bilingual HTML website prototype
 
-**Status:** Premium bilingual (Arabic-first RTL / English LTR) static HTML prototype, ready for client review and for conversion into a custom WordPress theme (phase 3). It is **not** a WordPress site and has **no backend**: forms, email, tracking IDs, redirects and Search Console are prepared as documented contracts, not live integrations.
+**Status:** Premium bilingual (Arabic-first RTL / English LTR) static HTML prototype, ready for client review and for conversion into a custom WordPress theme (phase 3). **v2 structure** follows the client's `Plum_Catering_Complete_Live_HTML_Demo.html` information architecture (utility bar + dropdown navigation, one page per service, product-family pages, Gallery, Contact & Quotations with a 3-step enquiry form) while keeping the plum/ivory brand system, Playfair/Inter/Tajawal and both languages. It is **not** a WordPress site and has **no backend**: forms, email, tracking IDs, redirects and Search Console are prepared as documented contracts, not live integrations.
 
 ## Quick start
 ```bash
@@ -13,6 +13,8 @@ npm run qa            # static QA (counts, H1s, canonicals, hreflang, links, sch
 npm run qa:browser    # Playwright QA — run with `npm run preview` active; add --shots for screenshots
 ```
 No npm dependencies. Node ≥ 18. The browser QA uses an installed Playwright/Chromium (`NODE_PATH=$(npm root -g)` if it is global).
+
+Site map (per language): Home · About · Corporates hub + 7 service pages · Celebrations hub + 6 service pages · B2B hub + 7 family pages + 76 product pages · Gallery · Contact · Facility (coming soon) · Privacy.
 
 Entry points to inspect: `dist/ar/index.html`, `dist/en/index.html`, `dist/en/services/b2b/index.html`, `dist/ar/products/brown-sourdough-bread/index.html`, `dist/en/products/plain-croissant/index.html`. `dist/index.html` is a tiny Arabic-first language gateway (noindex); in production `/` must 301 to `/ar/` at the server (see `docs/deployment-and-redirects.md`).
 

@@ -1,74 +1,83 @@
-// Global layout: <head>, SiteHeader, drawer, SiteFooter, QuoteModal, CookieConsent, mobile bar.
+// Global layout v2 (demo IA): utility bar, dropdown header, drawer with groups,
+// footer, stepped QuoteModal, CookieConsent, floating actions.
 import { esc, fmt, attrs, icon, join, when, rf, fact, reviewMode } from './helpers.mjs';
-import { route, otherLang } from './routes.mjs';
-
-const NAV = ['home', 'about', 'corporates', 'celebrations', 'b2b', 'facility'];
+import { route, serviceRoute, familyRoute, otherLang } from './routes.mjs';
 
 /* ---------------- WhatsApp ---------------- */
 export function whatsappHref(ctx, message) {
   const n = ctx.config.contact.whatsappNumber;
   if (!n) return null;
-  const digits = String(n).replace(/[^\d]/g, '');
-  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${String(n).replace(/[^\d]/g, '')}?text=${encodeURIComponent(message)}`;
 }
-export function whatsappControl(ctx, { variant = 'icon', message } = {}) {
+export function whatsappControl(ctx, { variant = 'icon', message, cls } = {}) {
   const msg = message || `${ctx.ui.cta.whatsapp} — ${ctx.config.siteName[ctx.lang]} (${ctx.pageTitleShort || ''})`;
   const href = whatsappHref(ctx, msg);
   if (href) {
-    const a = { href, target: '_blank', rel: 'noopener', 'data-track': 'whatsapp_click', 'data-wa': '' };
-    return variant === 'icon'
-      ? `<a class="icon-btn"${attrs(a)} aria-label="${esc(ctx.ui.cta.whatsapp)}">${icon('whatsapp')}</a>`
-      : `<a class="btn btn--secondary"${attrs(a)}>${icon('whatsapp')}<span>${esc(ctx.ui.cta.whatsapp)}</span></a>`;
+    const a = { href, target: '_blank', rel: 'noopener', 'data-track': 'whatsapp_click' };
+    if (variant === 'icon') return `<a class="icon-btn"${attrs(a)} aria-label="${esc(ctx.ui.cta.whatsapp)}">${icon('whatsapp')}</a>`;
+    if (variant === 'ulink') return `<a class="ulink"${attrs(a)}>${esc(ctx.ui.cta.openWhatsapp)}${icon('arrow')}</a>`;
+    return `<a class="${cls || 'btn btn--secondary'}"${attrs(a)}>${icon('whatsapp')}<span>${esc(ctx.ui.cta.whatsapp)}</span></a>`;
   }
-  // Number not supplied: never invent one. Non-interactive pending indicator (review builds only).
   if (!reviewMode(ctx)) return '';
-  return variant === 'icon'
-    ? `<span class="icon-btn is-pending" role="img" aria-label="${esc(ctx.ui.whatsappPending)}" title="${esc(ctx.ui.whatsappPending)}">${icon('whatsapp')}</span>`
-    : `<span class="review-flag" title="${esc(ctx.ui.whatsappPending)}">${icon('whatsapp')}<span>${esc(ctx.ui.whatsappPending)}</span></span>`;
+  if (variant === 'icon') return `<span class="icon-btn is-pending" role="img" aria-label="${esc(ctx.ui.whatsappPending)}" title="${esc(ctx.ui.whatsappPending)}">${icon('whatsapp')}</span>`;
+  return `<span class="review-flag" title="${esc(ctx.ui.whatsappPending)}">${icon('whatsapp')}<span>${esc(ctx.ui.whatsappPending)}</span></span>`;
 }
 
-/* ---------------- Quote trigger (progressive: anchor → modal) ---------------- */
-export function quoteButton(ctx, { label, service, product, cls = 'btn btn--primary', iconName = 'arrow' } = {}) {
+/* ---------------- Quote trigger ---------------- */
+export function quoteButton(ctx, { label, service, detail, product, cls = 'btn btn--primary', iconName = 'arrow', ulink = false } = {}) {
   const a = {
-    href: '#site-contact',
-    class: cls,
-    'data-quote-open': '',
-    'data-service': service || ctx.defaultService || null,
-    'data-product-id': product?.id || null,
-    'data-product-name': product?.name || null,
-    'data-product-category': product?.category || null,
-    'aria-haspopup': 'dialog',
+    href: `${route('contact', ctx.lang)}#enquiry`, class: ulink ? 'ulink' : cls, 'data-quote-open': '',
+    'data-service': service || ctx.defaultService || null, 'data-detail': detail || ctx.defaultDetail || null,
+    'data-product-id': product?.id || null, 'data-product-name': product?.name || null, 'data-product-category': product?.category || null, 'aria-haspopup': 'dialog',
   };
-  return `<a${attrs(a)}><span>${esc(label || ctx.ui.cta.quote)}</span>${iconName ? icon(iconName, { dir: true }) : ''}</a>`;
+  return `<a${attrs(a)}><span>${esc(label || ctx.ui.cta.quote)}</span>${iconName ? icon(iconName, { dir: !ulink }) : ''}</a>`;
 }
 
-/* ---------------- Language switcher ---------------- */
+/* ---------------- Nav model ---------------- */
+export function navModel(ctx) {
+  const L = ctx.lang;
+  return [
+    { key: 'corporates', label: ctx.ui.nav.corporates, head: ctx.ui.nav.groups.corporates, href: route('corporates', L), items: ctx.pages.corporates.services.items.map((s) => ({ label: s.title || s.h3, href: serviceRoute('corporates', s.slug, L) })) },
+    { key: 'celebrations', label: ctx.ui.nav.celebrations, head: ctx.ui.nav.groups.celebrations, href: route('celebrations', L), items: ctx.pages.celebrations.services.items.map((s) => ({ label: s.title || s.h3, href: serviceRoute('celebrations', s.slug, L) })) },
+    { key: 'b2b', label: ctx.ui.nav.b2b, head: ctx.ui.nav.groups.b2b, href: route('b2b', L), items: ctx.categories.map((c) => ({ label: c.name[L], href: familyRoute(c.slug, L) })) },
+    { key: 'about', label: ctx.ui.nav.about, href: route('about', L) },
+    { key: 'gallery', label: ctx.ui.nav.gallery, href: route('gallery', L) },
+    { key: 'contact', label: ctx.ui.nav.contact, href: route('contact', L) },
+  ];
+}
+const isCurrent = (ctx, href) => ctx.path === href;
+
 function langSwitch(ctx, extraCls = '') {
   const other = otherLang(ctx.lang);
   const href = ctx.alternates?.[other] || route('home', other);
   return `<a class="lang-switch ${extraCls}" href="${esc(href)}" hreflang="${other}" lang="${other}" data-lang-switch aria-label="${esc(ctx.ui.lang.switchLabel)}">${icon('globe')}<span lang="${other}">${esc(ctx.ui.lang.switchTo)}</span></a>`;
 }
 
-function navItems(ctx, { inDrawer = false } = {}) {
-  return join(NAV, (key) => {
-    const href = route(key, ctx.lang);
-    const current = ctx.pageKey === key;
-    const ancestor = ctx.navParent === key;
-    const badge = key === 'facility' && ctx.config.facilityManagement.launchMode !== 'live' ? ` <span class="nav-badge">${esc(ctx.ui.nav.comingSoon)}</span>` : '';
-    return `<li><a class="nav-link" href="${href}"${current ? ' aria-current="page"' : ancestor ? ' data-ancestor="true"' : ''}>${esc(ctx.ui.nav[key])}${badge}${inDrawer ? icon('chevron', { dir: true }) : ''}</a></li>`;
-  });
-}
-
 export function header(ctx) {
   const logo = ctx.config.brand.logo;
-  return `<header class="site-header" data-header>
+  const c = ctx.config.contact;
+  const nav = navModel(ctx);
+  const utility = `<div class="utility-bar"><div class="container utility-bar__inner"><span>${esc(ctx.ui.nav.utility.location)}</span>${c.phone ? `<span>${esc(ctx.ui.nav.utility.phone)}: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" dir="ltr">${esc(c.phone)}</a></span>` : ''}</div></div>`;
+  const items = join(nav, (n, i) => {
+    const current = ctx.pageKey === n.key || ctx.navParent === n.key;
+    if (!n.items) return `<li><a class="nav-link" href="${n.href}"${isCurrent(ctx, n.href) ? ' aria-current="page"' : ''}>${esc(n.label)}</a></li>`;
+    const id = `mega-${n.key}`;
+    return `<li class="nav-item" data-nav-item data-current="${current}">
+      <button class="nav-item__btn" type="button" aria-expanded="false" aria-controls="${id}" data-nav-toggle>${esc(n.label)}${icon('chevron', { cls: 'nav-chevron' })}</button>
+      <div class="mega" id="${id}" hidden>
+        <div class="mega__head">${esc(n.head)}</div>
+        <a class="mega__overview" href="${n.href}"${isCurrent(ctx, n.href) ? ' aria-current="page"' : ''}>${esc(ctx.ui.nav.overview)}${icon('arrow', { dir: true })}</a>
+        ${join(n.items, (it) => `<a href="${it.href}"${isCurrent(ctx, it.href) ? ' aria-current="page"' : ''}>${esc(it.label)}${icon('arrow', { dir: true })}</a>`)}
+      </div>
+    </li>`;
+  });
+  return `${utility}<header class="site-header" data-header>
   <div class="container site-header__inner">
     <a class="site-logo" href="${route('home', ctx.lang)}" aria-label="${esc(ctx.config.siteName[ctx.lang])} — ${esc(ctx.ui.nav.home)}"><img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[ctx.lang])}" fetchpriority="high"></a>
-    <nav class="primary-nav" aria-label="${esc(ctx.ui.nav.label)}"><ul class="nav-list">${navItems(ctx)}</ul></nav>
+    <nav class="primary-nav" aria-label="${esc(ctx.ui.nav.label)}"><ul class="nav-list">${items}</ul></nav>
     <div class="header-actions">
       ${langSwitch(ctx)}
-      ${whatsappControl(ctx)}
-      ${quoteButton(ctx, { cls: 'btn btn--primary btn--sm btn--quote-desktop', iconName: null })}
+      ${quoteButton(ctx, { label: ctx.ui.cta.quoteShort, cls: 'btn btn--primary btn--sm btn--quote-desktop', iconName: null })}
       <button class="icon-btn menu-toggle" type="button" data-drawer-open aria-controls="site-drawer" aria-expanded="false" aria-label="${esc(ctx.ui.nav.menu)}">${icon('menu')}</button>
     </div>
   </div>
@@ -77,13 +86,29 @@ export function header(ctx) {
 
 export function drawer(ctx) {
   const logo = ctx.config.brand.logo;
+  const L = ctx.lang;
+  const nav = navModel(ctx);
+  const link = (href, label, cls = '') => `<a class="${cls}" href="${href}"${isCurrent(ctx, href) ? ' aria-current="page"' : ''}>${esc(label)}</a>`;
+  const groups = join(nav, (n) => {
+    if (!n.items) return '';
+    return `<details${ctx.pageKey === n.key || ctx.navParent === n.key ? ' open' : ''}><summary>${esc(n.label)}${icon('chevron')}</summary>${link(n.href, ctx.ui.nav.overview, 'is-overview')}${join(n.items, (it) => link(it.href, it.label))}</details>`;
+  });
+  const fmSoon = ctx.config.facilityManagement.launchMode !== 'live';
   return `<dialog class="drawer" id="site-drawer" aria-label="${esc(ctx.ui.nav.label)}">
   <div class="drawer__panel">
     <div class="drawer__head">
-      <img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[ctx.lang])}" loading="lazy">
+      <img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[L])}" loading="lazy">
       <button class="icon-btn" type="button" data-drawer-close aria-label="${esc(ctx.ui.nav.close)}">${icon('close')}</button>
     </div>
-    <nav aria-label="${esc(ctx.ui.nav.label)}"><ul class="nav-list">${navItems(ctx, { inDrawer: true })}</ul></nav>
+    <nav aria-label="${esc(ctx.ui.nav.label)}"><ul class="nav-list">
+      <li><a class="nav-link" href="${route('home', L)}"${isCurrent(ctx, route('home', L)) ? ' aria-current="page"' : ''}>${esc(ctx.ui.nav.home)}</a></li>
+      <li><a class="nav-link" href="${route('about', L)}"${isCurrent(ctx, route('about', L)) ? ' aria-current="page"' : ''}>${esc(ctx.ui.nav.about)}</a></li>
+      <li>${groups}</li>
+      <li><a class="nav-link" href="${route('gallery', L)}">${esc(ctx.ui.nav.gallery)}</a></li>
+      <li><a class="nav-link" href="${route('facility', L)}">${esc(ctx.ui.nav.facility)}${fmSoon ? ` <span class="nav-badge">${esc(ctx.ui.nav.comingSoon)}</span>` : ''}</a></li>
+      <li><a class="nav-link" href="${route('contact', L)}">${esc(ctx.ui.nav.contact)}</a></li>
+      <li><a class="nav-link" href="${route('privacy', L)}">${esc(ctx.ui.nav.privacy)}</a></li>
+    </ul></nav>
     <div class="drawer__actions">
       ${quoteButton(ctx)}
       ${whatsappControl(ctx, { variant: 'button' })}
@@ -95,103 +120,128 @@ export function drawer(ctx) {
 
 export function footer(ctx) {
   const u = ctx.ui.footer;
+  const L = ctx.lang;
   const logo = ctx.config.brand.logo;
-  const certs = fact(ctx, 'certifications');
   const c = ctx.config.contact;
-  const contactItems = [
-    c.phone && `<li><a href="tel:${esc(c.phone.replace(/\s/g, ''))}" dir="ltr">${esc(c.phone)}</a></li>`,
-    c.email && `<li><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></li>`,
-    c.address?.[ctx.lang] && `<li>${esc(c.address[ctx.lang])}</li>`,
-  ].filter(Boolean);
+  const parent = fact(ctx, 'parent');
+  const brandLine = parent ? `${fmt(u.brandLine, { parent: esc(parent.value) })}${parent.flag}` : esc(u.brandLineNoParent);
   const fmLive = ctx.config.facilityManagement.launchMode === 'live';
+  const wa = whatsappHref(ctx, `${ctx.ui.cta.whatsapp} — ${ctx.config.siteName[L]}`);
   return `<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="${route('home', ctx.lang)}" aria-label="${esc(ctx.config.siteName[ctx.lang])} — ${esc(ctx.ui.nav.home)}"><img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[ctx.lang])}" loading="lazy"></a>
+        <a href="${route('home', L)}" aria-label="${esc(ctx.config.siteName[L])} — ${esc(ctx.ui.nav.home)}"><img src="${logo.src}" width="${logo.width}" height="${logo.height}" alt="${esc(ctx.config.siteName[L])}" loading="lazy"></a>
         <p>${esc(u.summary)}</p>
-        ${when(certs, () => `<div class="footer-cert">${certs.value.map((x) => `<span class="cert-pill" dir="ltr">${esc(x)}</span>`).join('')}${certs.flag}</div>`)}
+        <p class="small muted">${brandLine}</p>
       </div>
       <div class="footer-col">
-        <h2>${esc(u.services)}</h2>
+        <h2>${esc(u.explore)}</h2>
         <ul>
-          <li><a href="${route('corporates', ctx.lang)}">${esc(ctx.ui.nav.corporates)}</a></li>
-          <li><a href="${route('celebrations', ctx.lang)}">${esc(ctx.ui.nav.celebrations)}</a></li>
-          <li><a href="${route('b2b', ctx.lang)}">${esc(ctx.ui.nav.b2b)}</a></li>
-          <li><a href="${route('facility', ctx.lang)}">${esc(ctx.ui.nav.facility)}${fmLive ? '' : ` <span class="nav-badge">${esc(ctx.ui.nav.comingSoon)}</span>`}</a></li>
+          <li><a href="${route('corporates', L)}">${esc(ctx.ui.nav.corporates)}</a></li>
+          <li><a href="${route('celebrations', L)}">${esc(ctx.ui.nav.celebrations)}</a></li>
+          <li><a href="${route('b2b', L)}">${esc(ctx.ui.nav.b2b)}</a></li>
+          <li><a href="${route('facility', L)}">${esc(ctx.ui.nav.facility)}${fmLive ? '' : ` <span class="nav-badge">${esc(ctx.ui.nav.comingSoon)}</span>`}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h2>${esc(u.company)}</h2>
+        <h2>${esc(u.discover)}</h2>
         <ul>
-          <li><a href="${route('home', ctx.lang)}">${esc(ctx.ui.nav.home)}</a></li>
-          <li><a href="${route('about', ctx.lang)}">${esc(ctx.ui.nav.about)}</a></li>
-          <li><a href="${route('privacy', ctx.lang)}">${esc(ctx.ui.nav.privacy)}</a></li>
-          <li><button class="footer-link-btn" type="button" data-cookie-settings>${esc(u.cookieSettings)}</button></li>
+          <li><a href="${route('about', L)}">${esc(ctx.ui.nav.about)}</a></li>
+          <li><a href="${route('about', L)}#kitchen">${esc(u.kitchen)}</a></li>
+          <li><a href="${route('gallery', L)}">${esc(ctx.ui.nav.gallery)}</a></li>
+          <li><a href="${route('contact', L)}">${esc(ctx.ui.nav.contact)}</a></li>
         </ul>
       </div>
       <div class="footer-col" id="site-contact">
         <h2>${esc(u.contact)}</h2>
-        ${contactItems.length ? `<ul>${contactItems.join('')}</ul>` : reviewMode(ctx) ? `<p class="small muted">${esc(u.contactPending)}</p>` : ''}
-        <p class="small muted">${esc(u.quotePrompt)}</p>
-        <div class="btn-row">${quoteButton(ctx, { cls: 'btn btn--primary btn--sm', iconName: null })}${whatsappControl(ctx)}</div>
+        <ul>
+          ${c.phone ? `<li><a href="tel:${esc(c.phone.replace(/\s/g, ''))}" dir="ltr">${esc(c.phone)}</a></li>` : ''}
+          ${c.email ? `<li><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></li>` : ''}
+          ${wa ? `<li><a href="${esc(wa)}" target="_blank" rel="noopener" data-track="whatsapp_click">${esc(ctx.ui.cta.whatsapp)}</a></li>` : reviewMode(ctx) ? `<li>${whatsappControl(ctx, { variant: 'button' })}</li>` : ''}
+          ${c.address?.[L] ? `<li>${esc(c.address[L])}</li>` : ''}
+          <li>${quoteButton(ctx, { label: ctx.ui.cta.requestQuotation, ulink: true })}</li>
+          <li><button class="footer-link-btn" type="button" data-cookie-settings>${esc(u.cookieSettings)}</button></li>
+        </ul>
+        ${!c.phone && !c.email && reviewMode(ctx) ? `<p class="small muted">${esc(u.contactPending)}</p>` : ''}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© ${ctx.config.copyrightYear} ${esc(ctx.config.siteName[ctx.lang])}. ${esc(u.rights)}</span>
-      <span><a href="${route('privacy', ctx.lang)}">${esc(ctx.ui.nav.privacy)}</a></span>
+      <span>© ${ctx.config.copyrightYear} ${esc(ctx.config.siteName[L])}. ${esc(u.rights)}</span>
+      <span><a href="${route('privacy', L)}">${esc(ctx.ui.nav.privacy)}</a> · <button class="footer-link-btn" type="button" data-cookie-settings>${esc(u.cookieSettings)}</button></span>
     </div>
   </div>
 </footer>`;
 }
 
-/* ---------------- QuoteModal ---------------- */
+/* ---------------- QuoteModal (3 steps) ---------------- */
 export function quoteModal(ctx) {
   const q = ctx.ui.quote;
+  const L = ctx.lang;
   const fmLive = ctx.config.facilityManagement.launchMode === 'live';
   const services = ['corporate', 'celebration', 'b2b', ...(fmLive ? ['facility'] : [])];
   const req = `<span class="req" aria-hidden="true">*</span><span class="visually-hidden"> (${esc(q.required)})</span>`;
   const opt = `<span class="opt">(${esc(q.optional)})</span>`;
-  const field = (id, label, input, { full = false, hint = '', cond = null, required = false } = {}) =>
-    `<div class="field${full ? ' field--full' : ''}"${cond ? ` data-cond="${cond}"` : ''}>
+  const field = (id, label, input, { full = false, hint = '', required = false } = {}) =>
+    `<div class="field${full ? ' field--full' : ''}">
       <label class="field__label" for="q-${id}">${esc(label)} ${required ? req : opt}</label>
       ${input}
       ${hint ? `<span class="field__hint" id="q-${id}-hint">${esc(hint)}</span>` : ''}
       <span class="field__error" id="q-${id}-error" aria-live="polite"></span>
     </div>`;
   const desc = (id, hint) => `aria-describedby="${hint ? `q-${id}-hint ` : ''}q-${id}-error"`;
-  const privacyLink = `<a href="${route('privacy', ctx.lang)}" target="_blank" rel="noopener">${esc(q.privacyLink)}</a>`;
+  const privacyLink = `<a href="${route('privacy', L)}" target="_blank" rel="noopener">${esc(q.privacyLink)}</a>`;
+  const detailOptions = [
+    `<optgroup label="${esc(ctx.ui.nav.groups.corporates)}">${ctx.pages.corporates.services.items.map((s) => `<option value="${s.slug}" data-type="corporate">${esc(s.title || s.h3)}</option>`).join('')}</optgroup>`,
+    `<optgroup label="${esc(ctx.ui.nav.groups.celebrations)}">${ctx.pages.celebrations.services.items.map((s) => `<option value="${s.slug}" data-type="celebration">${esc(s.title || s.h3)}</option>`).join('')}</optgroup>`,
+    `<optgroup label="${esc(ctx.ui.nav.groups.b2b)}">${ctx.categories.map((c) => `<option value="${c.slug}" data-type="b2b">${esc(c.name[L])}</option>`).join('')}</optgroup>`,
+  ].join('');
+  const formats = Object.entries(q.formats).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join('');
   return `<dialog class="modal quote-modal" id="quote-modal" aria-labelledby="quote-title" aria-describedby="quote-intro">
   <div class="modal__head">
-    <div><h2 id="quote-title">${esc(q.title)}</h2><p id="quote-intro">${esc(q.intro)}</p></div>
+    <div><p class="eyebrow" style="margin-block-end:6px">${esc(q.eyebrow)}</p><h2 id="quote-title">${esc(q.title)}</h2><p id="quote-intro">${esc(q.intro)}</p><span class="step-count" data-step-count aria-live="polite"></span></div>
     <button class="icon-btn" type="button" data-modal-close aria-label="${esc(q.close)}">${icon('close')}</button>
   </div>
   <div class="modal__body">
-    <form class="form-grid" id="quote-form" novalidate data-quote-form>
+    <div class="stepper" aria-hidden="true" data-stepper><span class="is-on"></span><span></span><span></span></div>
+    <form class="form-grid" id="quote-form" novalidate data-quote-form data-steps="${JSON.stringify(q.steps).replace(/"/g, '&quot;')}">
       <div class="form-status field--full" id="quote-status" role="status" aria-live="polite" tabindex="-1"></div>
       <div class="attached-product field--full" data-attached hidden>${icon('bread')}<span><strong>${esc(q.attached)}:</strong> <span data-attached-name></span></span></div>
-      ${field('name', q.name, `<input class="input" id="q-name" name="name" type="text" autocomplete="name" required maxlength="120" ${desc('name')}>`, { required: true })}
-      ${field('email', q.email, `<input class="input" id="q-email" name="email" type="email" autocomplete="email" required maxlength="160" ${desc('email')}>`, { required: true })}
-      ${field('phone', q.phone, `<input class="input" id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="24" ${desc('phone', true)}>`, { required: true, hint: q.phoneHint })}
-      ${field('company', q.company, `<input class="input" id="q-company" name="company" type="text" autocomplete="organization" maxlength="160" ${desc('company')}>`)}
-      ${field('service', q.service, `<select class="input" id="q-service" name="service_type" required ${desc('service')}><option value="">${esc(q.servicePlaceholder)}</option>${services.map((s) => `<option value="${s}">${esc(q.services[s])}</option>`).join('')}</select>`, { required: true, full: true })}
-      ${field('date', q.eventDate, `<input class="input" id="q-date" name="event_date" type="date" ${desc('date')}>`, { cond: 'corporate celebration' })}
-      ${field('guests', q.guests, `<input class="input" id="q-guests" name="guest_count" type="number" min="1" max="100000" inputmode="numeric" ${desc('guests')}>`, { cond: 'corporate celebration' })}
-      ${field('product', q.product, `<input class="input" id="q-product" name="product_name" type="text" maxlength="200" ${desc('product')}>`, { cond: 'b2b' })}
-      ${field('volume', q.volume, `<input class="input" id="q-volume" name="supply_volume" type="text" maxlength="200" ${desc('volume', true)}>`, { cond: 'b2b', hint: q.volumeHint })}
+
+      <fieldset class="form-step" data-step="1"><legend class="visually-hidden">${esc(q.steps[0])}</legend>
+      ${field('service', q.category, `<select class="input" id="q-service" name="service_type" required ${desc('service')}><option value="">${esc(q.servicePlaceholder)}</option>${services.map((s) => `<option value="${s}">${esc(q.services[s])}</option>`).join('')}</select>`, { required: true })}
+      ${field('detail', q.detail, `<select class="input" id="q-detail" name="service_detail" ${desc('detail')}><option value="">${esc(q.detailPlaceholder)}</option>${detailOptions}</select>`)}
+      ${field('interest', q.interest, `<input class="input" id="q-interest" name="interest" type="text" maxlength="200" ${desc('interest', true)}>`, { full: true, hint: q.interestHint })}
+      ${field('quantity', q.quantity, `<input class="input" id="q-quantity" name="quantity" type="text" maxlength="120" ${desc('quantity', true)}>`, { hint: q.quantityHint })}
+      ${field('city', q.city, `<input class="input" id="q-city" name="city" type="text" maxlength="120" autocomplete="address-level2" ${desc('city')}>`)}
+      </fieldset>
+
+      <fieldset class="form-step" data-step="2" hidden><legend class="visually-hidden">${esc(q.steps[1])}</legend>
+      ${field('date', q.preferredDate, `<input class="input" id="q-date" name="preferred_date" type="text" maxlength="80" ${desc('date', true)}>`, { hint: q.preferredDateHint })}
+      ${field('format', q.format, `<select class="input" id="q-format" name="format" ${desc('format')}><option value="">${esc(q.formatNotDecided)}</option>${formats}</select>`)}
       ${field('message', q.message, `<textarea class="input" id="q-message" name="message" rows="4" maxlength="3000" ${desc('message', true)}></textarea>`, { full: true, hint: q.messageHint })}
+      </fieldset>
+
+      <fieldset class="form-step" data-step="3" hidden><legend class="visually-hidden">${esc(q.steps[2])}</legend>
+      ${field('name', q.name, `<input class="input" id="q-name" name="name" type="text" autocomplete="name" required maxlength="120" ${desc('name')}>`, { required: true })}
+      ${field('company', q.company, `<input class="input" id="q-company" name="company" type="text" autocomplete="organization" maxlength="160" ${desc('company')}>`)}
+      ${field('phone', q.phone, `<input class="input" id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="24" ${desc('phone', true)}>`, { required: true, hint: q.phoneHint })}
+      ${field('email', q.email, `<input class="input" id="q-email" name="email" type="email" autocomplete="email" required maxlength="160" ${desc('email')}>`, { required: true })}
       <div class="field field--full">
         <label class="checkbox"><input type="checkbox" name="privacy_ack" id="q-privacy" required aria-describedby="q-privacy-error"><span>${fmt(q.privacy, { link: privacyLink })} ${req}</span></label>
         <span class="field__error" id="q-privacy-error" aria-live="polite"></span>
       </div>
-      <div class="field field--full">
-        <label class="checkbox"><input type="checkbox" name="marketing_consent" id="q-marketing"><span>${esc(q.marketing)}</span></label>
-      </div>
+      <div class="field field--full"><label class="checkbox"><input type="checkbox" name="marketing_consent" id="q-marketing"><span>${esc(q.marketing)}</span></label></div>
+      </fieldset>
+
       <div class="visually-hidden" aria-hidden="true"><label for="q-website">Website</label><input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-      <input type="hidden" name="product_id"><input type="hidden" name="product_category"><input type="hidden" name="source_path"><input type="hidden" name="lang" value="${ctx.lang}">
+      <input type="hidden" name="product_id"><input type="hidden" name="product_category"><input type="hidden" name="product_name"><input type="hidden" name="source_path"><input type="hidden" name="lang" value="${L}">
       <div class="form-actions field--full">
-        <button class="btn btn--primary" type="submit" data-submit><span data-submit-label>${esc(q.submit)}</span>${icon('arrow', { dir: true })}</button>
-        <button class="btn btn--secondary" type="button" data-modal-close>${esc(q.close)}</button>
+        <button class="btn btn--secondary" type="button" data-step-back>${icon('arrow', { dir: true, cls: 'icon-back' })}<span>${esc(q.back)}</span></button>
+        <div class="btn-row">
+          <button class="btn btn--primary" type="button" data-step-next><span>${esc(q.next)}</span>${icon('arrow', { dir: true })}</button>
+          <button class="btn btn--primary" type="submit" data-submit hidden><span data-submit-label>${esc(q.submit)}</span>${icon('arrow', { dir: true })}</button>
+        </div>
       </div>
     </form>
   </div>
@@ -220,9 +270,7 @@ export function cookieUI(ctx) {
     <button class="icon-btn" type="button" data-modal-close aria-label="${esc(ctx.ui.quote.close)}">${icon('close')}</button>
   </div>
   <form class="modal__body" data-cookie-form>
-    ${row('necessary', true)}
-    ${row('analytics')}
-    ${row('marketing')}
+    ${row('necessary', true)}${row('analytics')}${row('marketing')}
     <div class="btn-row" style="margin-block-start:20px">
       <button class="btn btn--primary" type="submit">${esc(c.save)}</button>
       <button class="btn btn--secondary" type="button" data-consent="accept">${esc(c.acceptAll)}</button>
@@ -232,17 +280,15 @@ export function cookieUI(ctx) {
 </dialog>`;
 }
 
-export function mobileBar(ctx) {
-  return `<div class="mobile-bar" data-mobile-bar role="region" aria-label="${esc(ctx.ui.mobileBar.label)}">
-  ${quoteButton(ctx)}
+export function floating(ctx) {
+  return `<div class="floating" data-floating role="region" aria-label="${esc(ctx.ui.floating.label)}">
+  ${quoteButton(ctx, { label: ctx.ui.cta.enquire })}
   ${whatsappControl(ctx)}
 </div>`;
 }
 
 /* ---------------- Head ---------------- */
 function consentDefaults() {
-  // Consent Mode v2 defaults MUST run before any Google tag. Only the consent
-  // preference (no PII) is read from localStorage.
   return `<script>
 document.documentElement.classList.replace('no-js','js');
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
@@ -253,12 +299,12 @@ try{var c=JSON.parse(localStorage.getItem('plum_consent_v1')||'null');if(c&&c.v=
 
 export function head(ctx, meta) {
   const base = ctx.config.productionBaseUrl;
-  const L = ctx.config.languages;
+  const Ls = ctx.config.languages;
   const other = otherLang(ctx.lang);
   const alt = meta.indexable && ctx.alternates;
   const hreflang = alt
-    ? ['ar', 'en'].filter((l) => ctx.alternates[l]).map((l) => `<link rel="alternate" hreflang="${L[l].hreflang}" href="${base}${ctx.alternates[l]}">`).join('\n') +
-      (ctx.alternates[ctx.config.xDefaultLanguage] && ctx.alternates.ar && ctx.alternates.en ? `\n<link rel="alternate" hreflang="x-default" href="${base}${ctx.alternates[ctx.config.xDefaultLanguage]}">` : '')
+    ? ['ar', 'en'].filter((l) => ctx.alternates[l]).map((l) => `<link rel="alternate" hreflang="${Ls[l].hreflang}" href="${base}${ctx.alternates[l]}">`).join('\n') +
+      (ctx.alternates.ar && ctx.alternates.en ? `\n<link rel="alternate" hreflang="x-default" href="${base}${ctx.alternates[ctx.config.xDefaultLanguage]}">` : '')
     : '';
   const gsc = ctx.config.integrations.searchConsoleVerification;
   return `<head>
@@ -274,15 +320,15 @@ ${hreflang}
 <meta property="og:title" content="${esc(meta.title)}">
 <meta property="og:description" content="${esc(meta.description)}">
 <meta property="og:url" content="${base}${ctx.path}">
-<meta property="og:locale" content="${L[ctx.lang].locale}">
-${ctx.alternates?.[other] ? `<meta property="og:locale:alternate" content="${L[other].locale}">` : ''}
+<meta property="og:locale" content="${Ls[ctx.lang].locale}">
+${ctx.alternates?.[other] ? `<meta property="og:locale:alternate" content="${Ls[other].locale}">` : ''}
 ${meta.ogImage ? `<meta property="og:image" content="${base}${meta.ogImage}">` : ''}
 <meta name="twitter:card" content="${meta.ogImage ? 'summary_large_image' : 'summary'}">
 <meta name="theme-color" content="#452349">
 ${gsc ? `<meta name="google-site-verification" content="${esc(gsc)}">` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?${ctx.lang === 'ar' ? 'family=Tajawal:wght@400;500;700&' : 'family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&'}display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?${ctx.lang === 'ar' ? 'family=Tajawal:wght@400;500;700&family=Playfair+Display:wght@500;600&' : 'family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&'}display=swap">
 <link rel="stylesheet" href="/assets/styles/site.css?v=${ctx.buildId}">
 ${meta.preload || ''}
 ${consentDefaults()}
@@ -293,26 +339,20 @@ ${meta.jsonld ? `<script type="application/ld+json">${JSON.stringify(meta.jsonld
 export function pageData(ctx) {
   const c = ctx.config;
   const data = {
-    lang: ctx.lang,
-    siteName: c.siteName[ctx.lang],
-    path: ctx.path,
-    pageKey: ctx.pageKey,
-    quoteEndpoint: c.integrations.quoteEndpoint,
-    whatsappNumber: c.contact.whatsappNumber,
-    gtmContainerId: c.integrations.gtmContainerId,
-    consentModeType: c.integrations.consentModeType || 'basic',
-    adsConversion: c.integrations.googleAdsConversion,
-    i18n: { quote: ctx.ui.quote, cookie: ctx.ui.cookie, gallery: ctx.ui.gallery, filters: ctx.ui.filters, nav: ctx.ui.nav, video: ctx.ui.video },
+    lang: ctx.lang, siteName: c.siteName[ctx.lang], path: ctx.path, pageKey: ctx.pageKey,
+    quoteEndpoint: c.integrations.quoteEndpoint, whatsappNumber: c.contact.whatsappNumber, gtmContainerId: c.integrations.gtmContainerId,
+    consentModeType: c.integrations.consentModeType || 'basic', adsConversion: c.integrations.googleAdsConversion,
+    i18n: { quote: ctx.ui.quote, cookie: ctx.ui.cookie, gallery: ctx.ui.gallery, filters: ctx.ui.filters, nav: ctx.ui.nav, video: ctx.ui.video, finder: ctx.pages.b2b.finder },
   };
   return `<script type="application/json" id="plum-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 }
 
 export function document(ctx, meta, mainHtml, { beforeMain = '', afterMain = '' } = {}) {
-  const L = ctx.config.languages[ctx.lang];
+  const Ls = ctx.config.languages[ctx.lang];
   return `<!doctype html>
-<html lang="${ctx.lang}" dir="${L.dir}" class="no-js">
+<html lang="${ctx.lang}" dir="${Ls.dir}" class="no-js">
 ${head(ctx, meta)}
-<body class="page-${ctx.pageKey} has-mobile-bar">
+<body class="page-${ctx.pageKey}">
 <a class="skip-link" href="#main">${esc(ctx.ui.skip)}</a>
 ${header(ctx)}
 ${beforeMain}
@@ -321,7 +361,7 @@ ${mainHtml}
 </main>
 ${afterMain}
 ${footer(ctx)}
-${mobileBar(ctx)}
+${floating(ctx)}
 ${drawer(ctx)}
 ${quoteModal(ctx)}
 ${cookieUI(ctx)}

@@ -29,7 +29,8 @@ const metas = (html) => {
   return { robots, indexable: robots.startsWith('index'), canonical, alts };
 };
 
-const CORE = ['/ar/', '/en/', '/ar/about-us/', '/en/about-us/', '/ar/services/sharikat/', '/en/services/corporates/', '/ar/services/munasabat/', '/en/services/celebrations/', '/ar/services/qitaa-al-aamal/', '/en/services/b2b/', '/ar/services/idarat-al-marafiq/', '/en/services/facility-management/', '/ar/privacy/', '/en/privacy/'];
+const content = { ar: JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/content.ar.json'), 'utf8')), en: JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/content.en.json'), 'utf8')) };
+const CORE = ['/ar/', '/en/', '/ar/about-us/', '/en/about-us/', '/ar/services/sharikat/', '/en/services/corporates/', '/ar/services/munasabat/', '/en/services/celebrations/', '/ar/services/qitaa-al-aamal/', '/en/services/b2b/', '/ar/services/idarat-al-marafiq/', '/en/services/facility-management/', '/ar/privacy/', '/en/privacy/', '/ar/gallery/', '/en/gallery/', '/ar/contact/', '/en/contact/'];
 for (const c of CORE) (pages.has(c) ? pass : fail)(`core page exists: ${c}`);
 
 const titles = new Map();
@@ -96,8 +97,27 @@ for (const [url, html] of pages) {
 if (config.facilityManagement.launchMode !== 'live') {
   for (const u of ['/ar/services/idarat-al-marafiq/', '/en/services/facility-management/']) (!metas(pages.get(u)).indexable ? pass : fail)(`FM noindex while coming soon: ${u}`);
 }
-// Catalogue links every product, in the same language
 const live = productsData.products.filter((p) => p.status !== 'archived');
+// Service sub-pages and family pages exist and are linked from their hubs
+for (const [hub, base] of [['corporates', { ar: '/ar/services/sharikat/', en: '/en/services/corporates/' }], ['celebrations', { ar: '/ar/services/munasabat/', en: '/en/services/celebrations/' }]]) {
+  for (const lang of ['ar', 'en']) {
+    const hubHtml = pages.get(base[lang]);
+    for (const s of content[lang].pages[hub].services.items) {
+      const u = `${base[lang]}${s.slug}/`;
+      if (!pages.has(u)) fail(`service page missing ${u}`);
+      if (!hubHtml.includes(`href="${u}"`)) fail(`${base[lang]} does not link ${u}`);
+    }
+  }
+}
+for (const c of productsData.categories) for (const lang of ['ar', 'en']) {
+  const u = `/${lang}/products/${c.slug}/`;
+  if (!pages.has(u)) fail(`family page missing ${u}`);
+  const b2b = pages.get(lang === 'ar' ? '/ar/services/qitaa-al-aamal/' : '/en/services/b2b/');
+  if (!b2b.includes(`href="${u}"`)) fail(`B2B ${lang} hub does not link family ${u}`);
+  const fam = pages.get(u);
+  for (const p of live.filter((x) => x.category === c.id)) if (!fam.includes(`href="/${lang}/products/${p.slug[lang]}/"`)) fail(`family ${u} does not link ${p.slug[lang]}`);
+}
+// Catalogue hub links every product, in the same language (finder)
 for (const lang of ['ar', 'en']) {
   const b2b = pages.get(lang === 'ar' ? '/ar/services/qitaa-al-aamal/' : '/en/services/b2b/');
   for (const p of live) {
@@ -120,7 +140,9 @@ const summary = {
   checkedAt: new Date().toISOString(), htmlFiles: pages.size, indexable, noindex: pages.size - indexable, sitemapUrls: sitemapLocs.size,
   productRecords: productsData.products.length, approvedProducts: productsData.products.filter((p) => p.status === 'approved').length,
   expectedProducts: productsData.categories.reduce((s, c) => s + c.expectedCount, 0),
-  productPages: [...pages.keys()].filter((u) => u.includes('/products/')).length,
+  productPages: [...pages.keys()].filter((u) => /\/products\/[^/]+\/$/.test(u) && !productsData.categories.some((c) => u.endsWith(`/products/${c.slug}/`))).length,
+  servicePages: [...pages.keys()].filter((u) => /\/services\/[^/]+\/[^/]+\/$/.test(u)).length,
+  familyPages: productsData.categories.length * 2,
   failures: fails, warnings: warns, passedChecks: passes.length,
 };
 fs.writeFileSync(path.join(ROOT, 'docs', 'qa-static-results.json'), JSON.stringify(summary, null, 2));

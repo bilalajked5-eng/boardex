@@ -1,14 +1,16 @@
 {
-  "checkedAt": "2026-11-05T11:59:37.646Z",
-  "htmlFiles": 170,
-  "indexable": 10,
+  "checkedAt": "2026-11-05T12:53:39.831Z",
+  "htmlFiles": 214,
+  "indexable": 54,
   "noindex": 160,
-  "sitemapUrls": 10,
+  "sitemapUrls": 54,
   "productRecords": 76,
   "approvedProducts": 0,
   "expectedProducts": 76,
   "productPages": 152,
+  "servicePages": 26,
+  "familyPages": 14,
   "failures": [],
   "warnings": [],
-  "passedChecks": 16
+  "passedChecks": 20
 }

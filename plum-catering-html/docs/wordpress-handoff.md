@@ -19,7 +19,8 @@
 |---|---|---|
 | `page` | core | 7 pages per language. Each is assigned a template (below). |
 | `plum_product` | CPT, public, `has_archive=false`, rewrite `products` | One record per product per language, linked as translations |
-| `plum_product_category` | taxonomy, non-public archives for now | Bread, Croissants, Danish & Focaccia, Éclairs, Miracle Cakes, Molded Cakes, Whole Cakes. Phase 1.5: enable archives only with unique intro + FAQ. |
+| `plum_product_category` | taxonomy, **public archives** at `/products/{family}/` | Bread, Croissants, Danish & Focaccia, Éclairs, Miracle Cakes, Molded Cakes, Whole Cakes. Phase 1.5: enable archives only with unique intro + FAQ. |
+| `plum_service` | CPT, public, rewrite under the hub page slug (`services/corporates/{slug}`) | 13 service pages (7 corporate, 6 celebration), linked as translations |
 | `plum_client` | CPT, not public | Logo wall: name, logo, `approved` boolean, approval reference |
 | Gallery | Media Library + taxonomy `plum_gallery_category` (corporates, celebrations, kitchen, b2b) | 117 images. Use `wp_get_attachment_image()` for srcset. |
 | `post` | core | Reserved for the future blog (keep `/blog/` unpublished) |
@@ -83,6 +84,10 @@ Each section from `content.{lang}.json → pages.{key}` becomes a field group wi
 | `b2b` | `page-templates/template-b2b.php` (WP_Query over `plum_product`, grouped by term; full server-rendered list) |
 | `product` | `single-plum_product.php` |
 | `facility` | `page-templates/template-facility.php` (branches on `launch_mode`) |
+| `servicePage` | `single-plum_service.php` (CPT `plum_service`, taxonomy `plum_service_group` = corporates / celebrations; fields: short, who, options[4], plan[3], faq[2], image) |
+| `family` | `taxonomy-plum_product_category.php` (term meta: blurb AR/EN, shelf life, hero image) |
+| `galleryPage` | `page-templates/template-gallery.php` |
+| `contact` | `page-templates/template-contact.php` |
 | `privacy` | `page-templates/template-privacy.php` |
 | `notFound` | `404.php` (localised via the translation plugin) |
 | `schema.mjs` | `inc/seo/schema.php` (single JSON-LD graph per page) |
