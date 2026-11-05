@@ -50,7 +50,7 @@ js += `\n/* main.js */\n(function(){\n${main}\n})();\n`;
 js += `
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="#/"]');
-  if (!a || a.hasAttribute('download')) return;
+  if (!a || a.hasAttribute('download') || a.hasAttribute('data-quote-open') || e.defaultPrevented) return;
   e.preventDefault();
   parent.postMessage({ plumRoute: a.getAttribute('href').slice(1) }, '*');
 });
@@ -99,8 +99,11 @@ iframe{position:absolute;top:36px;left:0;width:100%;height:calc(100% - 36px);bor
   const frame = document.getElementById('frame');
   const cur = document.getElementById('cur');
   const subst = (s) => s.replace(/\\/assets\\/[^"' )]+/g, (m) => ASSETS[m.split('?')[0]] || m);
+  let current = null;
   function render() {
     let route = (location.hash || '#/ar/').slice(1).split('#')[0];
+    if (route === current) return; // same page, only an in-page fragment changed
+    current = route;
     if (!route.endsWith('/') && !route.endsWith('.html')) route += '/';
     let html = PAGES[route];
     if (!html) { html = PAGES[route.startsWith('/en/') ? '/en/404.html' : '/ar/404.html']; }
