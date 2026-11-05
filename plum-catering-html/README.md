@@ -16,6 +16,12 @@ No npm dependencies. Node ≥ 18. The browser QA uses an installed Playwright/Ch
 
 Entry points to inspect: `dist/ar/index.html`, `dist/en/index.html`, `dist/en/services/b2b/index.html`, `dist/ar/products/brown-sourdough-bread/index.html`, `dist/en/products/plain-croissant/index.html`. `dist/index.html` is a tiny Arabic-first language gateway (noindex); in production `/` must 301 to `/ar/` at the server (see `docs/deployment-and-redirects.md`).
 
+## Offline single-file review copy
+```bash
+npm run bundle   # → plum-catering-complete.html (~16 MB)
+```
+One self-contained HTML file with every page, style, script, product photo and the catalogue PDF embedded. Double-click it — no server needed. Navigation uses `#/ar/...` hashes inside the file; fonts still load from Google Fonts when online. **Review convenience only** — the deployable, crawlable site is `dist/`.
+
 ## What is where
 ```
 src/data/          site-config.json · content.ar.json · content.en.json · products.json · media-manifest.json · client-logos.json
