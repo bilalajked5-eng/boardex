@@ -1,3 +1,4 @@
 node_modules/
 qa-screenshots/
 .DS_Store
+*.zip
