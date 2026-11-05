@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-11-05T13:25:26.439Z",
+  "ranAt": "2026-11-05T14:08:03.089Z",
   "total": 127,
   "failed": 0,
   "results": [
@@ -606,7 +606,7 @@
     {
       "name": "RTL drawer slides from the left edge",
       "ok": true,
-      "detail": "x=-0.708404541015625"
+      "detail": "x=-0.7142333984375"
     },
     {
       "name": "drawer closes with Escape",

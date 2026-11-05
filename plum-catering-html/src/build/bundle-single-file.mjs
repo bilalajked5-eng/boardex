@@ -60,6 +60,7 @@ document.addEventListener('click', (e) => {
 const transformed = {};
 for (const [url, html] of Object.entries(pages)) {
   let h = html
+    .replace('<head>', '<head><script>window.PLUM_REVIEW_BUNDLE=true;</script>')
     .replace(/<link rel="stylesheet" href="\/assets\/styles\/site\.css[^"]*">/, '<style>__CSS__</style>')
     .replace(/<script type="module" src="\/assets\/scripts\/main\.js[^"]*"><\/script>/, '<script>__JS__</script>')
     .replace(/(href|action)="(\/(?:ar|en)\/[^"#]*|\/)(#[^"]*)?"/g, (m, attr, p, hash) => `${attr}="#${p}${hash || ''}"`)

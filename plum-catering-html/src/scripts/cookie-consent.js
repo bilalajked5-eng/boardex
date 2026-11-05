@@ -3,7 +3,9 @@
 import { openDialog, wireDialog } from './dialog.js';
 
 const KEY = 'plum_consent_v1';
-const read = () => { try { const c = JSON.parse(localStorage.getItem(KEY) || 'null'); return c && c.v === 1 ? c : null; } catch { return null; } };
+// Review bundle (single offline file) keeps the choice per session so the banner reappears on each open.
+const store = () => (window.PLUM_REVIEW_BUNDLE ? sessionStorage : localStorage);
+const read = () => { try { const c = JSON.parse(store().getItem(KEY) || 'null'); return c && c.v === 1 ? c : null; } catch { return null; } };
 
 function apply(choice) {
   const g = (b) => (b ? 'granted' : 'denied');
@@ -33,7 +35,7 @@ export function initCookieConsent(data) {
 
   const save = (choice, announce = true) => {
     const c = { v: 1, analytics: !!choice.analytics, marketing: !!choice.marketing, ts: new Date().toISOString() };
-    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch { /* storage blocked: apply for this page only */ }
+    try { store().setItem(KEY, JSON.stringify(c)); } catch { /* storage blocked: apply for this page only */ }
     apply(c);
     if (banner) banner.hidden = true;
     document.body.classList.remove('has-cookie-banner');
